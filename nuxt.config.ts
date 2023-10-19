@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     },
     components: {
       prefix: 'Prime',
-      include: ['Carousel', 'Button', 'Rating'],
+      include: ['Carousel', 'Button', 'Rating', 'InputText', 'InputNumber', 'Message'],
       exclude: undefined
     },
   }

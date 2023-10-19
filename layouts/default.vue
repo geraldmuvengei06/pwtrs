@@ -3,6 +3,9 @@
 </script>
 
 <template>
+
+    <!-- Promo -->
+    <UiAlert />
     <UiHeader />
    <slot></slot>
 </template>
