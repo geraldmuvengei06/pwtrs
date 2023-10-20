@@ -1,11 +1,55 @@
-
-@use './colors';
-@use './fonts';
-html, body {
-    background-color: #fff;
-    font-family: 'Roboto Slab', serif;
+@use "./colors";
+@use "./fonts";
+html,
+body {
+  background-color: #fff;
+  font-family: "Roboto Slab", serif;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Young Serif', serif;
+p,
+li,
+small {
+  font-family: "Roboto Slab", serif;
+  @apply leading-loose;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-family: "Young Serif", serif;
+}
+
+.btn {
+  text-transform: capitalize;
+}
+.p-carousel-indicators {
+  @apply mt-2;
+  .p-carousel-indicator {
+    @apply bg-slate-200 rounded-md;
+  }
+
+  .p-carousel-indicator.p-highlight {
+    @apply bg-primary;
+  }
+}
+
+.custom-list {
+  @apply ml-6;
+  li {
+    @apply relative my-2;
+    &::before {
+      content: ".";
+      @apply bg-secondary rounded-full text-transparent absolute -left-4 top-2;
+      font-weight: bold;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+    }
+  }
 }

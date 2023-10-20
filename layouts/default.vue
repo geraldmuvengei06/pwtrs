@@ -1,11 +1,11 @@
 <script setup lang="ts">
-
+    let notification = ref(false)
 </script>
 
 <template>
 
     <!-- Promo -->
-    <UiAlert />
+    <UiAlert v-if="notification" />
     <UiHeader />
    <slot></slot>
 </template>

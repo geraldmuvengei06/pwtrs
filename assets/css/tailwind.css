@@ -1,14 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-@layer base {
+@layer tailwind-base, primevue, tailwind-utilities;
+
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-/* 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%; */
 
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
@@ -38,9 +36,7 @@
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
 
-    /* --card: 24 9.8% 10%;
-    --card-foreground: 0 0% 95%; */
-
+   
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 95%;
 
@@ -63,4 +59,14 @@
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
   }
+} */
+
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
 }

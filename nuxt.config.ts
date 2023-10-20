@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue'],
   css: [
-    'primevue/resources/themes/lara-dark-teal/theme.css',
+    'primevue/resources/themes/tailwind-light/theme.css',
     '@/assets/css/main.scss',
     "primeicons/primeicons.css"
   ],
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     },
     components: {
       prefix: 'Prime',
-      include: ['Carousel', 'Button', 'Rating', 'InputText', 'InputNumber', 'Message'],
+      include: ['Carousel', 'Button', 'Rating', 'InputText', 'InputNumber', 'Message', 'Accordion', 'AccordionTab'],
       exclude: undefined
     },
   }

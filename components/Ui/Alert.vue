@@ -13,7 +13,7 @@
                                 cras semper.</p>
                         </div>
                     </div>
-                    <a href v-ripple
+                    <a href="" v-ripple
                         class="ml-9 sm:ml-auto no-underline text-secondary font-medium mt-3 lg:mt-0 cursor-pointer p-ripple">
                         <span>Learn More</span>
                     </a>
