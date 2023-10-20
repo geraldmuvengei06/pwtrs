@@ -35,7 +35,7 @@ const menu = [
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </label>
-                <ul tabindex="0" class="menu dropdown-content mt-3 z-[1] p-2 shadow bg-neutral text-base-100 rounded-box">
+                <ul tabindex="0" class="menu dropdown-content mt-3 z-[1] p-2 shadow bg-[#F5F6FC] text-neutral rounded-box">
                     <li v-for="item, i in menu" :key="i + 'menu'">
                         <NuxtLink :to="item?.link">{{ item.name }}</NuxtLink>
                     </li>
