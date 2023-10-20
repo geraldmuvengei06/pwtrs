@@ -6,7 +6,7 @@
             <div
                 class="flex flex-col items-center sm:flex-row bg-gradient-to-tr from-secondary to-[#F2F8FC]  via-[#FEF6F4] rounded-lg gap-4">
 
-                <img class="w-1/3" src="/img/Team spirit-pana.png" />
+                <img class="sm:w-1/3" src="/img/Team spirit-pana.png" />
 
                 <div class="py-8 px-8 sm:w-2/3">
 

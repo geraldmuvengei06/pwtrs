@@ -40,7 +40,7 @@ const responsiveOptions = ref([
                     quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
             </div>
 
-            <div class="grid grid-flow-row sm:grid-flow-col gap-2 mx-4 text-center">
+            <div class="hidden sm:grid grid-flow-row sm:grid-flow-col gap-2 mx-4 text-center">
                 <p class="text-gray-400 text-sm sm:border-r-2 border-r-primary">
                     Our Writers Have Graduated from the Best Universities and Colleges
                 </p>

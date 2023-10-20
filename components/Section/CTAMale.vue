@@ -18,7 +18,7 @@
 
                 </div>
 
-                <img class="w-1/3" src="/img/Telecommuting-pana.png" />
+                <img class="sm:w-1/3" src="/img/Telecommuting-pana.png" />
 
             </div>
 
