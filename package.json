@@ -20,9 +20,11 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-vue-next": "^0.287.0",
+    "pinia": "^2.1.7",
     "primeicons": "^6.0.1",
     "radix-vue": "^0.4.1",
     "sass": "^1.62.1",

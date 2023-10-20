@@ -70,7 +70,7 @@ strong {
 
 .p-accordion .p-accordion-header {
     &:not(.p-disabled).p-highlight .p-accordion-header-link {
-        @apply rounded-lg  bg-base-100  ring-1 ring-slate-200;
+        @apply rounded-lg  bg-base-100  ring-1 ring-slate-100;
     }
 
 }

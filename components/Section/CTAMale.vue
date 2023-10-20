@@ -4,7 +4,7 @@
 
 
             <div
-                class="flex flex-col items-center sm:flex-row bg-gradient-to-tr from-primary via-[#F2F8FC]  to-[#FEF6F4]  rounded-lg gap-4">
+                class="flex flex-col items-center sm:flex-row bg-gradient-to-tr from-primary via-[#F2F8FC]  to-[#FEF6F4]  rounded-lg gap-4 hover:shadow-lg">
 
                 
                 <div class="py-8 px-8 sm:w-2/3">

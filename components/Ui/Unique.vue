@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 
 <template>
-    <div class="card glass hover:ring-1 hover:shadow-md">
+    <div class="card glass hover:shadow-md">
         <div class="card-body">
             <div class="avatar">
                 <div class="bg-primary bg-opacity-50 p-2 rounded-xl ">

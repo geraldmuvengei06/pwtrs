@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue', '@pinia/nuxt'],
   css: [
     'primevue/resources/themes/tailwind-light/theme.css',
     '@/assets/css/main.scss',
@@ -38,6 +38,9 @@ export default defineNuxtConfig({
       include: ['Carousel', 'Button', 'Rating', 'InputText', 'InputNumber', 'Message', 'Accordion', 'AccordionTab'],
       exclude: undefined
     },
-  }
+  },
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
 
 })

@@ -1,5 +1,7 @@
 # Nuxt 3 Minimal Starter
 
+[Color scheme](https://coolors.co/palette/9c7bac-ff7f2d-7cb078-d0e6ff-4a4b4b-4cb1ff-f5faf5-f2f8fc-fef6f4-f5f6fc)
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup

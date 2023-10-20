@@ -1,7 +1,7 @@
 <template>
     <div class="">
         <div class="container mx-auto py-16 px-4">
-            <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex flex-col items-center gap-6">
 
                 <div class="sm:w-1/2">
                     <h2 class="text-xl sm:text-3xl mb-5 mt-4">Write My Paper! – No Problem!</h2>

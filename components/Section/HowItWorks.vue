@@ -27,7 +27,7 @@ let accordion_items = [
             <div class="section-header my-8 text-center max-w-lg mx-auto">
 
                 <h2 class="text-2xl sm:text-4xl ">How to Order</h2>
-                <p class="text-primary sm:text-2xl">How to Hire a Professional to "Do My Paper Online"? </p>
+                <p class="">How to Hire a Professional to "Do My Paper Online"? </p>
             </div>
 
 
@@ -44,7 +44,7 @@ let accordion_items = [
                                 <template #header>
                                     <!-- <i :class="tab.icon"></i> -->
                                     <div class="avatar " :class="active == i && 'animate-bounces'">
-                                        <div class="bg-primary bg-opacity-50 p-2 rounded-xl ">
+                                        <div class="bg-info bg-opacity-20 p-2 rounded-xl ">
                                             <span class="text-4xl pt-1" :class="tab.icon"></span>
                                         </div>
                                     </div>

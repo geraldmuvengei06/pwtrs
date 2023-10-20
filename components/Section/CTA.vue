@@ -2,11 +2,10 @@
     <div class="">
         <div class="container mx-auto py-16 px-4">
 
-
             <div
-                class="flex flex-col items-center sm:flex-row bg-gradient-to-tr from-secondary to-[#F2F8FC]  via-[#FEF6F4] rounded-lg gap-4">
+                class="flex flex-col items-center sm:flex-row bg-gradient-to-tr to-secondary from-[#F2F8FC]  via-[#FEF6F4] rounded-lg gap-4 hover:shadow-lg">
 
-                <img class="sm:w-1/3" src="/img/Team spirit-pana.png" />
+                <img class="sm:w-1/3" src="/img/creative-writing-animate (1).svg" />
 
                 <div class="py-8 px-8 sm:w-2/3">
 
