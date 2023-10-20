@@ -1,22 +1,5 @@
 <script setup>
-let key_factors = [
-    {
-        item: 'Lighting-fast turnaround time',
-        icon: '',
-    },
-    {
-        item: 'Help with any assignment',
-        icon: '',
-    },
-    {
-        item: 'Plagiarism-free content',
-        icon: '',
-    },
-    {
-        item: 'Writers from the US and Canada',
-        icon: '',
-    }
-]
+let { key_factors } = contentStore()
 </script>
 
 <template>

@@ -1,6 +1,6 @@
 <template>
         <div>
-                <small>Pay via:</small> 
+                <small>Secure Payment:</small> 
                 <br />
 
                 <div class="flex flex-row gap-4">

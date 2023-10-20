@@ -1,56 +1,82 @@
 export const contentStore = defineStore('content', () => {
     const services = [
         {
-            item: 'Online Nursing Assignment Help',
-            link: ''
+            item: 'Online Assignment Help',
+            link: 'online-assignment-help',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Assignment Help',
-            link: ''
+            item: 'Assignment Help',
+            link: 'assignment-help',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Dissertation Writing Services',
-            link: ''
+            item: 'Dissertation Writing Services',
+            link: 'dissertation-writing-services',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Capstone Project Writing Services',
-            link: ''
+            item: 'Capstone Project Writing Services',
+            link: 'capstone-project-writing-services',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Best Nursing Essay Writing Company',
-            link: ''
+            item: 'Best Essay Writing Company',
+            link: 'best-essay-writing-company',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Best Online Nursing Assignment Help',
-            link: ''
+            item: 'Best Online Assignment Help',
+            link: 'best-online-assignment-help',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Term Paper Writing Services',
-            link: ''
+            item: 'Term Paper Writing Services',
+            link: 'term-paper-writing-services',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Report Writing Services',
-            link: ''
+            item: 'Report Writing Services',
+            link: 'report-writing-services',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Essay Assignments',
-            link: ''
+            item: 'Essay Assignments',
+            link: 'essay-assignments',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Assignment Writing',
-            link: ''
+            item: 'Assignment Writing',
+            link: 'assignment-writing',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Case Study Writing Services',
-            link: ''
+            item: 'Case Study Writing Services',
+            link: 'case-study-writing-services',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Coursework Writing',
-            link: ''
+            item: 'Coursework Writing',
+            link: 'coursework-writing',
+            content: '',
+            content_type: 'markdown'
         },
         {
-            item: 'Nursing Research Paper Writing Services',
-            link: ''
+            item: 'Research Paper Writing Services',
+            link: 'research-paper-writing-services',
+            content: '',
+            content_type: 'markdown'
         }
     ];
 
@@ -83,6 +109,25 @@ export const contentStore = defineStore('content', () => {
         }
     ]
 
+    const key_factors = [
+        {
+            item: 'Lighting-fast turnaround time',
+            icon: '',
+        },
+        {
+            item: 'Help with any assignment',
+            icon: '',
+        },
+        {
+            item: 'Plagiarism-free content',
+            icon: '',
+        },
+        {
+            item: 'Writers from the US and Canada',
+            icon: '',
+        }
+    ]
 
-    return { services, menu }
+
+    return { services, menu, key_factors }
 })

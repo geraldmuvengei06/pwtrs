@@ -37,7 +37,7 @@ let { menu, services } = contentStore()
                         <summary>Services</summary>
                         <ul class="p-2 min-w-max  overflow-y-scroll shadow menu">
                             <li v-for="service, i in services.splice(0, 5)" :key="i + 's'">
-                                <NuxtLink :to="service.link">{{ service.item }}</NuxtLink>
+                                <NuxtLink :to=" '/services/' + service.link">{{ service.item }}</NuxtLink>
                             </li>
                             <li v-if="services.length > 5"><span>...</span></li>
                         </ul>

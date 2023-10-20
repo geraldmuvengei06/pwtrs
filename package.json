@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@tailwindcss/typography": "^0.5.10",
     "daisyui": "^3.9.3",
     "nuxt": "^3.7.4",
     "nuxt-primevue": "^0.0.3",

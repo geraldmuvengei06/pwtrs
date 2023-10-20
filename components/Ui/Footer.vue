@@ -37,7 +37,7 @@ const year =  new Date().getFullYear();
     </aside>
     <nav>
       <header class="footer-title">Services</header>
-      <NuxtLink v-for="service, i in services" :key="i" class="link link-hover">{{ service.item }}</NuxtLink>
+      <NuxtLink v-for="service, i in services" :key="i" :to="'/services/' + service.link" class="link link-hover">{{ service.item }}</NuxtLink>
 
     </nav>
     <nav>

@@ -3,10 +3,10 @@
     <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
         <div class="container mx-auto py-8">
             <div class="hero rounded-xl min-h-min ">
-                <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="hero-content flex-col sm:flex-row-reverse">
 
-                    <!-- <img src="/img/typing-animate.svg"
-            class=" sm:absolute lg:relative sm:right-1 sm:z-0 md:flex sm:max-w-sm md:max-w-md" /> -->
+                    <img src="/img/learning-animate.svg"
+            class="md:flex sm:max-w-sm md:max-w-md" />
 
 
                     <div class="sm:z-10">
@@ -18,12 +18,7 @@
                                 delivery time</b> and fully original content.
                         </p>
 
-                        <ul class="w-full text-lg hover:bg-transparent py-4">
-                            <li v-for="factor, i in key_factors" :key="i + 'f'" class="hover:bg-transparent"><span
-                                    class="px-0"><i class="pi pi-check text-xl mr-2 text-primary"></i>{{ factor.item
-                                    }}</span>
-                            </li>
-                        </ul>
+                      
 
                         <UiPayment class="hidden sm:inline" />
 

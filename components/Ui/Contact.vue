@@ -47,6 +47,6 @@ let props = withDefaults(defineProps<Props>(), {
         <p class="flex items-center gap-4 my-2"><span class="pi text-2xl pi-envelope text-red-500"></span>{{ contacts.mail
         }} </p>
 
-        <button class="btn btn-primary bg-green-500 text-white mt-8"><span
-                class="pi text-2xl pi-whatsapp text-white"></span> WhatsApp Chat</button>
+        <!-- <button class="btn btn-primary bg-green-500 text-white mt-8"><span
+                class="pi text-2xl pi-whatsapp text-white"></span> WhatsApp Chat</button> -->
 </div></template>

@@ -5,9 +5,11 @@
     <div class="min-w-full">
         <SectionHero />
         <SectionReviews />
-        <SectionUnique />
         <SectionExperts />
-        <SectionCTA />
+        <SectionSamples />
+        <SectionUnique />
+        <SectionFreeFeatures />
+        <SectionCTADark />
         <SectionHowItWorks />
         <SectionFaq />
         <SectionSeo />

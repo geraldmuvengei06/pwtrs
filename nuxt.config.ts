@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     head: {
       title: "Proswriters",
     },
+    // pageTransition: { name: 'page', mode: 'out-in' },
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   devtools: { enabled: true },
