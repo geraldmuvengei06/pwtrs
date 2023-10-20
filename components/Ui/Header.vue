@@ -11,7 +11,7 @@ const menu = [
     },
     {
         name: 'How it Works',
-        link: '/home',
+        link: '/',
     },
     {
         name: 'Samples',
@@ -26,7 +26,7 @@ const menu = [
 
 
 <template>
-    <div class="navbar bg-base-100 shadow sticky top-0 z-50">
+    <div class="navbar bg-[#F5F6FC] custom sticky top-0 z-50">
         <div class="navbar-start">
             <div class="dropdown">
                 <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -40,7 +40,7 @@ const menu = [
                         <NuxtLink :to="item?.link">{{ item.name }}</NuxtLink>
                     </li>
                     <li>
-                        <div><a class="btn btn-secondary btnoutline">Dashboard</a></div>
+                        <div><a class="btn btn-secondary btn-outline">Dashboard</a></div>
                     </li>
                 </ul>
             </div>
@@ -65,7 +65,7 @@ const menu = [
         </div>
         <div class="navbar-end flex gap-2">
             <a class="btn btn-primary">Order Now</a>
-            <a class="btn btn-primary btn-outline hidden sm:flex">Dashboard</a>
+            <a class="btn btn-secondary btn-outline hidden sm:flex">Dashboard</a>
         </div>
     </div>
 </template>
@@ -75,4 +75,13 @@ const menu = [
     // min-width: calc(100% - 20px) !important;
     width: 96vw !important;
 }
+.custom{
+      box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.03);
+
+}
+
+.router-link-exact-active {
+  @apply rounded-lg text-primary font-semibold hover:text-primary;
+}
+
 </style>

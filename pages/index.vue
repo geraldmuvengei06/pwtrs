@@ -3,13 +3,16 @@
 
 <template>
     <div class="min-w-full">
-        <SectionHero /> 
+        <SectionHero />
         <SectionReviews />
         <SectionUnique />
         <SectionExperts />
         <SectionCTA />
         <SectionHowItWorks />
+        <SectionFaq />
         <SectionSeo />
         <SectionCTAMale />
+
+
     </div>
 </template>

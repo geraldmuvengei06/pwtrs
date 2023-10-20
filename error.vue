@@ -21,8 +21,9 @@ function goBack() {
         <div
             class="error-container absolute px-4 my-10 mx-9 right-0 left-0 top-0 bottom-0 border border-primary flex flex-col-reverse sm:flex-row justify-around items-center">
             <div class="py-4">
-                <NuxtLayout :name="error?.statusCode" :statusCode="error?.statusCode" :message="error?.message"
+                <NuxtLayout :stack="error?.stack" :name="error?.statusCode" :statusCode="error?.statusCode" :message="error?.message"
                     class="break-words" />
+
                 <div class="flex flex-row items-center py-4 gap-4">
                     <NuxtLink class="btn btn-primary" to='/'>
                         Home

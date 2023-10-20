@@ -51,7 +51,7 @@ let key_factors = [
                         <div class="flex gap-4">
                             <!-- <div class="rounded overflow-hidden shadow w-28 "><img class="grayscale" src="/img/visa-mastercard.jpg" /></div>
                             <div class="rounded overflow-hidden shadow w-28 "><img class="grayscale" src="/img/trustpilog.png" /></div> -->
-                            <button class="sm:mt-9 btn btn-secondary flex sm:hidden text-slate-50">Order Now</button>
+                            <button class="sm:mt-9 btn btn-primary flex sm:hidden text-slate-50">Order Now</button>
                             <button class="sm:mt-9 btn btn-secondary btn-outline flex sm:hidden text-slate-50">Talk to An
                                 Expert</button>
                         </div>

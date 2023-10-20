@@ -5,7 +5,8 @@ definePageMeta({
 })
 const props = defineProps<{
     statusCode?: string | number,
-    message: string
+    message: string,
+    stack: string,
 }>()
 </script>
 
@@ -13,7 +14,6 @@ const props = defineProps<{
     <div>
         <h1 class="text-5xl text-primary italic font-bold">{{ statusCode }}</h1>
         <p class="my-4 text-4xl text-[#505560]  break-all">{{ message || "Something gone missing..." }}</p>
-        <p class="my-4">We couldn’t find the page, The page was removed or renamed</p>
         <slot />
     </div>
 </template>

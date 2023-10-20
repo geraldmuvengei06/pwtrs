@@ -8,4 +8,5 @@
     <UiAlert v-if="notification" />
     <UiHeader />
    <slot></slot>
+   <UiFooter />
 </template>

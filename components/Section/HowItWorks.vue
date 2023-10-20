@@ -67,35 +67,3 @@ let accordion_items = [
         </div>
     </div>
 </template>
-
-
-<style lang="scss">
-.accordion-custom i span {
-    vertical-align: middle;
-    /* @apply bg-base-100; */
-}
-
-.p-icon.p-accordion-toggle-icon{
-    float: right !important;
-    display: hidden !important;
-}
-
-.p-accordion .p-accordion-header {
-    &:not(.p-disabled).p-highlight .p-accordion-header-link {
-        @apply rounded-lg ring-1 ring-slate-300 bg-slate-50;
-    }
-
-}
-
-
-
-
-.accordion-custom span {
-    margin: 0 0.5rem;
-}
-
-.p-accordion p {
-    line-height: 1.5;
-    margin: 0;
-}
-</style>

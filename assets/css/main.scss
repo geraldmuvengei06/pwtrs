@@ -4,6 +4,9 @@ html,
 body {
   background-color: #fff;
   font-family: "Roboto Slab", serif;
+  @apply w-full;
+  margin: 0;
+  padding: 0;
 }
 
 p,
@@ -22,6 +25,7 @@ h6,
 b,
 strong {
   font-family: "Young Serif", serif;
+  @apply leading-relaxed;
 }
 
 .btn {
@@ -52,4 +56,31 @@ strong {
       position: absolute;
     }
   }
+}
+
+.accordion-custom i span {
+    vertical-align: middle;
+    /* @apply bg-base-100; */
+}
+
+.p-icon.p-accordion-toggle-icon{
+    float: right !important;
+    display: hidden !important;
+}
+
+.p-accordion .p-accordion-header {
+    &:not(.p-disabled).p-highlight .p-accordion-header-link {
+        @apply rounded-lg  bg-base-100  ring-1 ring-slate-200;
+    }
+
+}
+
+
+.accordion-custom span {
+    margin: 0 0.5rem;
+}
+
+.p-accordion p {
+    line-height: 1.5;
+    margin: 0;
 }

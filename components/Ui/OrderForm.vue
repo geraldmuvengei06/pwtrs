@@ -50,7 +50,7 @@
                     </select>
 
                 </div>
-                <button class="sm:mt-9 btn btn-secondary  text-slate-50">Order Now</button>
+                <button class="sm:mt-9 btn btn-primary">Order Now</button>
 
         </div>
     </div>
