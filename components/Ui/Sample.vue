@@ -19,8 +19,8 @@ let _rating = toRef(props?.rating)
 
 
 <template>
-    <div class="card m-2  max-w-xs bg-slate-50 hover:shadow-md">
-        <div class="card-body py-4 ">
+    <div class="card mx-1 max-w-xs bg-slate-50 hover:shadow-md">
+        <div class="card-body p-4 ">
             <h4 class="text-lg sm:text-xl flex sm:flex-row gap-1">
                 <span class="pi pi-file text-3xl sm:text-5xl"></span>
                 <span>The Importance and Impacts of Narratives in o</span>
@@ -33,7 +33,7 @@ let _rating = toRef(props?.rating)
 
             <div class="card-actions justify-between">
                     <button class="btn btn-primary">View</button>
-                    <button class="btn btn-primary btn-outline">Order Now</button>
+                    <button class="btn btn-secondary btn-outline">Order Now</button>
                 </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
                 class="flex flex-col items-center sm:flex-row bg-gradient-to-tr from-[#F2F8FC]  to-[#FEF6F4]  rounded-lg gap-4 hover:shadow-lg">
 
                 
-                <div class="py-8 px-8 sm:w-2/3">
+                <div class="px-4 py py-8">
 
                     <h2 class="text-2xl sm:text-4xl ">Let <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Experts</span>  write a paper you will like!</h2>
                     <p class="my-4">

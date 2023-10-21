@@ -7,7 +7,7 @@
 
                 <NuxtImg alt=""  id="nuxt-img" class="w-48 sm:w-1/3 max-w-xs m-4" src="/img/creative-writing-animate.svg" />
 
-                <div class="py-8 px-8 sm:w-2/3">
+                <div class="px-4 py py-8">
 
                     <h2 class="text-2xl sm:text-4xl ">Talk to an <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Expert Writer</span> Now</h2>
                     <p class="my-4">

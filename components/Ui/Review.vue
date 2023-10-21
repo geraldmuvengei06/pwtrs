@@ -19,7 +19,7 @@ let _rating = toRef(props?.rating)
 
 
 <template>
-    <div class="card m-2  bg-slate-50 hover:shadow-md">
+    <div class="card mx-1 bg-slate-50 hover:shadow-md">
         <!-- <figure class="px-10 pt-10"> -->
         <!-- <div class="avatar">
                 <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -32,7 +32,7 @@ let _rating = toRef(props?.rating)
                 </div>
             </div>  -->
         <!-- </figure> -->
-        <div class="card-body py-4 ">
+        <div class="card-body p-4 ">
             <h4 class="card-title mb-0">John Doe</h4>
 
 

@@ -5,11 +5,11 @@
 
 @layer base {
   :root {
-        --primary-color: #7CB078;
+        --primary-color: #3ae88b;
   }
 
   .dark {
-            --primary-color: #7CB078;
+            --primary-color: #3ae88b;
   }
 } 
 

@@ -74,12 +74,12 @@ h6{
     display: hidden !important;
 }
 
-.p-accordion .p-accordion-header {
-    &:not(.p-disabled).p-highlight .p-accordion-header-link {
-        @apply rounded-lg  bg-base-100  ring-1 ring-slate-100;
-    }
+// .p-accordion .p-accordion-header {
+//     &:not(.p-disabled).p-highlight .p-accordion-header-link {
+//         @apply rounded-lg  bg-base-100  ring-1 ring-slate-100;
+//     }
 
-}
+// }
 
 
 .accordion-custom span {

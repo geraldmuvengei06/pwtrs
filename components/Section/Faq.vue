@@ -6,7 +6,7 @@
                 <div class="sm:w-1/3">
 
                     <div class="card glass my-8">
-                        <div class="card-body w max-w-lg mx-auto">
+                        <div class="card-body p-2 max-w-lg mx-auto ">
                             <UiContact />
                         </div>
                     </div>

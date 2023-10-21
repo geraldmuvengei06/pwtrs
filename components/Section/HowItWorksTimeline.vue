@@ -19,7 +19,7 @@
                 <template #content="slotProps">
                     <div class="card shadow-lg">
                         
-                        <div class="card-body">
+                        <div class="card-body p-4">
                             
                             <div class="card-subtitle">
                                 <strong class="text-xl sm:text-2xl">{{ slotProps.item.status }}</strong> <br />

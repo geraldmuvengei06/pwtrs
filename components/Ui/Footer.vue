@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
 </script>
 
 <template>
-  <footer class="footer p-10 bg-neutral text-neutral-content">
+  <footer class="footer px-4 py-10 bg-neutral text-neutral-content">
     <aside>
       <UiLogo />
       <p> &COPY; {{ year }} Reliable Expert Writers</p>
@@ -36,7 +36,7 @@ const year = new Date().getFullYear();
       <NuxtLink v-for="l, i in legal" :key="i" :to="l.link" class="link link-hover">{{ l.name }}</NuxtLink>
     </nav>
   </footer>
-  <footer class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+  <footer class="footer px-4 py-10 border-t bg-base-200 text-base-content border-base-300">
     <aside class="items-center grid-flow-row">
       <UiPayment />
     </aside>

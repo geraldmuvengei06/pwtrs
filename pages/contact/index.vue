@@ -25,9 +25,9 @@ useSeoMeta({
             class=" md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" /> -->
 
           <div class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-full sm:w-2/5">
-            <div class=" sm:p-4">
+            <div class="">
               <div class="card glass my-8">
-                <div class="card-body">
+                <div class="card-body p-4">
                   <UiContact />
                 </div>
               </div>
