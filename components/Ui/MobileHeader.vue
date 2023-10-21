@@ -49,4 +49,7 @@ let { menu, services } = contentStore()
     .p-menubar-root-list{
         @apply  bg-gradient-to-br from-[rgb(242,248,252)] to-[#FEF6F4] ;
     }
+    .p-menubar{
+        @apply sticky z-50 w-full backdrop-blur bg-white/75;
+    }
 </style>

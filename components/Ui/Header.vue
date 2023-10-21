@@ -5,7 +5,7 @@ let { menu, services } = contentStore()
 
 <template>
     <UiMobileHeader class="flex md:hidden " />
-    <div class="hidden md:flex navbar bg-gradient-to-br from-[#F2F8FC] to-[#FEF6F4] border-b-2 custom sticky top-0 z-50">
+    <div class="hidden md:flex navbar custom-nav bg-gradient-to-br from-[#F2F8FC]/80 to-[#FEF6F4]/80 border-b-2 backdrop-blur sticky top-0 z-50">
         <div class="navbar-start">
             <div class="dropdown">
                 <label tabindex="0" class="btn btn-ghost md:hidden">
@@ -66,4 +66,6 @@ let { menu, services } = contentStore()
 .router-link-exact-active {
     @apply rounded-lg text-primary font-semibold hover:text-primary;
 }
+
+
 </style>

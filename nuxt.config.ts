@@ -21,6 +21,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue', '@pinia/nuxt', "@nuxt/image", 
+    'nuxt-simple-sitemap',
   // '@productdevbook/chatwoot'
 ],
   css: [
@@ -70,6 +71,9 @@ export default defineNuxtConfig({
   //   },
   //   // If this is loaded you can make it true, https://github.com/nuxt-modules/partytown
   //   partytown: false,
-  // }
+  // },
+  site: {
+    url: 'https://onlinessaywriting.com',
+  },
 
 })
