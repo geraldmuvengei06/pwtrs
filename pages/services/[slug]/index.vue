@@ -174,7 +174,6 @@ useSeoMeta({
                 <p>Our team has helped around 3,000,000 students worldwide produce 12,000,000 projects. Our record-high 96%
                     satisfaction level is a testament to the impeccable service that we render and the unique content of our
                     writeups.</p>
-                <cta-container id="cta-container-0"></cta-container>
                 <p>The following are some of the reasons why students work on their research papers with us:</p>
                 <ul>
                     <li><strong>Premium Quality Writing Service<br></strong>Our clients deserve nothing less than the best.
