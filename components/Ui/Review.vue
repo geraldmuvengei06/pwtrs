@@ -23,7 +23,7 @@ let _rating = toRef(props?.rating)
         <!-- <figure class="px-10 pt-10"> -->
         <!-- <div class="avatar">
                 <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <NuxtImg id="nuxt-img" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                 </div>
             </div> -->
         <!-- <div class="avatar placeholder">

@@ -33,7 +33,7 @@ const responsiveOptions = ref([
 
 <template>
     <div class="">
-        <div class="container mx-auto py-16">
+        <div class="container mx-auto py-8 sm:py-16">
             <div class="section-header my-8 text-center max-w-lg mx-auto">
                 <h2 class="text-2xl sm:text-4xl ">A Wide Selection of Expert Writers</h2>
                 <p>Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
@@ -44,10 +44,10 @@ const responsiveOptions = ref([
                 <p class="text-gray-400 text-sm sm:border-r-2 border-r-primary">
                     Our Writers Have Graduated from the Best Universities and Colleges
                 </p>
-                <img src="/img/icons/harvard.svg" />
-                <!-- <img src="/img/icons/univ2.svg" /> -->
-                <!-- <img src="/img/icons/leads.png" /> -->
-                <img src="/img/icons/ss.svg" />
+                <NuxtImg id="nuxt-img" src="/img/icons/harvard.svg" />
+                <!-- <NuxtImg id="nuxt-img" src="/img/icons/univ2.svg" /> -->
+                <!-- <NuxtImg id="nuxt-img" src="/img/icons/leads.png" /> -->
+                <NuxtImg id="nuxt-img" src="/img/icons/ss.svg" />
             </div>
 
             <PrimeCarousel :value="experts" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" circular

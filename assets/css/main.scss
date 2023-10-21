@@ -35,7 +35,8 @@ strong {
 .p-carousel-indicators {
   @apply mt-2;
   .p-carousel-indicator {
-    @apply bg-slate-200 rounded-md;
+    @apply w-3 h-3 bg-slate-200 rounded-full;
+    
   }
 
   .p-carousel-indicator.p-highlight {

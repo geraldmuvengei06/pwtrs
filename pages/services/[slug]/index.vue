@@ -1,6 +1,18 @@
 <script setup>
 let { key_factors } = contentStore()
 
+const route = useRoute();
+
+let title = route.params.slug
+
+useSeoMeta({
+    title: title,
+    ogTitle: title,
+    description: 'This is my amazing site, let me tell you all about it.',
+    ogDescription: 'This is my amazing site, let me tell you all about it.',
+    ogImage: '',
+    twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
@@ -50,13 +62,13 @@ let { key_factors } = contentStore()
 
             <!-- Service content -->
 
-            <article class="prose prose-slate lg:prose-lg min-w-full">
+            <article class="prose prose-slate  max-w-4xl mx-auto">
 
                 
                     <p>Most of the time, research papers constitute students' final and most demanding requirements. Thus, the
                     majority of students are intimidated when it comes to producing a high-quality paper that can suffice,
                     if not exceed, their teachers' expectations. If you want a well-researched paper with less time and
-                    effort required, try proswriters's writing help services today!</p>
+                    effort required, try Onlinessaywriting's writing help services today!</p>
                 <h2>Write My Research Paper: Our Experts Will Help</h2>
                 <p>Academic papers involve in-depth analysis and comprehensive discussion of a research topic. Thus, they
                     are commonly given by professors as the final requirement for students in their courses. They use these
@@ -66,13 +78,13 @@ let { key_factors } = contentStore()
                 <p>These factors increase the difficulty of research paper writing, especially for novice writers who are
                     yet to develop a niche or field of specialization. Students often feel lost and confused in the middle
                     of creating their academic papers or lab report.</p>
-                <p>Fortunately, our research paper writing service, proswriters, boasts a team of seasoned writers ready to
+                <p>Fortunately, our research paper writing service, Onlinessaywriting, boasts a team of seasoned writers ready to
                     assist everyone from high school students to Ph.D. candidates.</p>
                 <h3>Diverse Expertise Available</h3>
-                <p>Behind our <a href="/research-paper-writing-service/">custom research paper writing service</a> are
+                <p>Behind our <a >custom research paper writing service</a> are
                     talented and highly skilled experts who graduated from prestigious universities, including those in the
                     Ivy League. They have extensive knowledge and experience when it comes to academic papers. Besides, all
-                    of them have gone through proswriters testing for the best result guarantee. Our authors are ready to share
+                    of them have gone through Onlinessaywriting testing for the best result guarantee. Our authors are ready to share
                     their expertise with you through our platform!</p>
                 <p>With 52,000 experts from around the world, our research paper writing service ensures you'll find the
                     ideal expert tailored to your research requirements. These professionals span various fields, ensuring a
@@ -83,7 +95,7 @@ let { key_factors } = contentStore()
                 <h4>Rigorous Writer Selection Process</h4>
                 <p>Our service philosophy is founded on excellence. We have a stringent application and hiring process that
                     ensures our writers are of top quality.</p>
-                <p>Required Qualifications for proswriters Writers:</p>
+                <p>Required Qualifications for Onlinessaywriting Writers:</p>
                 <ul>
                     <li>A Master's or Ph.D. degree.</li>
                     <li>Strong command of the English language.</li>
@@ -109,7 +121,7 @@ let { key_factors } = contentStore()
                     forbidden to duplicate existing works and commit plagiarism. All our works are wholly original. We start
                     from scratch until we finalize an output that is a product of the productive collaboration and ideation
                     between our experts and customers.</p>
-                <p>You need not worry about the uniqueness of your works. proswriters utilizes modern plagiarism checkers to
+                <p>You need not worry about the uniqueness of your works. Onlinessaywriting utilizes modern plagiarism checkers to
                     ensure the authenticity and originality of your paper. Customers can also check the uniqueness of their
                     existing works in the plagiarism checker offered by the platform. Institutions commonly require
                     plagiarism reports to counter-check the authenticity of papers.</p>
@@ -224,8 +236,8 @@ let { key_factors } = contentStore()
                     to forward any concerns or suggestions. We also have a customer support live chat button that you can
                     use to resolve concerns or inquiries immediately.</p>
                 <p>Got a deadline coming your way? Hire one of our experts today to assist you in your academic paper!
-                    Getting started with proswriters is easy. Simply fill out the order form, and let us know the instructions
-                    to accomplish your <a href="https://proswriters.com/buy-research-papers/">research paper</a>.</p>
+                    Getting started with Onlinessaywriting is easy. Simply fill out the order form, and let us know the instructions
+                    to accomplish your <a >research paper</a>.</p>
 
 
             </article>

@@ -2,79 +2,79 @@ export const contentStore = defineStore('content', () => {
     const services = [
         {
             item: 'Online Assignment Help',
-            link: 'online-assignment-help',
+            link: '/services/online-assignment-help',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Assignment Help',
-            link: 'assignment-help',
+            link: '/services/assignment-help',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Dissertation Writing Services',
-            link: 'dissertation-writing-services',
+            link: '/services/dissertation-writing-services',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Capstone Project Writing Services',
-            link: 'capstone-project-writing-services',
+            link: '/services/capstone-project-writing-services',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Best Essay Writing Company',
-            link: 'best-essay-writing-company',
+            link: '/services/best-essay-writing-company',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Best Online Assignment Help',
-            link: 'best-online-assignment-help',
+            link: '/services/best-online-assignment-help',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Term Paper Writing Services',
-            link: 'term-paper-writing-services',
+            link: '/services/term-paper-writing-services',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Report Writing Services',
-            link: 'report-writing-services',
+            link: '/services/report-writing-services',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Essay Assignments',
-            link: 'essay-assignments',
+            link: '/services/essay-assignments',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Assignment Writing',
-            link: 'assignment-writing',
+            link: '/services/assignment-writing',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Case Study Writing Services',
-            link: 'case-study-writing-services',
+            link: '/services/case-study-writing-services',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Coursework Writing',
-            link: 'coursework-writing',
+            link: '/services/coursework-writing',
             content: '',
             content_type: 'markdown'
         },
         {
             item: 'Research Paper Writing Services',
-            link: 'research-paper-writing-services',
+            link: '/services/research-paper-writing-services',
             content: '',
             content_type: 'markdown'
         }
@@ -82,31 +82,33 @@ export const contentStore = defineStore('content', () => {
 
 
     const menu = [
-        // {
-        //     name: 'WhatsApp Chat',
-        //     link: 'https://wa.me/',
-        //     icon: 'pi pi-whatsapp text-green-500'
-        // },
+        
         {
-            name: 'FAQ',
-            link: '/faq',
+            name: 'Samples',
+            link: '/samples',
         },
         {
             name: 'How it Works',
             link: '/how-it-works',
         },
         {
-            name: 'Samples',
-            link: '/samples',
+            name: 'Services',
+            items: services
         },
         {
             name: 'Contact Us',
             link: '/contact',
         },
         {
+            name: 'FAQ',
+            link: '/faq',
+        },
+        {
             name: 'About Us',
             link: '/about-us',
-        }
+        },
+       
+        
     ]
 
     const key_factors = [

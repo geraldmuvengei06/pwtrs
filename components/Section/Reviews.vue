@@ -63,23 +63,23 @@ const responsiveOptions = ref([
 
 
 <template>
-    <div class="container mx-auto py-16">
+    <div class="container mx-auto py-8 sm:py-16">
         <div class="section-header my-8 text-center max-w-lg mx-auto px-4">
             <h2 class="text-2xl sm:text-4xl ">What Other Students Say</h2>
             <p>Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                 quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
 
-            <div class="flex flex-row gap-4 justify-between md:justify-center">
-                <div class="flex items-center justify-start flex-row border-2 rounded-lg px-2">
-                    <div class="w-24"><img src="/img/reviewsio.png" /></div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-between md:justify-center">
+                <div class="flex items-center justify-center sm:justify-start flex-row rounded-lg px-2">
+                    <div class="w-24"><NuxtImg id="nuxt-img" src="/img/reviewsio.png" /></div>
                     <p class="text-2xl w-1/4 flex flex-row items-center">
                         <span class="pi pi-star-fill text-orange-400 text-2xl"></span>
                         4.5
                     </p>
                 </div>
 
-                 <div class="flex items-center justify-start flex-row border-2 rounded-lg px-2">
-                        <div class="w-24"><img src="/img/sitejabber.png" /></div>
+                 <div class="flex items-center justify-center sm:justify-start flex-row rounded-lg px-2">
+                        <div class="w-24"><NuxtImg id="nuxt-img" src="/img/sitejabber.png" /></div>
                         <p class="text-2xl w-1/4 flex flex-row items-center">
                             <span class="pi pi-star-fill text-orange-400 text-2xl"></span>
                             4.7
@@ -89,8 +89,7 @@ const responsiveOptions = ref([
 
             </div>
         </div>
-        <PrimeCarousel :value="reviews" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" circular
-            :autoplayInterval="3000" class="mb-4">
+        <PrimeCarousel :value="reviews" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions"  class="mb-4">
             <template #item="slotProps">
                 <UiReview v-bind="slotProps.data" />
             </template>

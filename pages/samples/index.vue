@@ -1,4 +1,18 @@
 
+<script setup>
+
+let title = "Free Samples"
+useSeoMeta({
+    title: title,
+    ogTitle: title,
+    description: 'This is my amazing site, let me tell you all about it.',
+    ogDescription: 'This is my amazing site, let me tell you all about it.',
+    ogImage: '',
+    twitterCard: 'summary_large_image',
+})
+</script>
+
+
 <template>
     <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
         <div class="container mx-auto py-8">

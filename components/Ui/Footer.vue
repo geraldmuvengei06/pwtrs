@@ -21,28 +21,32 @@ const legal = [
   }
 ]
 
-const year =  new Date().getFullYear();
+const year = new Date().getFullYear();
 </script>
 
 <template>
   <footer class="footer p-10 bg-neutral text-neutral-content">
     <aside>
-      <header class="footer-title">Contact Us</header>
+      <UiLogo />
+      <p> &COPY; {{ year }} Reliable Expert Writers</p>
+      <header class="footer-title mt-4">Contact Us</header>
 
       <!-- <div class="card max-w-xs glass my-8">
         <div class="card-body"> -->
-          <UiContact :minimal="true" />
-        <!-- </div>
+      <UiContact :minimal="true" />
+      <!-- </div>
       </div> -->
     </aside>
     <nav>
       <header class="footer-title">Services</header>
-      <NuxtLink v-for="service, i in services" :key="i" :to="'/services/' + service.link" class="link link-hover">{{ service.item }}</NuxtLink>
+      <NuxtLink v-for="service, i in services" :key="i" :to="service.link" class="link link-hover">{{ service.item }}
+      </NuxtLink>
 
     </nav>
     <nav>
       <header class="footer-title">Company</header>
-      <NuxtLink v-for="item, i in menu" :key="i + 'x'" :to="item?.link" class="link link-hover"><span v-if="item.icon" class="mr-2" :class="item.icon"></span>{{ item.name }}</NuxtLink>
+      <NuxtLink v-for="item, i in menu" :key="i + 'x'" :to="item?.link" class="link link-hover"><span v-if="item.icon"
+          class="mr-2" :class="item.icon"></span>{{ item.name }}</NuxtLink>
     </nav>
     <nav>
       <header class="footer-title">Legal</header>
@@ -53,17 +57,12 @@ const year =  new Date().getFullYear();
   </footer>
   <footer class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
     <aside class="items-center grid-flow-row">
-       <UiLogo />
-        <p>Reliable Expert Writers 
-          <br />
-          &COPY; {{year   }}
-        </p>
-      
+      <UiPayment />
     </aside>
     <nav class="md:place-self-center md:justify-self-end">
-        <UiPayment />
-        <UiProtection />
-      </nav>
+      
+      <UiProtection />
+    </nav>
     <!-- <nav class="md:place-self-center md:justify-self-end">
       <div class="grid grid-flow-col gap-4">
         <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">

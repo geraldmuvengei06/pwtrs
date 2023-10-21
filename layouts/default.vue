@@ -6,7 +6,7 @@
 
     <!-- Promo -->
     <UiAlert v-if="notification" />
-    <UiHeader />
+    <UiHeader/>
    <slot></slot>
    <UiFooter />
 </template>

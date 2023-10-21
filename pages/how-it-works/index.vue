@@ -1,12 +1,25 @@
 
+<script setup>
+
+let title = "How it Works"
+useSeoMeta({
+    title: title,
+    ogTitle: title,
+    description: 'This is my amazing site, let me tell you all about it.',
+    ogDescription: 'This is my amazing site, let me tell you all about it.',
+    ogImage: '',
+    twitterCard: 'summary_large_image',
+})
+</script>
+
 <template>
     <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
         <div class="container mx-auto py-8">
             <div class="hero rounded-xl min-h-min ">
                 <div class="hero-content flex-col sm:flex-row-reverse">
 
-                    <img src="/img/learning-animate.svg"
-            class="md:flex sm:max-w-sm md:max-w-md" />
+                    <NuxtImg id="nuxt-img" src="/img/learning-animate.svg"
+            class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
 
                     <div class="sm:z-10">
@@ -32,7 +45,8 @@
         </div>
     </div>
     <div class="container mx-auto">
-        <SectionHowItWorks />
+        <!-- <SectionHowItWorks /> -->
+        <SectionHowItWorksTimeline />
         <SectionReviews />
         <SectionUnique />
         <SectionCTAMale />

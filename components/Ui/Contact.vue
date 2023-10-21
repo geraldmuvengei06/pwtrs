@@ -8,6 +8,7 @@ const contacts = {
     mail: 'support@test.com'
 }
 
+// const { isModalVisible, toggle, toggleBubbleVisibility, popoutChatWindow } = useChatWoot()
 
 let props = withDefaults(defineProps<Props>(), {
     minimal: false
@@ -22,31 +23,30 @@ let props = withDefaults(defineProps<Props>(), {
             <div class="avatar-group -space-x-6">
                 <div class="avatar">
                     <div class="w-12 sm:w-16">
-                        <img src="/img/writer.png" />
+                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
                 <div class="avatar">
                     <div class="w-12 sm:w-16">
-                        <img src="/img/writer.png" />
+                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
                 <div class="avatar">
                     <div class="w-12 sm:w-16">
-                        <img src="/img/writer.png" />
+                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
                 <div class="avatar">
                     <div class="w-12 sm:w-16">
-                        <img src="/img/writer.png" />
+                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
             </div>
         </span>
-        <p class="flex items-center gap-4 my-2"><span class="pi text-2xl pi-whatsapp text-green-500"></span>{{
+        <p class="flex items-center gap-4 my-2"><span class="pi pi-whatsapp"></span>{{
             contacts.whatsapp }} </p>
-        <p class="flex items-center gap-4 my-2"><span class="pi text-2xl pi-envelope text-red-500"></span>{{ contacts.mail
+        <p class="flex items-center gap-4 my-2"><span class="pi pi-envelope"></span>{{ contacts.mail
         }} </p>
 
-        <!-- <button class="btn btn-primary bg-green-500 text-white mt-8"><span
-                class="pi text-2xl pi-whatsapp text-white"></span> WhatsApp Chat</button> -->
+        <!-- <button class="btn btn-primary bgg-primary-500 text-white mt-8" @click="toggle('open')">Talk to an Agent</button> -->
 </div></template>

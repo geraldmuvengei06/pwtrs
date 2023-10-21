@@ -10,7 +10,7 @@
                 </span>
                 <div class="avatar online ">
                     <div class="w-24 rounded-full">
-                        <img src="/img/writer.png" />
+                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
             </div>

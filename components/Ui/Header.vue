@@ -4,14 +4,15 @@ let { menu, services } = contentStore()
 
 
 <template>
-    <div class="navbar bg-gradient-to-br from-[#F2F8FC] to-[#FEF6F4] border-b-2 custom sticky top-0 z-50">
+    <UiMobileHeader class="flex md:hidden " />
+    <div class="hidden md:flex navbar bg-gradient-to-br from-[#F2F8FC] to-[#FEF6F4] border-b-2 custom sticky top-0 z-50">
         <div class="navbar-start">
             <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <label tabindex="0" class="btn btn-ghost md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg> 
+                    </svg>
                 </label>
                 <ul tabindex="0" class="menu dropdown-content mt-3 z-[1] p-2 shadow bg-[#F5F6FC] text-neutral rounded-box">
                     <li v-for="item, i in menu" :key="i + 'menu'">
@@ -22,27 +23,26 @@ let { menu, services } = contentStore()
                     </li>
                 </ul>
             </div>
-            <NuxtLink to="/" class="">
-                <!-- <img class="max-h-8 sm:max-h-14" src="/img/logo.png" /> -->
-                <UiLogo />
-            </NuxtLink>
+
+            <UiLogo />
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
                 <li v-for="item, i in menu" :key="i + 'menu'">
-                    <NuxtLink :to="item?.link"><span v-if="item.icon" :class="item.icon"></span> {{ item.name }}</NuxtLink>
-                </li>
-                <li tabindex="0">
-                    <details class="dropdown dropdown-end">
-                        <summary>Services</summary>
-                        <ul class="p-2 min-w-max  overflow-y-scroll shadow menu">
-                            <li v-for="service, i in services.splice(0, 5)" :key="i + 's'">
-                                <NuxtLink :to=" '/services/' + service.link">{{ service.item }}</NuxtLink>
+                    <NuxtLink :to="item?.link" v-if="!item.items"><span v-if="item.icon" :class="item.icon"></span> {{ item.name }}</NuxtLink>
+
+
+                    <details v-else class="dropdown">
+                        <summary tabindex="0">{{ item.name }}</summary>
+                        <ul  tabindex="0" class="p-2 w-80 overflow-y-scroll shadow">
+                            <li v-for="service, i in item.items" :key="i + 's'" >
+                                <NuxtLink :to="service.link">{{ service.item }}</NuxtLink>
                             </li>
                             <li v-if="services.length > 5"><span>...</span></li>
                         </ul>
                     </details>
                 </li>
+
             </ul>
         </div>
         <div class="navbar-end flex gap-2">
@@ -57,13 +57,13 @@ let { menu, services } = contentStore()
     // min-width: calc(100% - 20px) !important;
     width: 96vw !important;
 }
-.custom{
-      box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.03);
+
+.custom {
+    box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.03);
 
 }
 
 .router-link-exact-active {
-  @apply rounded-lg text-primary font-semibold hover:text-primary;
+    @apply rounded-lg text-primary font-semibold hover:text-primary;
 }
-
 </style>

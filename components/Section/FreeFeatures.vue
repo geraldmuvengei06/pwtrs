@@ -25,7 +25,7 @@ let unique = [
 
 <template>
     <div class="bg-neutral text-neutral-content">
-        <div class="container mx-auto py-16">
+        <div class="container mx-auto py-8 sm:py-16">
 
 
 

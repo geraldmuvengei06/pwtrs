@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@tailwindcss/typography": "^0.5.10",
     "daisyui": "^3.9.3",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
+    "@productdevbook/chatwoot": "^1.4.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-vue-next": "^0.287.0",

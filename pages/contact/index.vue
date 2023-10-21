@@ -1,5 +1,14 @@
 <script setup>
 
+let title = "Contact Us"
+useSeoMeta({
+  title: title,
+  ogTitle: title,
+  description: 'This is my amazing site, let me tell you all about it.',
+  ogDescription: 'This is my amazing site, let me tell you all about it.',
+  ogImage: '',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
@@ -12,11 +21,11 @@
                             <Vue3Lottie animationLink="/lotties/hero-2.json" />
                         </client-only> -->
           <!-- </div> -->
-          <!-- <img src="/img/typing-animate.svg"
-            class=" md:flex sm:max-w-sm md:max-w-md" /> -->
+          <!-- <NuxtImg id="nuxt-img" src="/img/typing-animate.svg"
+            class=" md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" /> -->
 
-          <div class="md:flex sm:max-w-sm md:max-w-md">
-            <div class="p-4">
+          <div class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-full sm:w-2/5">
+            <div class=" sm:p-4">
               <div class="card glass my-8">
                 <div class="card-body">
                   <UiContact />
@@ -46,7 +55,8 @@
     </div>
   </div>
   <div class="container mx-auto">
-     <SectionUnique />
+    <SectionExperts />
+    <SectionUnique />
     <SectionCTA />
   </div>
 </template>

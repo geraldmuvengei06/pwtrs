@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <div class="container mx-auto py-16 px-4">
+        <div class="container mx-auto py-8 sm:py-16 px-4">
 
 
             <div
@@ -18,7 +18,7 @@
 
                 </div>
 
-                <img class="sm:w-1/3" src="/img/Telecommuting-pana.png" />
+                <NuxtImg id="nuxt-img" class="w-48 sm:w-1/3 max-w-xs m-4" src="/img/Telecommuting-pana.png" />
 
             </div>
 

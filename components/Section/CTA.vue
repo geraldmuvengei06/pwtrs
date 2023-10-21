@@ -1,11 +1,11 @@
 <template>
     <div class="">
-        <div class="container mx-auto py-16 px-4">
+        <div class="container mx-auto py-8 sm:py-16 px-4">
 
             <div
-                class="flex flex-col items-center sm:flex-row bg-gradient-to-tr to-secondary from-[#F2F8FC]  via-[#FEF6F4] rounded-lg gap-4 hover:shadow-lg">
+                class="flex flex-col items-center sm:flex-row bg-gradient-to-tr from-[#F2F8FC]  to-[#FEF6F4] rounded-lg gap-4 hover:shadow-lg">
 
-                <img class="sm:w-1/3" src="/img/creative-writing-animate (1).svg" />
+                <NuxtImg id="nuxt-img" class="w-48 sm:w-1/3 max-w-xs m-4" src="/img/creative-writing-animate.svg" />
 
                 <div class="py-8 px-8 sm:w-2/3">
 

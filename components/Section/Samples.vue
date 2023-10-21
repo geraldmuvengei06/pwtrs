@@ -77,11 +77,11 @@ onMounted(() => {
 
 const samples = ref();
 const responsiveOptions = ref([
-    // {
-    //     breakpoint: '1199px',
-    //     numVisible: 1,
-    //     numScroll: 1
-    // },
+    {
+        breakpoint: '1199px',
+        numVisible: 1,
+        numScroll: 1
+    },
     {
         breakpoint: '991px',
         numVisible: 2,
@@ -99,7 +99,7 @@ const responsiveOptions = ref([
 
 
 <template>
-    <div class="container mx-auto py-16">
+    <div class="container mx-auto py-8 sm:py-16">
         <div class="section-header my-8 text-center max-w-lg mx-auto px-4">
             <h2 class="text-2xl sm:text-4xl ">Check Out Our Samples</h2>
             <p>Original. Quality. On time</p>

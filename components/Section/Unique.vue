@@ -25,7 +25,7 @@ let unique = [
 
 <template>
     <div class="bg-gradient-to-tr from-[#F2F8FC] via-[#FEF6F4] to-transparent">
-        <div class="container mx-auto py-16">
+        <div class="container mx-auto py-8 sm:py-16">
             <div class="section-header my-8 text-center max-w-lg mx-auto">
 
                 <h2 class="text-2xl sm:text-4xl ">How We Stand Out from the Crowd</h2>
