@@ -1,7 +1,7 @@
 <template>
     <div class="">
-        <div class="container mx-auto max-w-4xl py-8 sm:py-16 px-4">
-            <article class="prose prose-slate  max-w-4xl mx-auto">
+        <div class="container mx-auto max-w-3xl py-8 sm:py-16 px-4">
+            <article class="prose prose-slate  max-w-3xl mx-auto">
                 
                    
                         <h2 class="text-xl sm:text-3xl mb-5 mt-4">Write My Paper! – No Problem!</h2>

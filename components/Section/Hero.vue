@@ -12,7 +12,7 @@ let { key_factors } = contentStore()
                             <Vue3Lottie animationLink="/lotties/hero-2.json" />
                         </client-only> -->
                     <!-- </div> -->
-                    <NuxtImg id="nuxt-img" src="/img/typing-animate.svg" class="hidden sm:inline sm:absolute lg:relative sm:right-1 sm:z-0 md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
+                    <NuxtImg alt=""  id="nuxt-img" src="/img/typing-animate.svg" class="hidden sm:inline sm:absolute lg:relative sm:right-1 sm:z-0 md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
                     <!-- <div class="flex sm:hidden w-full sm:max-w-sm md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">
                         <UiOrderFormDescription class="w-full" type="verticle" />

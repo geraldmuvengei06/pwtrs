@@ -34,9 +34,9 @@ let accordion_items = [
             <div>
                 <div class="flex flex-col sm:flex-row gap-4 px-4">
                     <div class="hidden sm:flex sm:w-2/4">
-                        <NuxtImg id="nuxt-img" v-if="active === 0" src="/img/order.png" />
-                        <NuxtImg id="nuxt-img" v-if="active === 1" src="/img/process.png" />
-                        <NuxtImg id="nuxt-img" v-if="active === 2" src="/img/download.png" />
+                        <NuxtImg alt=""  id="nuxt-img" v-if="active === 0" src="/img/order.png" />
+                        <NuxtImg alt=""  id="nuxt-img" v-if="active === 1" src="/img/process.png" />
+                        <NuxtImg alt=""  id="nuxt-img" v-if="active === 2" src="/img/download.png" />
                     </div>
                     <div class="sm:w-2/4">
                         <PrimeAccordion class="accordion-custom" v-model:activeIndex="active">
@@ -44,19 +44,19 @@ let accordion_items = [
                                 <template #header>
                                     <!-- <i :class="tab.icon"></i> -->
                                     <div class="avatar " :class="active == i && 'animate-bounces'">
-                                        <div class="bg-primary p-2 rounded-xl ">
-                                            <span class="text-4xl pt-1" :class="tab.icon"></span>
+                                        <div class=" p-2 rounded-xl ">
+                                            <span class="text-xl sm:text-4xl pt-1" :class="tab.icon"></span>
                                         </div>
                                     </div>
-                                    <h5 class="ml-2">{{ tab.header }}</h5>
+                                    <h6 class="ml-2">{{ tab.header }}</h6>
                                 </template>
                                 <p>
                                     {{ tab.content }}
                                 </p>
                                 <div class="block sm:hidden py-4">
-                                    <NuxtImg id="nuxt-img" v-if="i == 0" src="/img/order.png" />
-                                    <NuxtImg id="nuxt-img" v-if="i == 1" src="/img/process.png" />
-                                    <NuxtImg id="nuxt-img" v-if="i == 2" src="/img/download.png" />
+                                    <NuxtImg alt=""  id="nuxt-img" v-if="i == 0" src="/img/order.png" />
+                                    <NuxtImg alt=""  id="nuxt-img" v-if="i == 1" src="/img/process.png" />
+                                    <NuxtImg alt=""  id="nuxt-img" v-if="i == 2" src="/img/download.png" />
                                 </div>
                             </PrimeAccordionTab>
                         </PrimeAccordion>

@@ -21,7 +21,7 @@ useSeoMeta({
                             <Vue3Lottie animationLink="/lotties/hero-2.json" />
                         </client-only> -->
           <!-- </div> -->
-          <!-- <NuxtImg id="nuxt-img" src="/img/typing-animate.svg"
+          <!-- <NuxtImg alt=""  id="nuxt-img" src="/img/typing-animate.svg"
             class=" md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" /> -->
 
           <div class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-full sm:w-2/5">

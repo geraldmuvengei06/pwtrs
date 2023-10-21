@@ -62,7 +62,7 @@ useSeoMeta({
 
             <!-- Service content -->
 
-            <article class="prose prose-slate  max-w-4xl mx-auto">
+            <article class="prose prose-slate  max-w-3xl mx-auto">
 
                 
                     <p>Most of the time, research papers constitute students' final and most demanding requirements. Thus, the

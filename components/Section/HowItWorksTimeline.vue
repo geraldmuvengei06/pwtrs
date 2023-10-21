@@ -25,7 +25,7 @@
                                 <strong class="text-xl sm:text-2xl">{{ slotProps.item.status }}</strong> <br />
                                 {{ slotProps.item.date }}
                             </div>
-                            <NuxtImg v-if="slotProps.item.image"
+                            <NuxtImg alt=""  v-if="slotProps.item.image"
                                 :src="`/img/${slotProps.item.image}`"
                                 :alt="slotProps.item.name"  class="shadow-1" />
                             <p>

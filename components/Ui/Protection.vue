@@ -9,7 +9,7 @@
             </div>
 
             <div class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="DMCA">
-                <NuxtImg id="nuxt-img" class="h-5 sm:h-7 " src="/img/dmca.png" />
+                <NuxtImg alt=""  id="nuxt-img" class="h-5 sm:h-7 " src="/img/dmca.png" />
             </div>
 
 

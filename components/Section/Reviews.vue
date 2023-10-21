@@ -71,7 +71,7 @@ const responsiveOptions = ref([
 
             <div class="flex flex-col sm:flex-row gap-4 justify-between md:justify-center">
                 <div class="flex items-center justify-center sm:justify-start flex-row rounded-lg px-2">
-                    <div class="w-24"><NuxtImg id="nuxt-img" src="/img/reviewsio.png" /></div>
+                    <div class="w-24"><NuxtImg alt=""  id="nuxt-img" src="/img/reviewsio.png" /></div>
                     <p class="text-2xl w-1/4 flex flex-row items-center">
                         <span class="pi pi-star-fill text-orange-400 text-2xl"></span>
                         4.5
@@ -79,7 +79,7 @@ const responsiveOptions = ref([
                 </div>
 
                  <div class="flex items-center justify-center sm:justify-start flex-row rounded-lg px-2">
-                        <div class="w-24"><NuxtImg id="nuxt-img" src="/img/sitejabber.png" /></div>
+                        <div class="w-24"><NuxtImg alt=""  id="nuxt-img" src="/img/sitejabber.png" /></div>
                         <p class="text-2xl w-1/4 flex flex-row items-center">
                             <span class="pi pi-star-fill text-orange-400 text-2xl"></span>
                             4.7

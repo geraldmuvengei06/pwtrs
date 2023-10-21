@@ -44,10 +44,10 @@ const responsiveOptions = ref([
                 <p class="text-gray-400 text-sm sm:border-r-2 border-r-primary">
                     Our Writers Have Graduated from the Best Universities and Colleges
                 </p>
-                <NuxtImg id="nuxt-img" src="/img/icons/harvard.svg" />
-                <!-- <NuxtImg id="nuxt-img" src="/img/icons/univ2.svg" /> -->
-                <!-- <NuxtImg id="nuxt-img" src="/img/icons/leads.png" /> -->
-                <NuxtImg id="nuxt-img" src="/img/icons/ss.svg" />
+                <NuxtImg alt=""  id="nuxt-img" src="/img/icons/harvard.svg" />
+                <!-- <NuxtImg alt=""  id="nuxt-img" src="/img/icons/univ2.svg" /> -->
+                <!-- <NuxtImg alt=""  id="nuxt-img" src="/img/icons/leads.png" /> -->
+                <NuxtImg alt=""  id="nuxt-img" src="/img/icons/ss.svg" />
             </div>
 
             <PrimeCarousel :value="experts" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" circular
@@ -59,7 +59,7 @@ const responsiveOptions = ref([
 
             <!-- <div class="flex gap-4 items-center justify-center">
 
-                <button class="sm:mt-9 btn btn-secondary flex text-slate-50">Hire an Expert Writer</button>
+                <button class="sm:mt-9 btn btn-secondary flex">Hire an Expert Writer</button>
             </div> -->
 
         </div>

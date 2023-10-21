@@ -10,15 +10,15 @@
                 </span>
                 <div class="avatar online ">
                     <div class="w-24 rounded-full">
-                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
+                        <NuxtImg alt=""  id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
             </div>
 
 
             <h6>John Doe</h6>
-            <small class="text-gray-400 underline">Nursing/Healthcare</small>
-            <p class="text-sm"><b>345</b> <span class="text-gray-400">Finished Papers</span></p>
+            <small class=" underline">Nursing/Healthcare</small>
+            <p class="text-sm"><b>345</b> <span class="">Finished Papers</span></p>
         </div>
     </div>
 </template> 

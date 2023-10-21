@@ -13,7 +13,7 @@ let props = withDefaults(defineProps<Props>(), {
     <div class="card glass shadow-lg flat">
         <div class="card-body p-4 flex" :class="type == 'verticle' ? 'flex-column' : 'flex-column md:flex-row'">
             <div class="card-title" v-if="type == 'verticle'">
-                <h2 class="text-xl sm:text-3xl ">Find an Expert</h2>
+                <h4 class="text-xl sm:text-3xl ">Find an Expert</h4>
             </div>
 
             <div class="form-control">

@@ -3,7 +3,7 @@
 html,
 body {
   background-color: #fff;
-  font-family: "Roboto Slab", serif;
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont, "Roboto Slab" ,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
   @apply w-full;
   margin: 0;
   padding: 0;
@@ -12,8 +12,10 @@ body {
 
 p,
 li,
-small {
-  font-family: "Roboto Slab", serif;
+small,
+b,
+strong {
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont, "Roboto Slab" ,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
   @apply leading-loose;
 }
 
@@ -22,10 +24,8 @@ h2,
 h3,
 h4,
 h5,
-h6,
-b,
-strong {
-  font-family: "Young Serif", serif;
+h6{
+  font-family: "Young Serif", system-ui,-apple-system, BlinkMacSystemFont,  "Roboto Slab" ,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
   @apply leading-relaxed;
 }
 
@@ -35,12 +35,16 @@ strong {
 .p-carousel-indicators {
   @apply mt-2;
   .p-carousel-indicator {
-    @apply w-3 h-3 bg-slate-200 rounded-full;
-    
+   
+    button.p-link {
+       @apply w-3 h-3 bg-slate-200 rounded-full;
+  }
   }
 
   .p-carousel-indicator.p-highlight {
-    @apply bg-primary;
+     button.p-link {
+       @apply w-3 h-3 bg-primary rounded-full;
+  }
   }
 }
 

@@ -18,7 +18,7 @@ useSeoMeta({
             <div class="hero rounded-xl min-h-min ">
                 <div class="hero-content flex-col sm:flex-row-reverse">
 
-                    <NuxtImg id="nuxt-img" src="/img/learning-animate.svg"
+                    <NuxtImg alt=""  id="nuxt-img" src="/img/learning-animate.svg"
             class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
 

@@ -1,25 +1,8 @@
 <script setup>
 
-let { services, menu } = contentStore()
+let { services, menu, legal } = contentStore()
 
-const legal = [
-  {
-    item: '',
-    link: ''
-  },
-  {
-    item: '',
-    link: ''
-  },
-  {
-    item: '',
-    link: ''
-  },
-  {
-    item: '',
-    link: ''
-  }
-]
+
 
 const year = new Date().getFullYear();
 </script>
@@ -29,7 +12,7 @@ const year = new Date().getFullYear();
     <aside>
       <UiLogo />
       <p> &COPY; {{ year }} Reliable Expert Writers</p>
-      <header class="footer-title mt-4">Contact Us</header>
+      <header class="font-bold text-slate-100 mt-4">Contact Us</header>
 
       <!-- <div class="card max-w-xs glass my-8">
         <div class="card-body"> -->
@@ -38,21 +21,19 @@ const year = new Date().getFullYear();
       </div> -->
     </aside>
     <nav>
-      <header class="footer-title">Services</header>
+      <header class="font-bold text-slate-100">Services</header>
       <NuxtLink v-for="service, i in services" :key="i" :to="service.link" class="link link-hover">{{ service.item }}
       </NuxtLink>
 
     </nav>
     <nav>
-      <header class="footer-title">Company</header>
+      <header class="font-bold text-slate-100">Company</header>
       <NuxtLink v-for="item, i in menu" :key="i + 'x'" :to="item?.link" class="link link-hover"><span v-if="item.icon"
           class="mr-2" :class="item.icon"></span>{{ item.name }}</NuxtLink>
     </nav>
     <nav>
-      <header class="footer-title">Legal</header>
-      <a class="link link-hover">Terms of use</a>
-      <a class="link link-hover">Privacy policy</a>
-      <a class="link link-hover">Cookie policy</a>
+      <header class="font-bold text-slate-100">Legal</header>
+      <NuxtLink v-for="l, i in legal" :key="i" :to="l.link" class="link link-hover">{{ l.name }}</NuxtLink>
     </nav>
   </footer>
   <footer class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">

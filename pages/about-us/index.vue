@@ -18,7 +18,7 @@ useSeoMeta({
             <div class="hero rounded-xl min-h-min ">
                 <div class="hero-content flex-col sm:flex-row-reverse">
 
-                    <NuxtImg id="nuxt-img" src="/img/about-us-page-animate.svg" class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
+                    <NuxtImg alt=""  id="nuxt-img" src="/img/about-us-page-animate.svg" class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
 
                     <div class="sm:z-10">
@@ -53,7 +53,7 @@ useSeoMeta({
     
     <SectionExperts />
     <div class="container mx-auto max-w-4xl py-12 px-4">
-             <article class="prose prose-slate  max-w-4xl mx-auto">
+             <article class="prose prose-slate  max-w-3xl mx-auto">
                   <p>Most of the time, research papers constitute students' final and most demanding requirements. Thus, the
                         majority of students are intimidated when it comes to producing a high-quality paper that can suffice,
                         if not exceed, their teachers' expectations. If you want a well-researched paper with less time and

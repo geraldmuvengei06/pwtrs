@@ -93,6 +93,7 @@ export const contentStore = defineStore('content', () => {
         },
         {
             name: 'Services',
+            link: '/services',
             items: services
         },
         {
@@ -130,6 +131,20 @@ export const contentStore = defineStore('content', () => {
         }
     ]
 
+    const legal = [
+        {
+            name: 'Terms of use',
+            link: '/legal/terms-of-use',
+        },
+        {
+            name: 'Privacy Policy',
+            link: '/legal/privacy-policy',
+        },
+        {
+            name: 'Cookie Policy',
+            link: '/legal/cookie-policy',
+        },
+    ]
 
-    return { services, menu, key_factors }
+    return { services, menu, key_factors, legal }
 })

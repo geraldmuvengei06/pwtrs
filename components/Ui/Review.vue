@@ -23,7 +23,7 @@ let _rating = toRef(props?.rating)
         <!-- <figure class="px-10 pt-10"> -->
         <!-- <div class="avatar">
                 <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                    <NuxtImg id="nuxt-img" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <NuxtImg alt=""  id="nuxt-img" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                 </div>
             </div> -->
         <!-- <div class="avatar placeholder">
@@ -33,11 +33,10 @@ let _rating = toRef(props?.rating)
             </div>  -->
         <!-- </figure> -->
         <div class="card-body py-4 ">
-            <h2 class="card-title">{{ name }}</h2>
-            <p class="text-secondary">Essay</p>
+            <h4 class="card-title mb-0">John Doe</h4>
 
 
-            <div class="divider py-0 my-0 border-slate-50"></div>
+            <div class="divider py-0 my-0 border-slate-50">Essay</div>
 
             <p>If a dog chews shoes whose shoes does he choose?</p>
             <div class="card-actions">

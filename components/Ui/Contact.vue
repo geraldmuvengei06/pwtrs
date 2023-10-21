@@ -23,22 +23,22 @@ let props = withDefaults(defineProps<Props>(), {
             <div class="avatar-group -space-x-6">
                 <div class="avatar">
                     <div class="w-12 sm:w-16">
-                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
+                        <NuxtImg alt=""  id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
                 <div class="avatar">
                     <div class="w-12 sm:w-16">
-                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
+                        <NuxtImg alt=""  id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
                 <div class="avatar">
                     <div class="w-12 sm:w-16">
-                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
+                        <NuxtImg alt=""  id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
                 <div class="avatar">
                     <div class="w-12 sm:w-16">
-                        <NuxtImg id="nuxt-img" src="/img/writer.png" />
+                        <NuxtImg alt=""  id="nuxt-img" src="/img/writer.png" />
                     </div>
                 </div>
             </div>

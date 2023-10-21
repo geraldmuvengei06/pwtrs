@@ -50,7 +50,7 @@ let unique = [
                                     <span class="text-3xl  text-gray-500 dark:text-gray-400  pi pi-user"></span>
                                 </div>
                                 <div class="flex-1 min-w-0 ml-4">
-                                    <p class="text-sm font-medium text-gray-900 dark:text-slate-300">
+                                    <p class="text-sm font-medium text-slate-300">
                                         12+ Years helping students in their studies
                                     </p>
                                     <p class="text-sm text-gray-500 dark:text-gray-400">
@@ -82,7 +82,7 @@ let unique = [
                                 </span>
                             </div>
                             <div class="divider font-bold">Saved <strike>$5.00</strike></div>
-                            <h5 class="text-center">Get All These Features</h5>
+                            <h6 class="text-center">Get All These Features</h6>
                             <button class="sm:mt-4 btn btn-primary flex text-slate-50">Order Now</button>
                         </div>
                     </div>
