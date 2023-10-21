@@ -8,7 +8,6 @@ module.exports = {
         mytheme: {
           primary: "#7CB078",
 
-
           secondary: "#FF7F2D",
 
           accent: "#1fb2a6",
@@ -26,6 +25,51 @@ module.exports = {
           warning: "#fbbd23",
 
           error: "#f87272",
+
+          extend: {
+            animation: {
+              blob: "blob 1s infinite",
+            },
+            keyframes: {
+              blob: {
+                "0%": {
+                  transform: "translate(0px, 0px) scale(1)",
+                },
+                "33%": {
+                  transform: "translate(30px, -50px) scale(1.4)",
+                },
+                "66%": {
+                  transform: "translate(-20px, 20px) scale(0.5)",
+                },
+                "100%": {
+                  transform: "tranlate(0px, 0px) scale(1)",
+                },
+              },
+            },
+          },
+        },
+        theme: {
+          extend: {
+            animation: {
+              blob: "blob 1s infinite",
+            },
+            keyframes: {
+              blob: {
+                "0%": {
+                  transform: "translate(0px, 0px) scale(1)",
+                },
+                "33%": {
+                  transform: "translate(30px, -50px) scale(1.1)",
+                },
+                "66%": {
+                  transform: "translate(-20px, 20px) scale(0.9)",
+                },
+                "100%": {
+                  transform: "tranlate(0px, 0px) scale(1)",
+                },
+              },
+            },
+          },
         },
       },
     ],

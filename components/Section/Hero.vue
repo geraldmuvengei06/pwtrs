@@ -4,15 +4,19 @@ let { key_factors } = contentStore()
 
 <template>
     <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
-        <div class="container mx-auto pb-8">
-            <div class="hero rounded-xl min-h-min ">
+        <div class="container mx-auto py-8">
+            <div class="hero rounded-xl min-h-min relative">
+                <div
+                    class="absolute top-10 left-1/4 w-40 h-40 bg-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
+                </div>
+                <div
+                    class="absolute top-1/3 right-1/4 w-60 h-60 bg-primary rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000">
+                </div>
+              
                 <div class="hero-content flex-col-reverse lg:flex-row-reverse">
-                    <!-- <div class=" max-w-xs sm:max-w-sm md:max-w-md"> -->
-                    <!-- <client-only>
-                            <Vue3Lottie animationLink="/lotties/hero-2.json" />
-                        </client-only> -->
-                    <!-- </div> -->
-                    <NuxtImg alt=""  id="nuxt-img" src="/img/typing-animate.svg" class="hidden sm:inline sm:absolute lg:relative sm:right-1 sm:z-0 md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
+
+                    <NuxtImg alt="" id="nuxt-img" src="/img/typing-animate.svg"
+                        class="hidden sm:inline sm:absolute lg:relative sm:right-1 sm:z-0 md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
                     <!-- <div class="flex sm:hidden w-full sm:max-w-sm md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">
                         <UiOrderFormDescription class="w-full" type="verticle" />
@@ -22,16 +26,18 @@ let { key_factors } = contentStore()
                         <h1 class="text-3xl sm:text-5xl font-bold ">Let <span
                                 class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Expert
                                 Writers</span> Ace your Essays!</h1>
-                        <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">Trust your assignments to an essay writing service with the <b>fastest
+                        <p class="py-6 text-lg sm:max-w-xs lg:max-w-max">Trust your assignments to an essay writing service
+                            with the <b>fastest
                                 delivery time</b> and fully original content.
-                        </p>   
-                        
-                        
-                        <div class="w-full inline  sm:hidden shadow-lg py-8">
+                        </p>
+
+
+                        <div class="w-full inline  sm:hidden shadow-lg my-8">
                             <UiOrderFormDescription class="" type="verticle" />
+
                         </div>
 
-                        <ul class="w-full text-lg hover:bg-transparent py-4">
+                        <ul class="w-full text-lg hover:bg-transparent py-6">
                             <li v-for="factor, i in key_factors" :key="i + 'f'" class="hover:bg-transparent"><span
                                     class="px-0"><i class="pi pi-check text-xl mr-2 text-primary"></i>{{ factor.item
                                     }}</span>
@@ -40,11 +46,12 @@ let { key_factors } = contentStore()
 
                         <UiPayment class="hidden sm:inline" />
 
-                        <!-- <div class="flex gap-4">
-                            <button class="sm:mt-9 btn btn-primary flex sm:hidden ">Order Now</button>
-                            <button class="sm:mt-9 btn btn-secondary btn-outline flex sm:hidden ">Talk to An
-                                Expert</button>
-                        </div> -->
+
+                        <div class="flex gap-4">
+                            <!-- <button class="sm:mt-9 btn btn-primary flex sm:hidden ">Order Now</button> -->
+                            <!-- <button class="sm:mt-9 btn btn-secondary btn-outline flex sm:hidden ">Talk to An
+                                Expert</button> -->
+                        </div>
 
                     </div>
 
@@ -56,4 +63,13 @@ let { key_factors } = contentStore()
                 <UiOrderForm />
             </div>
         </div>
-</div></template> 
+    </div>
+</template> 
+
+<style>
+/* .navbar-c{
+
+        background-color: rgb(253, 224, 71);
+        background-image: radial-gradient(at 80% 24%, rgb(74, 222, 128) 0, transparent 86%), radial-gradient(at 91% 5%, rgb(134, 25, 143) 0, transparent 15%), radial-gradient(at 99% 49%, rgb(237, 233, 254) 0, transparent 50%), radial-gradient(at 58% 11%, rgb(55, 48, 163) 0, transparent 63%), radial-gradient(at 2% 34%, rgb(254, 205, 211) 0, transparent 73%), radial-gradient(at 64% 55%, rgb(31, 41, 55) 0, transparent 20%);
+      
+} */</style>

@@ -93,7 +93,6 @@ export const contentStore = defineStore('content', () => {
         },
         {
             name: 'Services',
-            link: '/services',
             items: services
         },
         {
