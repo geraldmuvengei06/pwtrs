@@ -1,15 +1,11 @@
 
 <template>
-    <div class="shadow  z-10  min-w-full sticky top-0">
+    <div class="shadow  z-10  min-w-full sticky top-0 ">
         <PrimeMenubar :model="menu" class="min-w-full flex justify-between ">
             <template #start>
                 <UiLogo />
             </template>
             
-            <!-- <template #end>
-                <a class="btn btn-primary">Order Now</a>
-            </template> -->
-
             <template #item="{ name, item, props, root, hasSubmenu }" class=" ">
                     <NuxtLink v-if="item.link" v-slot="routerProps" :to="item.link" custom class="">
                         <a :href="routerProps.href" v-bind="props.action">
