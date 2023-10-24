@@ -4,7 +4,7 @@ definePageMeta({
     title: "404"
 })
 const props = defineProps<{
-    statusCode?: string | number,
+    statusCode?:  number,
     message: string,
     stack: string,
 }>()

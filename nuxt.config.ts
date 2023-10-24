@@ -11,7 +11,7 @@ export default defineNuxtConfig({
           hid: 'tawk.to',
           src:
             'https://embed.tawk.to/6293c890b0d10b6f3e74a1ff/1g48keu47',
-            
+
           defer: true
         }
       ]
@@ -20,10 +20,15 @@ export default defineNuxtConfig({
 
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue', '@pinia/nuxt', "@nuxt/image", 
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'nuxt-primevue',
+    '@pinia/nuxt',
+    "@nuxt/image",
     'nuxt-simple-sitemap',
-  // '@productdevbook/chatwoot'
-],
+    '@nuxt/content',
+    // '@productdevbook/chatwoot'
+  ],
   css: [
     'primevue/resources/themes/tailwind-light/theme.css',
     '@/assets/css/main.scss',
@@ -57,6 +62,12 @@ export default defineNuxtConfig({
 
   pinia: {
     storesDirs: ['./stores/**'],
+  },
+
+  router: {
+    options: {
+      strict: true,
+    },
   },
 
   // chatwoot: {
