@@ -14,7 +14,8 @@ useSeoMeta({
 <template>
   <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
     <div class="container mx-auto py-8">
-      <div class="hero rounded-xl min-h-min ">
+      <div class="hero rounded-xl min-h-min relative">
+        <UiBgShade />
         <div class="hero-content flex-col sm:flex-row-reverse">
           <!-- <div class=" max-w-xs sm:max-w-sm md:max-w-md"> -->
           <!-- <client-only>
@@ -42,7 +43,7 @@ useSeoMeta({
                 delivery time</b> and fully original content.
             </p>
 
-           
+
             <UiProtection class="hidden sm:inline" />
 
 

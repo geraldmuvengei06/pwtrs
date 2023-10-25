@@ -14,11 +14,12 @@ useSeoMeta({
 <template>
     <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
         <div class="container mx-auto py-8">
-            <div class="hero rounded-xl min-h-min ">
+            <div class="hero rounded-xl min-h-min relative">
+                <UiBgShade />
                 <div class="hero-content flex-col sm:flex-row-reverse">
 
-                    <NuxtImg alt=""  id="nuxt-img" src="/img/faq-animate.svg"
-            class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
+                    <NuxtImg alt="" id="nuxt-img" src="/img/faq-animate.svg"
+                        class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
                     <div class="sm:z-10">
                         <h1 class="text-3xl sm:text-5xl font-bold "><span

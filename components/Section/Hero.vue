@@ -6,13 +6,9 @@ let { key_factors } = contentStore()
     <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
         <div class="container mx-auto py-8">
             <div class="hero rounded-xl min-h-min relative">
-                <div
-                    class="absolute top-10 left-1/4 w-40 h-40 bg-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
-                </div>
-                <div
-                    class="absolute top-1/3 right-1/4 w-60 h-60 bg-primary rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000">
-                </div>
-              
+                <UiBgShade />
+
+
                 <div class="hero-content flex-col-reverse lg:flex-row-reverse">
 
                     <NuxtImg alt="" id="nuxt-img" src="/img/typing-animate.svg"
@@ -37,7 +33,7 @@ let { key_factors } = contentStore()
 
                         </div>
 
-                        <ul class="w-full text-lg hover:bg-transparent py-6">
+                        <ul class="w-full text-lg hover:bg-transparent">
                             <li v-for="factor, i in key_factors" :key="i + 'f'" class="hover:bg-transparent"><span
                                     class="px-0"><i class="pi pi-check text-xl mr-2 text-primary"></i>{{ factor.item
                                     }}</span>
@@ -45,6 +41,8 @@ let { key_factors } = contentStore()
                         </ul>
 
                         <UiPayment class="hidden sm:inline" />
+
+                        <UiRatingsTotal classnames="justify-start mt-5" />
 
 
                         <div class="flex gap-4">
@@ -60,7 +58,7 @@ let { key_factors } = contentStore()
             </div>
 
             <div class="hidden sm:block max-w-screen-xl mx-auto">
-                <UiOrderForm />
+                <!-- <UiOrderForm /> -->
             </div>
         </div>
     </div>
@@ -72,4 +70,5 @@ let { key_factors } = contentStore()
         background-color: rgb(253, 224, 71);
         background-image: radial-gradient(at 80% 24%, rgb(74, 222, 128) 0, transparent 86%), radial-gradient(at 91% 5%, rgb(134, 25, 143) 0, transparent 15%), radial-gradient(at 99% 49%, rgb(237, 233, 254) 0, transparent 50%), radial-gradient(at 58% 11%, rgb(55, 48, 163) 0, transparent 63%), radial-gradient(at 2% 34%, rgb(254, 205, 211) 0, transparent 73%), radial-gradient(at 64% 55%, rgb(31, 41, 55) 0, transparent 20%);
       
-} */</style>
+} */
+</style>

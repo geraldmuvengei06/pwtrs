@@ -26,15 +26,15 @@ let _rating = toRef(props?.rating)
                 <span>The Importance and Impacts of Narratives in o</span>
             </h4>
             <span><b>Editing</b> - <small>2 pages</small></span>
-            
+
 
 
             <div class="divider py-0 my-0 border-slate-50"></div>
 
             <div class="card-actions justify-between">
-                    <button class="btn btn-primary">View</button>
-                    <button class="btn btn-secondary btn-outline">Order Now</button>
-                </div>
+                <button class="btn btn-primary">View</button>
+                <button class="btn btn-secondary btn-outline">Order Now</button>
+            </div>
         </div>
     </div>
 </template>

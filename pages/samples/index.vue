@@ -16,7 +16,8 @@ useSeoMeta({
 <template>
     <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
         <div class="container mx-auto py-8">
-            <div class="hero rounded-xl min-h-min ">
+            <div class="hero rounded-xl min-h-min relative">
+                <UiBgShade />
                 <div class="hero-content flex-col sm:flex-row-reverse">
 
                     <div class="w-full sm:max-w-sm md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">

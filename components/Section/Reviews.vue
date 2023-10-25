@@ -69,27 +69,9 @@ const responsiveOptions = ref([
             <p>Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                 quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-between md:justify-center">
-                <div class="flex items-center justify-center sm:justify-start flex-row rounded-lg px-2">
-                    <div class="w-24"><NuxtImg alt=""  id="nuxt-img" src="/img/reviewsio.png" /></div>
-                    <p class="text-2xl w-1/4 flex flex-row items-center">
-                        <span class="pi pi-star-fill text-orange-400 text-2xl"></span>
-                        4.5
-                    </p>
-                </div>
-
-                 <div class="flex items-center justify-center sm:justify-start flex-row rounded-lg px-2">
-                        <div class="w-24"><NuxtImg alt=""  id="nuxt-img" src="/img/sitejabber.png" /></div>
-                        <p class="text-2xl w-1/4 flex flex-row items-center">
-                            <span class="pi pi-star-fill text-orange-400 text-2xl"></span>
-                            4.7
-                        </p>
-                    </div>
-
-
-            </div>
+            <UiRatingsTotal />
         </div>
-        <PrimeCarousel :value="reviews" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions"  class="mb-4">
+        <PrimeCarousel :value="reviews" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" class="mb-4">
             <template #item="slotProps">
                 <UiReview v-bind="slotProps.data" />
             </template>

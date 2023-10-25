@@ -24,6 +24,5 @@ useSeoMeta({
         <SectionFaq />
         <SectionSeo />
         <SectionCTAMale />
-
     </div>
 </template>
