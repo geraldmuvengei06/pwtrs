@@ -19,7 +19,13 @@ export default defineNuxtConfig({
     // pageTransition: { name: 'page', mode: 'out-in' },
 
   },
-  devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      websiteUrl:  process.env.NUXT_WEBSITE_URL,
+      apiBase: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+    }
+  },
+  devtools: { enabled: false },
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-primevue',
@@ -86,5 +92,11 @@ export default defineNuxtConfig({
   site: {
     url: 'https://onlinessaywriting.com',
   },
+
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  }
 
 })

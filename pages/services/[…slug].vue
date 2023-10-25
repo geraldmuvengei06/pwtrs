@@ -12,14 +12,14 @@ const { data, pending, error, refresh } = await useAsyncData(
 
 console.log( data, pending, error, refresh);
 
-// useSeoMeta({
-//     title: title,
-//     ogTitle: title,
-//     description: 'This is my amazing site, let me tell you all about it.',
-//     ogDescription: 'This is my amazing site, let me tell you all about it.',
-//     ogImage: '',
-//     twitterCard: 'summary_large_image',
-// })
+useSeoMeta({
+    title: data?.title,
+    ogTitle: data?.title,
+    description: data?.description,
+    ogDescription: data?.description,
+    ogImage: data?.cover,
+    twitterCard: 'summary_large_image',
+})
 
 </script>
 
@@ -64,21 +64,18 @@ console.log( data, pending, error, refresh);
         <div class="container mx-auto max-w-4xl py-12 px-4">
 
           <article class="prose prose-slate  max-w-3xl mx-auto">
-            <!-- <ContentDoc /> -->
-            <ContentRenderer :value="data">
+            <ContentDoc />
+            <!-- <ContentRenderer :value="data">
               <ContentRendererMarkdown :value="data" ></ContentRendererMarkdown>
-            </ContentRenderer>
+            </ContentRenderer> -->
             
           </article>
 
 
             <!-- Service content -->
 
-
         </div>
-        <SectionFaq />
         <SectionReviews />
-
         <SectionCTA />
     </div>
 </template>
