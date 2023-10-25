@@ -5,7 +5,8 @@ let { menu, services } = contentStore()
 
 <template>
     <UiMobileHeader class="flex md:hidden " />
-    <div class="hidden md:flex navbar custom-nav bg-gradient-to-br from-[#F2F8FC]/80 to-[#FEF6F4]/80 border-b-2 backdrop-blur sticky top-0 z-50">
+    <div
+        class="hidden md:flex navbar custom-nav bg-gradient-to-br from-[#F2F8FC]/80 to-[#FEF6F4]/80 border-b-2 backdrop-blur sticky top-0 z-50">
         <div class="navbar-start">
             <div class="dropdown">
                 <label tabindex="0" class="btn btn-ghost md:hidden">
@@ -29,16 +30,22 @@ let { menu, services } = contentStore()
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
                 <li v-for="item, i in menu" :key="i + 'menu'">
-                    <NuxtLink :to="item?.link" v-if="!item.items"><span v-if="item.icon" :class="item.icon"></span> {{ item.name }}</NuxtLink>
+                    <NuxtLink :to="item?.link" v-if="!item.items"><span v-if="item.icon" :class="item.icon"></span> {{
+                        item.name }}</NuxtLink>
 
 
                     <details v-else class="dropdown">
                         <summary tabindex="0">{{ item.name }}</summary>
-                        <ul  tabindex="0" class="p-2 w-80 overflow-y-scroll shadow">
-                            <li v-for="service, i in item.items" :key="i + 's'" >
+                        <ul tabindex="0" class="p-2 w-80 overflow-y-scroll shadow">
+                            <!-- <li v-for="service, i in item.items" :key="i + 's'" >
                                 <NuxtLink :to="service.link">{{ service.item }}</NuxtLink>
                             </li>
-                            <li v-if="services.length > 5"><span>...</span></li>
+                            <li v-if="services.length > 5"><span>...</span></li> -->
+                            <ContentList path="/services" v-slot="{ list }">
+                                <NuxtLink v-for="service in list" :key="service?._path" :to="service?._path" class="flex flex-col my-1">
+                                    {{ service?.title }}
+                                </NuxtLink>
+                            </ContentList>
                         </ul>
                     </details>
                 </li>
@@ -66,6 +73,4 @@ let { menu, services } = contentStore()
 .router-link-exact-active {
     @apply rounded-lg text-primary font-semibold hover:text-primary;
 }
-
-
 </style>

@@ -25,8 +25,8 @@ export const contentStore = defineStore('content', () => {
             content_type: 'markdown'
         },
         {
-            item: 'Best Essay Writing Company',
-            link: '/services/best-essay-writing-company',
+            item: 'Best Essay Writing Service',
+            link: '/services/best-essay-writing-service',
             content: '',
             content_type: 'markdown'
         },
