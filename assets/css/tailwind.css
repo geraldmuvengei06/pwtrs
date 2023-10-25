@@ -5,14 +5,13 @@
 
 @layer base {
   :root {
-        --primary-color: #7CB078;
+    --primary-color: #7cb078;
   }
 
   .dark {
-            --primary-color: #7CB078;
+    --primary-color: #7cb078;
   }
-} 
-
+}
 
 @layer tailwind-base {
   @tailwind base;

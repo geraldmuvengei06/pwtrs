@@ -23,8 +23,13 @@ const year = new Date().getFullYear();
         </aside>
         <nav>
           <header class="font-bold text-slate-100">Services</header>
-          <NuxtLink v-for="service, i in services" :key="i" :to="service.link" class="link link-hover">{{ service.item }}
-          </NuxtLink>
+          <!-- <NuxtLink v-for="service, i in services" :key="i" :to="service.link" class="link link-hover">{{ service.item }}
+          </NuxtLink> -->
+          <ContentList path="/services" v-slot="{ list }">
+            <NuxtLink v-for="service in list" :key="service?._path" :to="service?._path" class="flex flex-col my-1">
+              {{ service?.title }}
+            </NuxtLink>
+          </ContentList>
         </nav>
         <nav>
           <header class="font-bold text-slate-100">Company</header>

@@ -66,8 +66,12 @@ useSeoMeta({
         <!-- <SectionCTADark /> -->
         <div class="container mx-auto max-w-4xl py-12 px-4">
 
-            <article class="prose prose-slate  max-w-3xl mx-auto max-h-screen overflow-x-scroll">
-                <ContentDoc />
+            <article class="prose prose-slate  max-w-3xl mx-auto">
+                <ContentDoc>
+                    <template #not-found>
+                        <UiContentNotFound />
+                    </template>
+                </ContentDoc>
                 <!-- <ContentRenderer :value="data">
               <ContentRendererMarkdown :value="data" ></ContentRendererMarkdown>
             </ContentRenderer> -->
