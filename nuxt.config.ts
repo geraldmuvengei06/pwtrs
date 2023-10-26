@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Onlinessaywriting",
+      title: "nursingessayonline",
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
       script: [
         // ...
@@ -90,7 +90,7 @@ export default defineNuxtConfig({
   //   partytown: false,
   // },
   site: {
-    url: 'https://onlinessaywriting.com',
+    url: 'https://nursingessayonline.com',
   },
 
   nitro: {
