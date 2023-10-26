@@ -33,7 +33,7 @@ let _rating = toRef(props?.rating)
 
             <div class="card-actions justify-between">
                 <button class="btn btn-primary">View</button>
-                <button class="btn btn-secondary btn-outline">Order Now</button>
+                <NuxtLink to="/orders/ordernow" class="btn btn-secondary btn-outline">Order Now</NuxtLink>
             </div>
         </div>
     </div>

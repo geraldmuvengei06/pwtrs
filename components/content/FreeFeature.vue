@@ -11,7 +11,7 @@
             </div>
             <div class="divider font-bold">Saved <strike>$5.00</strike></div>
             <h6 class="text-center">Get All These Features</h6>
-            <button class="sm:mt-4 btn btn-primary flex ">Order Now</button>
+            <NuxtLink to="/orders/ordernow" class="sm:mt-4 btn btn-primary flex ">Order Now</NuxtLink>
         </div>
     </div>
 </template>

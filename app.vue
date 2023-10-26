@@ -1,7 +1,7 @@
 <script setup>
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - Onlinessaywriting` : 'Onlinessaywriting';
+    return titleChunk ? `${titleChunk} - proswriters` : 'proswriters';
   }
 })
 </script>

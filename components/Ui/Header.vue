@@ -54,8 +54,8 @@ let { menu, services } = contentStore()
             </ul>
         </div>
         <div class="navbar-end flex gap-2">
-            <a class="btn btn-primary">Order Now</a>
-            <a class="btn btn-secondary btn-outline hidden sm:flex">Dashboard</a>
+            <NuxtLink to="/orders/ordernow" class="btn btn-primary">Order Now</NuxtLink>
+            <NuxtLink to="/orders/home/" class="btn btn-secondary btn-outline hidden sm:flex">Dashboard</NuxtLink>
         </div>
     </div>
 </template>

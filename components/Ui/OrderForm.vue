@@ -72,7 +72,8 @@ let props = withDefaults(defineProps<Props>(), {
                     <string class="font-bold mx-2">$30.00</string>
                 </span>
             </div>
-            <button class=" btn btn-primary" :class="type == 'verticle' ? '' : 'sm:mt-9'">Order Now</button>
+            <NuxtLink to="/orders/ordernow" class=" btn btn-primary" :class="type == 'verticle' ? '' : 'sm:mt-9'">Order Now
+            </NuxtLink>
 
         </div>
     </div>
