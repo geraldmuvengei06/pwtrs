@@ -93,7 +93,7 @@ export const contentStore = defineStore('content', () => {
         },
         {
             name: 'Services',
-            items: services
+            items: []
         },
         {
             name: 'Contact Us',

@@ -5,7 +5,7 @@
             <div
                 class="flex flex-col items-center sm:flex-row bg-gradient-to-tr from-[#F2F8FC]  to-[#FEF6F4] rounded-lg gap-4 hover:shadow-lg">
 
-                <NuxtImg alt="" id="nuxt-img" class="w-48 sm:w-1/3 max-w-xs m-4" src="/img/creative-writing-animate.svg" />
+                <NuxtImg alt="" id="nuxt-img" class="w-48 sm:w-1/3 max-w-xs m-4" src="/img/Creative-writing-amico.png" />
 
                 <div class="px-4 py py-8">
 

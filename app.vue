@@ -10,7 +10,7 @@ useHead({
   <div>
     <!-- <NuxtWelcome /> -->
     <NuxtLayout>
-      <NuxtLoadingIndicator :duration="2000" :height="5" :color="'#7CB078'" />
+      <NuxtLoadingIndicator :duration="2000" :height="5" :color="'#3f50b5'" />
       <NuxtPage />
     </NuxtLayout>
   </div>

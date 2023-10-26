@@ -19,7 +19,7 @@ useSeoMeta({
                 <UiBgShade />
                 <div class="hero-content flex-col sm:flex-row-reverse">
 
-                    <NuxtImg alt="" id="nuxt-img" src="/img/learning-animate.svg"
+                    <NuxtImg alt="" id="nuxt-img" src="/img/Problem-solving-pana.png"
                         class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
 
