@@ -30,10 +30,9 @@ let { key_factors } = contentStore()
 
                         <div class="w-full inline  sm:hidden shadow-lg my-8">
                             <UiOrderFormDescription class="" type="verticle" />
-
                         </div>
 
-                        <ul class="w-full text-lg hover:bg-transparent">
+                        <ul class="w-full text-lg mt-8 hover:bg-transparent">
                             <li v-for="factor, i in key_factors" :key="i + 'f'" class="hover:bg-transparent"><span
                                     class="px-0"><i class="pi pi-check text-xl mr-2 text-primary"></i>{{ factor.item
                                     }}</span>
@@ -48,7 +47,7 @@ let { key_factors } = contentStore()
 
                         <div class="flex gap-4">
                             <!-- <button class="sm:mt-9 btn btn-primary flex sm:hidden ">Order Now</button> -->
-                            <!-- <button class="sm:mt-9 btn btn-secondary btn-outline flex sm:hidden ">Talk to An
+                            <!-- <button class="sm:mt-9 btn btn-primary btn-outline flex sm:hidden ">Talk to An
                                 Expert</button> -->
                         </div>
 

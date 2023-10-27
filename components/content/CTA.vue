@@ -1,4 +1,7 @@
 <script setup lang="ts">
+
+let { order_url, goTo } = contentStore()
+
 const props = defineProps<{
     title: string,
     action: string,
@@ -23,10 +26,10 @@ const props = defineProps<{
                         <slot />
                     </p>
 
-                    <NuxtLink to="/orders/ordernow" class="sm:mt-9 btn btn-primary flex" v-if="action"> {{ action }}
-                    </NuxtLink>
-                    <NuxtLink to="/orders/ordernow" class="sm:mt-9 btn btn-primary flex" v-else>Hire an Expert Writer
-                    </NuxtLink>
+                    <button @click="goTo(`${order_url}`)" class="sm:mt-9 btn btn-primary flex" v-if="action"> {{ action }}
+                    </button>
+                    <button @click="goTo(`${order_url}`)" class="sm:mt-9 btn btn-primary flex" v-else>Hire an Expert Writer
+                    </button>
 
                 </div>
             </div>

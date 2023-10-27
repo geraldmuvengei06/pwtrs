@@ -1,5 +1,6 @@
 <script setup>
-let { menu, services } = contentStore()
+let { menu, services, order_url, home_url, goTo } = contentStore()
+
 </script>
 
 
@@ -20,7 +21,7 @@ let { menu, services } = contentStore()
                         <NuxtLink :to="item?.link">{{ item.name }}</NuxtLink>
                     </li>
                     <li>
-                        <div><a class="btn btn-secondary btn-outline">Dashboard</a></div>
+                        <div><a class="btn btn-primary btn-outline">Dashboard</a></div>
                     </li>
                 </ul>
             </div>
@@ -54,8 +55,8 @@ let { menu, services } = contentStore()
             </ul>
         </div>
         <div class="navbar-end flex gap-2">
-            <NuxtLink to="/orders/ordernow" class="btn btn-primary">Order Now</NuxtLink>
-            <NuxtLink to="/orders/home" class="btn btn-secondary btn-outline hidden sm:flex">Dashboard</NuxtLink>
+            <button @click="goTo(`${order_url}`)" class="btn btn-primary">Order Now</button>
+            <button @click="goTo(`${home_url}`)" class="btn btn-secondary btn-outline hidden sm:flex">Dashboard</button>
         </div>
     </div>
 </template>

@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+let { order_url, goTo } = contentStore()
+</script>
+
 <template>
     <div class="card bg-base-100 backdrop-filter backdrop-blur-sm bg-opacity-90  text-base-content shadow-lg">
         <div class="card-body px-4">
@@ -11,7 +15,7 @@
             </div>
             <div class="divider font-bold">Saved <strike>$5.00</strike></div>
             <h6 class="text-center">Get All These Features</h6>
-            <NuxtLink to="/orders/ordernow" class="sm:mt-4 btn btn-primary flex ">Order Now</NuxtLink>
+            <button @click="goTo(`${order_url}`)" class="sm:mt-4 btn btn-primary flex ">Order Now</button>
         </div>
     </div>
 </template>

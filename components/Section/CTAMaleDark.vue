@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+let { order_url, goTo } = contentStore()
+</script>
+
 <template>
     <div class="">
         <div class="container mx-auto py-8 sm:py-16 px-4">
@@ -18,7 +22,7 @@
                         provident explicabo enim rerum. Voluptate?
                     </p>
 
-                    <NuxtLink to="/orders/ordernow" class="sm:mt-9 btn btn-secondary flex">Ok! Proceed</NuxtLink>
+                    <button @click="goTo(`${order_url}`)" class="sm:mt-9 btn btn-primary flex">Ok! Proceed</button>
 
                 </div>
 

@@ -3,6 +3,9 @@ interface Props {
     type?: string;
 }
 
+let { order_url, goTo } = contentStore()
+
+
 
 let props = withDefaults(defineProps<Props>(), {
     type: 'horizontal'
@@ -15,12 +18,7 @@ let props = withDefaults(defineProps<Props>(), {
             <div class="card-title" v-if="type == 'verticle'">
                 <h4 class="text-2xl sm:text-4xl ">Calculate the Price</h4>
             </div>
-            <!-- <div class="form-control flex-1">
-                <label class="label">
-                    <span class="label-text">Type of paper</span>
-                </label>
-                <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-            </div> -->
+
             <div class="form-control flex-1">
                 <label class="label">
                     <span class="label-text">Academic Level</span>
@@ -72,8 +70,9 @@ let props = withDefaults(defineProps<Props>(), {
                     <string class="font-bold mx-2">$30.00</string>
                 </span>
             </div>
-            <NuxtLink to="/orders/ordernow" class=" btn btn-primary" :class="type == 'verticle' ? '' : 'sm:mt-5'">Order Now
-            </NuxtLink>
+            <button @click="goTo(`${order_url}`)" class=" btn btn-primary"
+                :class="type == 'verticle' ? '' : 'sm:mt-5'">Order Now
+            </button>
 
         </div>
     </div>

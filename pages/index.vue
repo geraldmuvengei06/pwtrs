@@ -14,14 +14,16 @@ useSeoMeta({
 <template>
     <div class="min-w-full">
         <SectionHero />
-        <SectionSamples />
         <SectionReviews />
+        <SectionSamples />
+        <SectionCTADark />
         <SectionExperts />
         <SectionUnique />
-        <SectionFreeFeatures />
         <SectionCTA />
+        <SectionFreeFeatures />
         <SectionHowItWorks />
         <SectionFaq />
+        <SectionCTAMaleDark />
         <SectionSeo />
         <SectionCTAMale />
     </div>

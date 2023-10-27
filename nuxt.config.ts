@@ -3,25 +3,27 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "proswriters",
+      title: process.env.NUXT_WEBSITE_NAME,
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
       script: [
         // ...
         {
           hid: 'tawk.to',
           src:
-            'https://embed.tawk.to/6293c890b0d10b6f3e74a1ff/1g48keu47',
+            'https://embed.tawk.to/' + process.env.NUXT_TAWK_CODE,
 
           defer: true
         }
       ]
     },
     // pageTransition: { name: 'page', mode: 'out-in' },
-
   },
   runtimeConfig: {
     public: {
+      websiteName: process.env.NUXT_WEBSITE_NAME,
       websiteUrl:  process.env.NUXT_WEBSITE_URL,
+      orderUrl: process.env.NUXT_ORDER_URL || '/orders/ordernow/',
+      homeUrl: process.env.NUXT_HOME_URL || '/orders/home/',
       apiBase: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
     }
   },
@@ -90,7 +92,7 @@ export default defineNuxtConfig({
   //   partytown: false,
   // },
   site: {
-    url: 'https://proswriters.com',
+    url: process.env.NUXT_WEBSITE_URL,
   },
 
   nitro: {

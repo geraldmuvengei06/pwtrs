@@ -91,10 +91,10 @@ export const contentStore = defineStore('content', () => {
             name: 'How it Works',
             link: '/how-it-works',
         },
-        {
-            name: 'Services',
-            items: []
-        },
+        // {
+        //     name: 'Services',
+        //     items: []
+        // },
         {
             name: 'Contact Us',
             link: '/contact',
@@ -145,5 +145,15 @@ export const contentStore = defineStore('content', () => {
         },
     ]
 
-    return { services, menu, key_factors, legal }
+
+    const runtimeConfig = useRuntimeConfig()
+    const order_url = runtimeConfig?.public.orderUrl
+    const home_url = runtimeConfig?.public.homeUrl
+
+    const router = useRouter();
+    function goTo(path: string, params: object = {}, query: object  = {}) {
+        router.push({ path: path, params: {...params}, query: {...query} })
+    }
+    
+    return { services, menu, key_factors, legal, order_url, home_url, goTo }
 })

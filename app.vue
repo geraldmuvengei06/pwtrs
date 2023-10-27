@@ -1,7 +1,9 @@
 <script setup>
+const runtimeConfig = useRuntimeConfig()
+
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - proswriters` : 'proswriters';
+    return titleChunk ? `${titleChunk} - ${runtimeConfig.public.websiteName}` : runtimeConfig.public.websiteName;
   }
 })
 </script>

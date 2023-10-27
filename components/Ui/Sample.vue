@@ -1,4 +1,5 @@
 <script setup lang="ts">
+let { order_url, goTo } = contentStore()
 
 interface Props {
     img?: string;
@@ -33,7 +34,7 @@ let _rating = toRef(props?.rating)
 
             <div class="card-actions justify-between">
                 <button class="btn btn-primary">View</button>
-                <NuxtLink to="/orders/ordernow" class="btn btn-secondary btn-outline">Order Now</NuxtLink>
+                <button @click="goTo(`${order_url}`)" class="btn btn-primary btn-outline">Order Now</button>
             </div>
         </div>
     </div>

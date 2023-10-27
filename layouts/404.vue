@@ -4,7 +4,7 @@ definePageMeta({
     title: "404"
 })
 const props = defineProps<{
-    statusCode?:  number,
+    statusCode?: number,
     message: string,
     stack: string,
 }>()
@@ -13,7 +13,7 @@ const props = defineProps<{
 <template>
     <div>
         <h1 class="text-5xl text-primary italic font-bold">{{ statusCode }}</h1>
-        <p class="my-4 text-4xl text-[#505560]  break-all">{{ message || "Something gone missing..." }}</p>
+        <p class="my-4 text-xl sm:text-4xl text-[#505560]  break-all">{{ message || "Something gone missing..." }}</p>
         <slot />
     </div>
 </template>
