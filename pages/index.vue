@@ -13,8 +13,7 @@ useSeoMeta({
 
 <template>
     <div class="min-w-full">
-        <!-- <SectionHero /> -->
-        <SectionHero2 />
+        <SectionHero />
         <SectionSamples />
         <SectionReviews />
         <SectionExperts />

@@ -40,9 +40,10 @@ let { key_factors } = contentStore()
                             </li>
                         </ul>
 
-                        <UiPayment class="hidden sm:inline" />
-
-                        <UiRatingsTotal classnames="justify-start mt-5" />
+                        <div class="flex flex-row  justify-start items-center gap-4 mt-4">
+                            <UiPayment class="hidden sm:inline" />
+                            <UiRatingsTotal classnames="justify-start" />
+                        </div>
 
 
                         <div class="flex gap-4">
@@ -58,7 +59,7 @@ let { key_factors } = contentStore()
             </div>
 
             <div class="hidden sm:block max-w-screen-xl mx-auto">
-                <!-- <UiOrderForm /> -->
+                <UiOrderForm />
             </div>
         </div>
     </div>

@@ -10,8 +10,8 @@ let props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-    <div class="card shadow-xl">
-        <div class="card-body p-6 flex" :class="type == 'verticle' ? 'flex-column' : 'flex-column md:flex-row'">
+    <div class="card shadow hover:shadow-lg sm:max-w-6xl mx-auto bg-white">
+        <div class="card-body p-4 flex" :class="type == 'verticle' ? 'flex-column' : 'flex-column md:flex-row'">
             <div class="card-title" v-if="type == 'verticle'">
                 <h4 class="text-2xl sm:text-4xl ">Calculate the Price</h4>
             </div>
@@ -25,7 +25,7 @@ let props = withDefaults(defineProps<Props>(), {
                 <label class="label">
                     <span class="label-text">Academic Level</span>
                 </label>
-                <select class="select select-bordered">
+                <select class="select select-bordered select-sm">
                     <option disabled selected>Pick one</option>
                     <option>Star Wars</option>
                     <option>Harry Potter</option>
@@ -39,7 +39,7 @@ let props = withDefaults(defineProps<Props>(), {
                 <label class="label">
                     <span class="label-text">Urgency</span>
                 </label>
-                <select class="select select-bordered">
+                <select class="select select-bordered select-sm">
                     <option disabled selected>Pick one</option>
                     <option>Star Wars</option>
                     <option>Harry Potter</option>
@@ -54,7 +54,7 @@ let props = withDefaults(defineProps<Props>(), {
                 <label class="label">
                     <span class="label-text">Pages/Words</span>
                 </label>
-                <select class="select select-bordered">
+                <select class="select select-bordered select-sm">
                     <option disabled selected>Pick one</option>
                     <option>Star Wars</option>
                     <option>Harry Potter</option>
@@ -72,7 +72,7 @@ let props = withDefaults(defineProps<Props>(), {
                     <string class="font-bold mx-2">$30.00</string>
                 </span>
             </div>
-            <NuxtLink to="/orders/ordernow" class=" btn btn-primary" :class="type == 'verticle' ? '' : 'sm:mt-9'">Order Now
+            <NuxtLink to="/orders/ordernow" class=" btn btn-primary" :class="type == 'verticle' ? '' : 'sm:mt-5'">Order Now
             </NuxtLink>
 
         </div>
