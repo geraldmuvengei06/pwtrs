@@ -29,12 +29,18 @@ useSeoMeta({
 
                 <div class="hero-content flex-col sm:flex-row-reverse">
                     <div class="w-full md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">
+
+                        <h1 class="text-3xl sm:text-5xl font-bold sm:hidden mb-2"><span
+                                class="bg-gradient-to-tr from-primary to-secondary bg-clip-text text-transparent">{{
+                                    data?.title }}</span>
+                        </h1>
+
                         <UiOrderFormDescription type="verticle" />
                     </div>
 
 
                     <div class="sm:w-2/3">
-                        <h1 class="text-3xl sm:text-5xl font-bold "><span
+                        <h1 class="text-3xl sm:text-5xl font-bold hidden sm:inline"><span
                                 class="bg-gradient-to-tr from-primary to-secondary bg-clip-text text-transparent">{{
                                     data?.title }}</span>
                         </h1>
@@ -51,7 +57,8 @@ useSeoMeta({
 
 
 
-                        <UiRatingsTotal classnames="ustify-start md:justify-start" />
+                        <!-- <UiRatingsTotal classnames="ustify-start md:justify-start" /> -->
+                        <UiPayment />
 
                     </div>
 

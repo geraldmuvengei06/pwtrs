@@ -2,12 +2,13 @@
 <template>
   <div class="card flex flex-col justify-content-center">
     <PrimeToast position="bottom-center" severity="info" group="bc" @close="onClose">
-      <template #message="slotProps">
-        <div class="flex flex-col align-items-start px-4 py-4" style="flex: 1">
+      <template #container="slotProps">
+        <div class="flex flex-col align-items-start px-8 py-5" style="flex: 1">
           <h6 class="text-base sm:text-lg">Cookie Policy</h6>
           <p>
             {{ runtimeConfig.public.websiteName }} uses cookies to deliver a seemless and personalized experience. By
-            clicking 'Accept' you agree with these <RouterLink to="/legal/cookie-policy">cookies</RouterLink>.
+            clicking 'Accept' you agree with these <RouterLink class="underline font-bold " to="/legal/cookie-policy">
+              cookies</RouterLink>.
           </p>
           <button class="btn btn-primary mt-2" label="Accept" @click="onAccept()">Accept</button>
         </div>

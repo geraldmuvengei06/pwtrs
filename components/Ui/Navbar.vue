@@ -44,7 +44,8 @@ watch(() => route.path, () => {
 
 </script>
 <template>
-    <header class="drop-shadow bg-gradient-to-br from-[#F2F8FC]/80 to-[#FEF6F4]/80 backdrop-blur sticky top-0 z-40">
+    <header
+        class="drop-shadow bg-white sm:bg-gradient-to-br sm:from-[#F2F8FC]/80 sm:to-[#FEF6F4]/80 backdrop-blur sticky top-0 z-40">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 sm:p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
@@ -139,8 +140,10 @@ watch(() => route.path, () => {
                                 </DisclosureButton>
                                 <DisclosurePanel class="mt-2 space-y-2">
                                     <DisclosureButton v-for="item in services" :key="item.link"
-                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 w-full text-left text-gray-900 hover:bg-gray-50">
-                                        <RouterLink class="w-full" :to="item.link">{{ item.name || item.item }}</RouterLink>
+                                        class="block rounded-lg text-sm font-semibold leading-7 w-full text-left text-gray-900 hover:bg-gray-50">
+                                        <RouterLink
+                                            class="w-full block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7  text-left text-gray-900 hover:bg-gray-50"
+                                            :to="item.link">{{ item.name || item.item }}</RouterLink>
                                     </DisclosureButton>
                                 </DisclosurePanel>
                             </Disclosure>

@@ -15,7 +15,7 @@ let { order_url, goTo } = contentStore()
             </div>
             <div class="divider font-bold">Saved <small>$5.00</small></div>
             <h6 class="text-center">Get All These Features</h6>
-            <button @click="goTo(`${order_url}`)" class="sm:mt-4 btn btn-primary flex ">Order Now</button>
+            <button @click="goTo(`${order_url}`)" class="sm:mt-4 btn btn-primary flex mx-auto ">Order Now</button>
         </div>
     </div>
 </template>
