@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     },
     components: {
       prefix: 'Prime',
-      include: ['Carousel', 'Button', 'Rating', 'InputText', 'InputNumber', 'Message', 'Accordion', 'AccordionTab', 'Timeline', 'Menubar'],
+      include: ['Carousel', 'Toast', 'Avatar', 'Button', 'Rating', 'InputText', 'InputNumber', 'Message', 'Accordion', 'AccordionTab', 'Timeline', 'Menubar'],
       exclude: undefined
     },
   },

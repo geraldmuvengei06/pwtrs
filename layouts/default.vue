@@ -5,8 +5,8 @@ let notification = ref(false)
 <template>
     <!-- Promo -->
     <UiAlert v-if="notification" />
-    <!-- <UiHeader/> -->
     <UiNavbar />
     <slot></slot>
+    <UiCookiePolicy />
     <UiFooter />
 </template>

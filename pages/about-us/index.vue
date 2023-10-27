@@ -55,7 +55,8 @@ useSeoMeta({
 
     <SectionExperts />
     <div class="container mx-auto max-w-4xl py-12 px-4">
-        <article class="prose prose-slate  max-w-3xl mx-auto">
+        <article
+            class="prose prose-slate  max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl">
             <p>Most of the time, research papers constitute students' final and most demanding requirements. Thus, the
                 majority of students are intimidated when it comes to producing a high-quality paper that can suffice,
                 if not exceed, their teachers' expectations. If you want a well-researched paper with less time and

@@ -19,8 +19,10 @@ let props = withDefaults(defineProps<Props>(), {
                     placeholder="Briefly describe your requirements."></textarea>
             </div>
 
-            <button class=" btn btn-primary" :class="type == 'verticle' ? '' : 'sm:mt-9'">Find An Expert <span
-                    class="animate-pulse">🔥</span></button>
+            <button class=" btn btn-primary my-2" :class="type == 'verticle' ? '' : 'sm:mt-9'">Order Now<span
+                    class="animate-pulse text-2xl">🔥</span></button>
+
+            <UiRatingsTotal classnames="justify-start" />
 
         </div>
     </div>

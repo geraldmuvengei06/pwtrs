@@ -33,11 +33,19 @@ const callsToAction = [
     { name: 'WhatsApp Chat', href: '#', icon: PhoneIcon },
 ]
 
+
 const mobileMenuOpen = ref(false)
+
+const route = useRoute();
+watch(() => route.path, () => {
+    console.log("route.path", route.path);
+    mobileMenuOpen.value = false
+})
+
 </script>
 <template>
-    <header class="bg-white">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header class="drop-shadow bg-gradient-to-br from-[#F2F8FC]/80 to-[#FEF6F4]/80 backdrop-blur sticky top-0 z-40">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 sm:p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">{{ runtimeConfig.public.websiteName }}</span>
@@ -65,25 +73,23 @@ const mobileMenuOpen = ref(false)
                         <PopoverPanel
                             class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                             <div class="p-4">
-                                <ContentNavigation v-slot="{ navigation }">
-                                    <!-- Services menu -->
-                                    <div v-for="item of navigation[0]?.children" :key="item._path"
-                                        class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
-                                        <div
-                                            class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                            <component :is="item.icon || BookOpenIcon"
-                                                class="h-6 w-6 text-gray-600 group-hover:text-primary" aria-hidden="true" />
-                                        </div>
-                                        <div class="flex-auto">
-                                            <NuxtLink :to="item._path" class="block font-semibold text-gray-900">
-                                                {{ item.title }}
-                                                <span class="absolute inset-0" />
-                                            </NuxtLink>
-                                            <p class="mt-1 text-gray-600">{{ item.description }}</p>
-                                        </div>
+                                <!-- Services menu -->
+                                <div v-for="item in services" :key="item.link"
+                                    class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                    <div
+                                        class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                        <component :is="item.icon || BookOpenIcon"
+                                            class="h-6 w-6 text-gray-600 group-hover:text-primary" aria-hidden="true" />
                                     </div>
+                                    <div class="flex-auto">
+                                        <NuxtLink :to="item.link" class="block font-semibold text-gray-900">
+                                            {{ item.title || item.item }}
+                                            <span class="absolute inset-0" />
+                                        </NuxtLink>
+                                        <p class="mt-1 text-gray-600">{{ item.description }}</p>
+                                    </div>
+                                </div>
 
-                                </ContentNavigation>
                             </div>
                             <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                                 <a v-for="item in callsToAction" :key="item.name" :href="item.href"
@@ -112,7 +118,7 @@ const mobileMenuOpen = ref(false)
                 class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
                     <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">{{}}</span>
+                        <span class="sr-only">{{ runtimeConfig.public.websiteName }}</span>
                         <UiLogo />
                     </a>
                     <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
@@ -124,22 +130,20 @@ const mobileMenuOpen = ref(false)
                     <div class="-my-6 divide-y divide-gray-500/10">
 
                         <div class="space-y-2 py-6">
-                            <ContentNavigation v-slot="{ navigation }">
-                                <Disclosure as="div" class="-mx-3" v-slot="{ open }">
-                                    <DisclosureButton
-                                        class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                        Services
-                                        <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']"
-                                            aria-hidden="true" />
+                            <Disclosure as="div" class="-mx-3" v-slot="{ open }">
+                                <DisclosureButton
+                                    class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                    Services
+                                    <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']"
+                                        aria-hidden="true" />
+                                </DisclosureButton>
+                                <DisclosurePanel class="mt-2 space-y-2">
+                                    <DisclosureButton v-for="item in services" :key="item.link"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 w-full text-left text-gray-900 hover:bg-gray-50">
+                                        <RouterLink class="w-full" :to="item.link">{{ item.name || item.item }}</RouterLink>
                                     </DisclosureButton>
-                                    <DisclosurePanel class="mt-2 space-y-2">
-                                        <DisclosureButton v-for="item of [...navigation[0]?.children, ...callsToAction]"
-                                            :key="item._path" as="a" :href="item._path"
-                                            class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                            {{ item.name || item.title }}</DisclosureButton>
-                                    </DisclosurePanel>
-                                </Disclosure>
-                            </ContentNavigation>
+                                </DisclosurePanel>
+                            </Disclosure>
                             <NuxtLink v-for="item, i in menu" :key="i + 'menu'" :to="item?.link"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                 {{ item?.name }}</NuxtLink>

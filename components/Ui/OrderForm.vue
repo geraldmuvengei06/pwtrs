@@ -66,7 +66,7 @@ let props = withDefaults(defineProps<Props>(), {
                 class="flex flex-col sm:flex-row items-center justify-between p-4 bg-slate-200 rounded-lg">
                 <!-- <strong>Your Price</strong> -->
                 <span class="text-2xl">
-                    <strike class="font-bold text-slate-400">$60.00</strike>
+                    <small class="font-bold text-slate-400">$60.00</small>
                     <string class="font-bold mx-2">$30.00</string>
                 </span>
             </div>

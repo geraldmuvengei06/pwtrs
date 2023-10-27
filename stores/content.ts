@@ -1,83 +1,85 @@
+import { generateFullUrl } from "~/lib/utils";
+
 export const contentStore = defineStore('content', () => {
     const services = [
         {
-            item: 'Online Assignment Help',
-            link: '/services/online-assignment-help',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Assignment Help',
-            link: '/services/assignment-help',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Dissertation Writing Services',
-            link: '/services/dissertation-writing-services',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Capstone Project Writing Services',
-            link: '/services/capstone-project-writing-services',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Best Essay Writing Service',
+            item: 'Essay',
             link: '/services/best-essay-writing-service',
             content: '',
             content_type: 'markdown'
         },
         {
-            item: 'Best Online Assignment Help',
-            link: '/services/best-online-assignment-help',
+            item: 'Assignment Help',
+            link: '/services/online-assignment-help',
             content: '',
             content_type: 'markdown'
         },
         {
-            item: 'Term Paper Writing Services',
-            link: '/services/term-paper-writing-services',
+            item: 'Term Paper',
+            link: '/services/term-paper-writing-service',
             content: '',
             content_type: 'markdown'
         },
-        {
-            item: 'Report Writing Services',
-            link: '/services/report-writing-services',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Essay Assignments',
-            link: '/services/essay-assignments',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Assignment Writing',
-            link: '/services/assignment-writing',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Case Study Writing Services',
-            link: '/services/case-study-writing-services',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Coursework Writing',
-            link: '/services/coursework-writing',
-            content: '',
-            content_type: 'markdown'
-        },
-        {
-            item: 'Research Paper Writing Services',
-            link: '/services/research-paper-writing-services',
-            content: '',
-            content_type: 'markdown'
-        }
+        // {
+        //     item: 'Capstone Project Writing Services',
+        //     link: '/services/capstone-project-writing-services',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Best Essay Writing Service',
+        //     link: '/services/best-essay-writing-service',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Best Online Assignment Help',
+        //     link: '/services/best-online-assignment-help',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Term Paper Writing Services',
+        //     link: '/services/term-paper-writing-services',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Report Writing Services',
+        //     link: '/services/report-writing-services',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Essay Assignments',
+        //     link: '/services/essay-assignments',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Assignment Writing',
+        //     link: '/services/assignment-writing',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Case Study Writing Services',
+        //     link: '/services/case-study-writing-services',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Coursework Writing',
+        //     link: '/services/coursework-writing',
+        //     content: '',
+        //     content_type: 'markdown'
+        // },
+        // {
+        //     item: 'Research Paper Writing Services',
+        //     link: '/services/research-paper-writing-services',
+        //     content: '',
+        //     content_type: 'markdown'
+        // }
     ];
 
 
@@ -150,9 +152,9 @@ export const contentStore = defineStore('content', () => {
     const order_url = runtimeConfig?.public.orderUrl
     const home_url = runtimeConfig?.public.homeUrl
 
-    const router = useRouter();
     function goTo(path: string, params: object = {}, query: object  = {}) {
-        router.push({ path: path, params: {...params}, query: {...query} })
+        let url = generateFullUrl( path, params, query)
+        document.location.href = url
     }
     
     return { services, menu, key_factors, legal, order_url, home_url, goTo }
