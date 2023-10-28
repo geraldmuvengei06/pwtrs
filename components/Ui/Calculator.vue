@@ -9,6 +9,7 @@ const props = withDefaults(defineProps<Props>(), {
 import axios from "axios";
 const title = "Cost of your order";
 const total = ref("$0.0");
+const calculating = ref(false);
 const loading = ref(true);
 
 interface DefaultType {
@@ -85,13 +86,17 @@ async function getSetups() {
 
 async function calculatePrice() {
   try {
+    calculating.value = true;
     const res = await http.post("/Orders/CalculatePrice/", calcPriceForm.value);
 
-    let total = res?.data?.Data?.totals;
-    total.value = "$" + total[total.length - 1].value;
+    let totals = res?.data?.Data?.totals;
+    console.log("total", totals);
+    total.value = "$" + totals[totals.length - 1].value;
   } catch (error) {
     console.log("error", error);
     throw error;
+  } finally {
+    calculating.value = false;
   }
 }
 async function pages(state: boolean) {
@@ -193,7 +198,6 @@ onMounted(async () => {
             >-</span
           >
           <PrimeInputNumber
-            showButtons
             class="text-center"
             :min="1"
             placeholder="No of pages"
@@ -208,10 +212,11 @@ onMounted(async () => {
         </div>
         <div class="flex flex-row flex-1 items-center justify-between">
           <div class="mx-2">
-            {{ total || "" }}
+            <b>{{ total || "" }}</b>
           </div>
           <button type="button" @click="submitOrder" class="btn btn-primary">
-            Order Now <span class="animate-pulse text-2xl">🔥</span>
+            Order Now
+            <span class="animate-pulse text-2xl">🔥</span>
           </button>
         </div>
 
