@@ -1,30 +1,31 @@
 <script setup>
-let title = 'Essay Writing Service'
+let title = "Essay Writing Service";
 
 useSeoMeta({
-    title: title,
-    ogTitle: title,
-    description: 'This is my amazing site, let me tell you all about it.',
-    ogDescription: 'This is my amazing site, let me tell you all about it.',
-    ogImage: '',
-    twitterCard: 'summary_large_image',
-})
+  title: title,
+  ogTitle: title,
+  description: "This is my amazing site, let me tell you all about it.",
+  ogDescription: "This is my amazing site, let me tell you all about it.",
+  ogImage: "",
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <template>
-    <div class="min-w-full">
-        <SectionHero />
-        <SectionReviews />
-        <SectionSamples />
-        <SectionCTADark />
-        <SectionExperts />
-        <SectionUnique />
-        <SectionCTA />
-        <SectionFreeFeatures />
-        <SectionHowItWorks />
-        <SectionFaq />
-        <SectionCTAMaleDark />
-        <SectionSeo />
-        <SectionCTAMale />
-    </div>
+  <div class="min-w-full">
+    <SectionHero />
+    <SectionStats />
+    <SectionReviews />
+    <SectionSamples />
+    <SectionCTADark />
+    <SectionExperts />
+    <SectionUnique />
+    <SectionCTA />
+    <SectionFreeFeatures />
+    <SectionHowItWorksCards />
+    <SectionFaq />
+    <SectionCTAMaleDark />
+    <SectionSeo />
+    <SectionCTAMale />
+  </div>
 </template>

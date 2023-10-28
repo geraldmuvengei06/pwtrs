@@ -1,11 +1,13 @@
 <script setup>
-const runtimeConfig = useRuntimeConfig()
+const runtimeConfig = useRuntimeConfig();
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - ${runtimeConfig.public.websiteName}` : runtimeConfig.public.websiteName;
-  }
-})
+    return titleChunk
+      ? `${titleChunk} - ${runtimeConfig.public.websiteName}`
+      : runtimeConfig.public.websiteName;
+  },
+});
 </script>
 
 <template>
@@ -17,8 +19,6 @@ useHead({
     </NuxtLayout>
   </div>
 </template>
-
-
 
 <style>
 /* .page-enter-active,

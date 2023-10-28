@@ -1,67 +1,76 @@
 <script setup>
-let { key_factors } = contentStore()
+let { key_factors } = contentStore();
 </script>
 
 <template>
-    <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
-        <div class="container mx-auto py-8">
-            <div class="hero rounded-xl min-h-min relative">
-                <UiBgShade />
+  <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
+    <div class="container mx-auto py-8">
+      <div class="hero rounded-xl min-h-min relative">
+        <UiBgShade />
 
+        <div class="hero-content flex-col-reverse lg:flex-row-reverse">
+          <NuxtImg
+            alt=""
+            id="nuxt-img"
+            src="/img/typing-animate.svg"
+            class="hidden sm:inline sm:absolute lg:relative sm:right-1 sm:z-0 md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5"
+          />
 
-                <div class="hero-content flex-col-reverse lg:flex-row-reverse">
-
-                    <NuxtImg alt="" id="nuxt-img" src="/img/typing-animate.svg"
-                        class="hidden sm:inline sm:absolute lg:relative sm:right-1 sm:z-0 md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
-
-                    <!-- <div class="flex sm:hidden w-full sm:max-w-sm md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">
+          <!-- <div class="flex sm:hidden w-full sm:max-w-sm md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">
                         <UiOrderFormDescription class="w-full" type="verticle" />
                     </div> -->
 
-                    <div class="sm:z-10 sm:px-4 sm:pt-8">
-                        <h1 class="text-3xl sm:text-5xl font-bold ">Let <span
-                                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Expert
-                                Writers</span> Ace your Essays!</h1>
-                        <p class="py-6 text-lg sm:max-w-xs lg:max-w-max">Trust your assignments to an essay writing service
-                            with the <b>fastest
-                                delivery time</b> and fully original content.
-                        </p>
+          <div class="sm:z-10 sm:px-4 sm:pt-8">
+            <h1 class="text-3xl sm:text-5xl font-bold">
+              Let
+              <span
+                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+                >Expert Writers</span
+              >
+              Ace your Essays!
+            </h1>
+            <p class="py-6 text-lg sm:max-w-xs lg:max-w-max">
+              Trust your assignments to an essay writing service with the
+              <b>fastest delivery time</b> and fully original content.
+            </p>
 
+            <div class="w-full inline sm:hidden shadow-lg my-8">
+              <UiCalculator type="verticle" />
+            </div>
 
-                        <div class="w-full inline  sm:hidden shadow-lg my-8">
-                            <UiOrderFormDescription class="" type="verticle" />
-                        </div>
+            <ul class="w-full text-lg mt-8 sm:mt-0 hover:bg-transparent">
+              <li
+                v-for="(factor, i) in key_factors"
+                :key="i + 'f'"
+                class="hover:bg-transparent"
+              >
+                <span class="px-0"
+                  ><i class="pi pi-check text-xl mr-2 text-primary"></i
+                  >{{ factor.item }}</span
+                >
+              </li>
+            </ul>
 
-                        <ul class="w-full text-lg mt-8 sm:mt-0 hover:bg-transparent">
-                            <li v-for="factor, i in key_factors" :key="i + 'f'" class="hover:bg-transparent"><span
-                                    class="px-0"><i class="pi pi-check text-xl mr-2 text-primary"></i>{{ factor.item
-                                    }}</span>
-                            </li>
-                        </ul>
+            <div class="flex flex-row justify-start items-center gap-4 mt-4">
+              <UiPayment class="sm:inline" />
+              <UiRatingsTotal class="hidden sm:flex" />
+            </div>
 
-                        <div class="flex flex-row  justify-start items-center gap-4 mt-4">
-                            <UiPayment class="hidden sm:inline" />
-                        </div>
-
-
-                        <div class="flex gap-4">
-                            <!-- <button class="sm:mt-9 btn btn-primary flex sm:hidden ">Order Now</button> -->
-                            <!-- <button class="sm:mt-9 btn btn-primary btn-outline flex sm:hidden ">Talk to An
+            <div class="flex gap-4">
+              <!-- <button class="sm:mt-9 btn btn-primary flex sm:hidden ">Order Now</button> -->
+              <!-- <button class="sm:mt-9 btn btn-primary btn-outline flex sm:hidden ">Talk to An
                                 Expert</button> -->
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
-
-            <div class="hidden sm:block max-w-screen-xl mx-auto">
-                <UiOrderForm />
-            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="hidden sm:block max-w-screen-xl mx-auto">
+        <UiCalculator />
+      </div>
     </div>
-</template> 
+  </div>
+</template>
 
 <style>
 /* .navbar-c{
