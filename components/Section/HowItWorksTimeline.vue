@@ -1,10 +1,8 @@
 <script setup>
 import { ref } from "vue";
 
-const { how_it_works } = contentStore()
-
+const { how_it_works } = contentStore();
 </script>
-
 
 <template>
   <div class="container mx-auto py-8 sm:py-16 max-w-7xl">
@@ -14,9 +12,15 @@ const { how_it_works } = contentStore()
     </div>
 
     <div>
-      <PrimeTimeline :value="how_it_works" align="alternate" class="customized-timeline max-w-5xl mx-auto">
+      <PrimeTimeline
+        :value="how_it_works"
+        align="alternate"
+        class="customized-timeline max-w-5xl mx-auto"
+      >
         <template #marker="slotProps">
-          <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-1 shadow-1 bg-primary">
+          <span
+            class="flex w-8 h-8 items-center justify-center text-white rounded-full z-1 shadow-1 bg-primary"
+          >
             <i :class="slotProps.item.icon"></i>
           </span>
         </template>
@@ -30,9 +34,17 @@ const { how_it_works } = contentStore()
                 <br />
                 {{ slotProps.item.date }}
               </div>
-              <NuxtImg alt="" v-if="slotProps.item.image" :src="`/img/${slotProps.item.image}`" :alt="slotProps.item.name"
-                class="shadow-1" />
-              <span class="prose prose-stone list text-left" v-html="slotProps.item.description"></span>
+              <NuxtImg
+                alt=""
+                v-if="slotProps.item.image"
+                :src="`/img/${slotProps.item.image}`"
+                :alt="slotProps.item.name"
+                class="shadow-1"
+              />
+              <span
+                class="prose prose-stone list text-left"
+                v-html="slotProps.item.description"
+              ></span>
             </div>
           </div>
         </template>
@@ -40,7 +52,6 @@ const { how_it_works } = contentStore()
     </div>
   </div>
 </template>
-
 
 <style lang="scss" scoped>
 @media screen and (max-width: 960px) {

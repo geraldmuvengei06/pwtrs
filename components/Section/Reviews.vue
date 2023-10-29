@@ -3,42 +3,8 @@ import { UiReview } from '#build/components';
 <script setup>
 import { ref, onMounted } from "vue";
 
-onMounted(() => {
-  reviews.value = [
-    {
-      name: "test",
-      image: "test.png",
-      rating: 4,
-      description: "Timely delivery",
-    },
-    {
-      name: "test",
-      image: "test.png",
-      rating: 4,
-      description: "Timely delivery",
-    },
-    {
-      name: "test",
-      image: "test.png",
-      rating: 4,
-      description: "Timely delivery",
-    },
-    {
-      name: "test",
-      image: "test.png",
-      rating: 4,
-      description: "Timely delivery",
-    },
-    {
-      name: "test",
-      image: "test.png",
-      rating: 4,
-      description: "Timely delivery",
-    },
-  ];
-});
+const { reviews } = contentStore();
 
-const reviews = ref();
 const responsiveOptions = ref([
   // {
   //     breakpoint: '1199px',

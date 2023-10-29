@@ -6,13 +6,22 @@ let { order_url, goTo } = contentStore();
   <div class="">
     <div class="container mx-auto py-8 sm:py-16 max-w-7xl px-4 sm:px-8">
       <div
-        class="flex flex-col items-center sm:flex-row bg-neutral text-neutral-content rounded-lg gap-4 hover:shadow-lg">
-        <NuxtImg alt="" id="nuxt-img" class="w-48 sm:w-1/3 max-w-xs m-4 m-4" src="/img/creative-writing-animate.svg" />
+        class="flex flex-col items-center sm:flex-row bg-neutral text-neutral-content rounded-lg gap-4 hover:shadow-lg"
+      >
+        <NuxtImg
+          alt=""
+          id="nuxt-img"
+          class="w-48 sm:w-1/3 max-w-xs m-4 m-4"
+          src="/img/creative-writing-animate.svg"
+        />
 
         <div class="px-4 sm:px-8 py-8">
           <h2 class="text-2xl sm:text-4xl">
             Talk to an
-            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Expert Writer</span>
+            <span
+              class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+              >Expert Writer</span
+            >
             Now
           </h2>
           <p class="my-4">
@@ -22,7 +31,10 @@ let { order_url, goTo } = contentStore();
             provident explicabo enim rerum. Voluptate?
           </p>
 
-          <button @click="goTo(`${order_url}`)" class="sm:mt-9 btn btn-primary flex">
+          <button
+            @click="goTo(`${order_url}`)"
+            class="sm:mt-9 btn btn-primary flex"
+          >
             Hire an Expert Writer
           </button>
         </div>

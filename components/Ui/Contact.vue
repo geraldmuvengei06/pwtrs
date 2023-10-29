@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-const { contacts } = contentStore()
+const { contacts } = contentStore();
 interface Props {
   minimal?: boolean;
 }

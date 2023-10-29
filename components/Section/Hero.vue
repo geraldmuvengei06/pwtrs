@@ -22,16 +22,14 @@ let { key_factors } = contentStore();
 
           <div class="sm:z-10 sm:px-4 sm:pt-8">
             <h1 class="text-3xl sm:text-5xl font-bold">
-              Let
               <span
                 class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-                >Expert Writers</span
+                >A+ Essays</span
               >
-              Ace your Essays!
+              at Your Fingertips
             </h1>
             <p class="py-6 text-lg sm:max-w-xs lg:max-w-max">
-              Trust your assignments to an essay writing service with the
-              <b>fastest delivery time</b> and fully original content.
+              Elevate your academic performance with our online writing service.
             </p>
 
             <div class="w-full inline sm:hidden shadow-lg my-8">
