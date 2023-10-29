@@ -1,12 +1,9 @@
 <script setup lang="ts">
+
+const { contacts } = contentStore()
 interface Props {
   minimal?: boolean;
 }
-
-const contacts = {
-  whatsapp: "1-893-233-2333",
-  mail: "support@test.com",
-};
 
 // const { isModalVisible, toggle, toggleBubbleVisibility, popoutChatWindow } = useChatWoot()
 
@@ -46,10 +43,10 @@ let props = withDefaults(defineProps<Props>(), {
       </div>
     </span>
     <p class="flex items-center gap-4 my-2">
-      <span class="pi pi-whatsapp"></span>{{ contacts.whatsapp }}
+      <span class="pi pi-whatsapp"></span>{{ contacts?.whatsapp }}
     </p>
     <p class="flex items-center gap-4 my-2">
-      <span class="pi pi-envelope"></span>{{ contacts.mail }}
+      <span class="pi pi-envelope"></span>{{ contacts?.mail }}
     </p>
 
     <!-- <button class="btn btn-primary bgg-primary-500 text-white mt-8" @click="toggle('open')">Talk to an Agent</button> -->

@@ -23,6 +23,8 @@ export default defineNuxtConfig({
       websiteUrl: process.env.NUXT_WEBSITE_URL,
       orderUrl: process.env.NUXT_ORDER_URL || "/orders/ordernow/",
       homeUrl: process.env.NUXT_HOME_URL || "/orders/home/",
+      whatsappNumber: process.env.NUXT_WHATSAPP_NUMBER,
+      supportEmail: process.env.NUXT_SUPPORT_EMAIL,
       apiUrl: "https://api.urgentwriters.com", // can be overridden by NUXT_PUBLIC_API_BASE environment variable
     },
   },
