@@ -20,66 +20,7 @@ export const contentStore = defineStore("content", () => {
       content: "",
       content_type: "markdown",
     },
-    // {
-    //     item: 'Capstone Project Writing Services',
-    //     link: '/services/capstone-project-writing-services',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Best Essay Writing Service',
-    //     link: '/services/best-essay-writing-service',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Best Online Assignment Help',
-    //     link: '/services/best-online-assignment-help',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Term Paper Writing Services',
-    //     link: '/services/term-paper-writing-services',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Report Writing Services',
-    //     link: '/services/report-writing-services',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Essay Assignments',
-    //     link: '/services/essay-assignments',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Assignment Writing',
-    //     link: '/services/assignment-writing',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Case Study Writing Services',
-    //     link: '/services/case-study-writing-services',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Coursework Writing',
-    //     link: '/services/coursework-writing',
-    //     content: '',
-    //     content_type: 'markdown'
-    // },
-    // {
-    //     item: 'Research Paper Writing Services',
-    //     link: '/services/research-paper-writing-services',
-    //     content: '',
-    //     content_type: 'markdown'
-    // }
+    
   ];
 
   const menu = [
@@ -318,6 +259,161 @@ export const contentStore = defineStore("content", () => {
     },
   ];
 
+
+  const samples = [
+    {
+        filename: "A Personal Reflection On Future Career Path As A Nurse And How To Care For Self And Patients",
+        path: "/samples/watermarked-A-Personal-Reflection-on-Future-Career-Path-as-a-Nurse-and-How-to-Care-for-Self-and-Patients.pdf",
+        size: "0.05 MB",
+        num_pages: 4,
+        estimated_read_time: "2.40 minutes",
+        type: "Reflection Essay",
+        created_at: "2023-10-30 10:08:06",
+        modified_at: "2023-10-30 10:08:06",
+    },
+    {
+        filename: "Advanced Pharmacology",
+        path: "/samples/watermarked-Advanced-Pharmacology.pdf",
+        size: "0.10 MB",
+        num_pages: 3,
+        estimated_read_time: "1.80 minutes",
+        type: "Research Paper",
+        created_at: "2023-10-30 10:08:06",
+        modified_at: "2023-10-30 10:08:06",
+    },
+    {
+        filename: "Comprehensive Integrated Psychiatric Assessment",
+        path: "/samples/watermarked-Comprehensive-integrated-psychiatric-assessment.pdf",
+        size: "0.12 MB",
+        num_pages: 5,
+        estimated_read_time: "3.00 minutes",
+        type: "Assessment Essay",
+        created_at: "2023-10-30 10:08:06",
+        modified_at: "2023-10-30 10:08:06",
+    },
+    {
+        filename: "Diversity In Health Care Purnell Nursing Model",
+        path: "/samples/watermarked-Diversity-in-Health-Care-Purnell-nursing-Model.pdf",
+        size: "0.15 MB",
+        num_pages: 7,
+        estimated_read_time: "4.20 minutes",
+        type: "Essay",
+        created_at: "2023-10-30 10:08:06",
+        modified_at: "2023-10-30 10:08:06",
+    },
+    {
+        filename: "Focused Assessment Of The Lungs And Thorax",
+        path: "/samples/watermarked-Focused-Assessment-of-the-Lungs-and-Thorax.pdf",
+        size: "0.13 MB",
+        num_pages: 7,
+        estimated_read_time: "4.20 minutes",
+        type: "Essay",
+        created_at: "2023-10-30 10:08:07",
+        modified_at: "2023-10-30 10:08:07",
+    },
+    {
+        filename: "Internal And External Data",
+        path: "/samples/watermarked-Internal-and-external-data.pdf",
+        size: "0.07 MB",
+        num_pages: 4,
+        estimated_read_time: "2.40 minutes",
+        type: "Essay",
+        created_at: "2023-10-30 10:08:07",
+        modified_at: "2023-10-30 10:08:07",
+    },
+    {
+        filename: "Learning Needs Assessment",
+        path: "/samples/watermarked-Learning-Needs-Assessment.pdf",
+        size: "0.15 MB",
+        num_pages: 6,
+        estimated_read_time: "3.60 minutes",
+        type: "Assessment",
+        created_at: "2023-10-30 10:08:07",
+        modified_at: "2023-10-30 10:08:07",
+    },
+    {
+        filename: "Quality Healthcare Measuring Np Performance",
+        path: "/samples/watermarked-Quality-Healthcare-Measuring-NP-Performance.pdf",
+        size: "0.09 MB",
+        num_pages: 9,
+        estimated_read_time: "5.40 minutes",
+        type: "Essay",
+        created_at: "2023-10-30 10:08:08",
+        modified_at: "2023-10-30 10:08:08",
+    },
+    {
+        filename: "Reducing Barriers To Selfhelp Tools Among Women With Depression ",
+        path: "/samples/watermarked-REDUCING-BARRIERS-TO-SELFHELP-TOOLS-AMONG-WOMEN-WITH-DEPRESSION-.pdf",
+        size: "0.17 MB",
+        num_pages: 26,
+        estimated_read_time: "15.60 minutes",
+        type: "Paper",
+        created_at: "2023-10-30 10:08:09",
+        modified_at: "2023-10-30 10:08:09",
+    },
+    {
+        filename: "NPR Concept Plan",
+        path: "/samples/watermarked-References.pdf",
+        size: "0.15 MB",
+        num_pages: 2,
+        estimated_read_time: "1.20 minutes",
+        type: "Plan",
+        created_at: "2023-10-30 10:08:09",
+        modified_at: "2023-10-30 10:08:09",
+    },
+    {
+        filename: "Sigmund Freud",
+        path: "/samples/watermarked-Sigmund-Freud.pdf",
+        size: "0.11 MB",
+        num_pages: 4,
+        estimated_read_time: "2.40 minutes",
+        type: "Paper",
+        created_at: "2023-10-30 10:08:10",
+        modified_at: "2023-10-30 10:08:10",
+    },
+    {
+        filename: "Stage A Heart Failure",
+        path: "/samples/watermarked-Stage-A-Heart-Failure.pdf",
+        size: "0.14 MB",
+        num_pages: 5,
+        estimated_read_time: "3.00 minutes",
+        type: "Essay",
+        created_at: "2023-10-30 10:08:10",
+        modified_at: "2023-10-30 10:08:10",
+    },
+    {
+        filename: "Stress Management",
+        path: "/samples/watermarked-Stress-Management.pdf",
+        size: "0.14 MB",
+        num_pages: 7,
+        estimated_read_time: "4.20 minutes",
+        type: "Essay",
+        created_at: "2023-10-30 10:08:10",
+        modified_at: "2023-10-30 10:08:10",
+    },
+    {
+        filename: "Testtaking",
+        path: "/samples/watermarked-TestTaking.pdf",
+        size: "0.11 MB",
+        num_pages: 5,
+        estimated_read_time: "3.00 minutes",
+        type: "Essay",
+        created_at: "2023-10-30 10:08:10",
+        modified_at: "2023-10-30 10:08:10",
+    },
+    {
+        filename: "Week 4 Signature Assignment Pediatric Comprehensive Soap Note Pt 2 Bp",
+        path: "/samples/watermarked-Week-4-Signature-Assignment-Pediatric-Comprehensive-SOAP-Note-Pt-2-BP.pdf",
+        size: "0.08 MB",
+        num_pages: 5,
+        estimated_read_time: "3.00 minutes",
+        type: "Assignment",
+        created_at: "2023-10-30 10:08:11",
+        modified_at: "2023-10-30 10:08:11",
+    }
+]
+  
+
   const runtimeConfig = useRuntimeConfig();
   const order_url = runtimeConfig?.public.orderUrl;
   const home_url = runtimeConfig?.public.homeUrl;
@@ -343,6 +439,7 @@ export const contentStore = defineStore("content", () => {
     how_it_works,
     faqs,
     reviews,
+    samples,
     goTo,
   };
 });

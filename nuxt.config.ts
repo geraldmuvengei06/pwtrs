@@ -79,6 +79,7 @@ export default defineNuxtConfig({
         "Menubar",
         "InputNumber",
         "Dropdown",
+        "Dialog"
       ],
       exclude: undefined,
     },

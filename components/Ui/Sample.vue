@@ -3,33 +3,54 @@ let { order_url, goTo } = contentStore();
 
 interface Props {
   img?: string;
-  name?: string;
-  rating?: number;
+  filename?: string;
+  path?: string;
+  size?: string;
+  type?: string;
   description?: string;
+  estimated_read_time?: string;
+  num_pages?: number;
 }
 let props = withDefaults(defineProps<Props>(), {
   img: "",
-  name: "",
-  rating: 4,
+  filename: "",
+  path: '',
+  size: "",
+  type: "",
   description: "",
+  estimated_read_time: "",
+  num_pages: 0
 });
 
-let _rating = toRef(props?.rating);
+
+const visible = ref(false)
+
 </script>
 
 <template>
+  <PrimeDialog v-model:visible="visible" modal :header="filename" :style="{ width: '50rem' }"
+    :breakpoints="{ '1199px': '75vw', '575px': '90vw' }">
+    <p>
+      <span><b>{{ type }}</b> - <small>{{ num_pages }} pages</small></span>
+      <small>{{ estimated_read_time }} Read</small>
+    </p>
+    <object class="bg-slate-100" type="application/pdf" width="100%" height="500" :data="path">
+      Your browser does not support PDFs.
+    </object>
+
+    <UiCalculator type="horizontal" />
+  </PrimeDialog>
   <div class="card mx-1 max-w-xs bg-slate-50 hover:shadow-md">
     <div class="card-body p-4">
       <h4 class="text-lg sm:text-xl flex sm:flex-row gap-1">
         <span class="pi pi-file text-3xl sm:text-5xl"></span>
-        <span>The Importance and Impacts of Narratives in o</span>
+        <span>{{ filename }}</span>
       </h4>
-      <span><b>Editing</b> - <small>2 pages</small></span>
-
+      <span><b>{{ type }}</b> - <small>{{ num_pages }} pages</small></span>
       <div class="divider py-0 my-0 border-slate-50"></div>
 
       <div class="card-actions justify-between">
-        <button class="btn btn-primary btn-outline btn-sm">View</button>
+        <button class="btn btn-primary btn-outline btn-sm" @click="visible = true">View</button>
         <!-- <button @click="goTo(`${order_url}`)" class="btn btn-primary btn-outline">Order Now</button> -->
       </div>
     </div>
