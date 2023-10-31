@@ -93,15 +93,15 @@ export const contentStore = defineStore("content", () => {
       icon: "",
     },
     {
-      item: "Help with any assignment",
+      item: "Affordability & Commitment",
       icon: "",
     },
     {
-      item: "Plagiarism-free content",
+      item: "Originality - Plagiarism-free content",
       icon: "",
     },
     {
-      item: "Writers from the US and Canada",
+      item: "Expert Writers from the US and Canada",
       icon: "",
     },
   ];
