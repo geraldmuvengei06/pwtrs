@@ -452,6 +452,27 @@ export const contentStore = defineStore("content", () => {
     },
   ];
 
+  const unique = [
+    {
+      "title": "Originality",
+      "description": "At the heart of every great piece of academic work is originality. We understand that plagiarism is a cardinal sin in academia. That's why we guarantee that every piece we craft, whether it's a 'write my paper for me' request, an 'online nursing paper,' or an 'online term paper,' is 100% original. Our dedicated writers meticulously create each document from scratch, ensuring it's tailored to your specific requirements."
+    },
+    {
+      "title": "Expertise",
+      "description": "Our team comprises online expert writers with diverse academic backgrounds. When you trust us with your assignments, you can be confident that we have specialists in your field. Whether you need a research paper in science, a literary analysis, or a business essay, we match your task with a writer who possesses the expertise to meet your expectations."
+    },
+    {
+      "title": "Timely Delivery",
+      "description": "In academia, punctuality is of paramount importance. We understand the significance of meeting deadlines. Whether you have an 'online nursing paper' due or a 'write my paper for me' request, we work diligently to ensure you receive your assignment on time. Our quick turnaround ensures that you are never left in a lurch, even when time is tight."
+    },
+    {
+      "title": "Affordability & Commitment",
+      "description": "We believe that affordability should not be sacrificed for quality. Our competitive pricing ensures that every student can access our exceptional services without breaking the bank. We also offer discounts and special offers, making our services even more budget-friendly. In a world where academic success is highly competitive, we stand as your beacon of light. Trust us to deliver original, expert-crafted work on time and within your budget. We don't just provide essays; we provide solutions that drive you toward academic excellence."
+    },
+ 
+  ]
+  
+
   const order_url = runtimeConfig?.public.orderUrl;
   const home_url = runtimeConfig?.public.homeUrl;
 
@@ -477,6 +498,7 @@ export const contentStore = defineStore("content", () => {
     faqs,
     reviews,
     samples,
+    unique,
     page_content,
     goTo,
   };

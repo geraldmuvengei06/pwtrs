@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<Props>(), {
   icon: "pi pi-verified",
   title: "",
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam iusto repudiandae, nemo dolores sed adipisci magnam?",
+    "",
 });
 </script>
 
