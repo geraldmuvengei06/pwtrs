@@ -263,7 +263,7 @@ export const contentStore = defineStore("content", () => {
   const samples = [
     {
         filename: "A Personal Reflection On Future Career Path As A Nurse And How To Care For Self And Patients",
-        path: "/samples/watermarked-A-Personal-Reflection-on-Future-Career-Path-as-a-Nurse-and-How-to-Care-for-Self-and-Patients.pdf",
+        path: "/sample/watermarked-A-Personal-Reflection-on-Future-Career-Path-as-a-Nurse-and-How-to-Care-for-Self-and-Patients.pdf",
         size: "0.05 MB",
         num_pages: 4,
         estimated_read_time: "2.40 minutes",
@@ -273,7 +273,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Advanced Pharmacology",
-        path: "/samples/watermarked-Advanced-Pharmacology.pdf",
+        path: "/sample/watermarked-Advanced-Pharmacology.pdf",
         size: "0.10 MB",
         num_pages: 3,
         estimated_read_time: "1.80 minutes",
@@ -283,7 +283,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Comprehensive Integrated Psychiatric Assessment",
-        path: "/samples/watermarked-Comprehensive-integrated-psychiatric-assessment.pdf",
+        path: "/sample/watermarked-Comprehensive-integrated-psychiatric-assessment.pdf",
         size: "0.12 MB",
         num_pages: 5,
         estimated_read_time: "3.00 minutes",
@@ -293,7 +293,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Diversity In Health Care Purnell Nursing Model",
-        path: "/samples/watermarked-Diversity-in-Health-Care-Purnell-nursing-Model.pdf",
+        path: "/sample/watermarked-Diversity-in-Health-Care-Purnell-nursing-Model.pdf",
         size: "0.15 MB",
         num_pages: 7,
         estimated_read_time: "4.20 minutes",
@@ -303,7 +303,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Focused Assessment Of The Lungs And Thorax",
-        path: "/samples/watermarked-Focused-Assessment-of-the-Lungs-and-Thorax.pdf",
+        path: "/sample/watermarked-Focused-Assessment-of-the-Lungs-and-Thorax.pdf",
         size: "0.13 MB",
         num_pages: 7,
         estimated_read_time: "4.20 minutes",
@@ -313,7 +313,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Internal And External Data",
-        path: "/samples/watermarked-Internal-and-external-data.pdf",
+        path: "/sample/watermarked-Internal-and-external-data.pdf",
         size: "0.07 MB",
         num_pages: 4,
         estimated_read_time: "2.40 minutes",
@@ -323,7 +323,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Learning Needs Assessment",
-        path: "/samples/watermarked-Learning-Needs-Assessment.pdf",
+        path: "/sample/watermarked-Learning-Needs-Assessment.pdf",
         size: "0.15 MB",
         num_pages: 6,
         estimated_read_time: "3.60 minutes",
@@ -333,7 +333,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Quality Healthcare Measuring Np Performance",
-        path: "/samples/watermarked-Quality-Healthcare-Measuring-NP-Performance.pdf",
+        path: "/sample/watermarked-Quality-Healthcare-Measuring-NP-Performance.pdf",
         size: "0.09 MB",
         num_pages: 9,
         estimated_read_time: "5.40 minutes",
@@ -343,7 +343,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Reducing Barriers To Selfhelp Tools Among Women With Depression ",
-        path: "/samples/watermarked-REDUCING-BARRIERS-TO-SELFHELP-TOOLS-AMONG-WOMEN-WITH-DEPRESSION-.pdf",
+        path: "/sample/watermarked-REDUCING-BARRIERS-TO-SELFHELP-TOOLS-AMONG-WOMEN-WITH-DEPRESSION-.pdf",
         size: "0.17 MB",
         num_pages: 26,
         estimated_read_time: "15.60 minutes",
@@ -353,7 +353,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "NPR Concept Plan",
-        path: "/samples/watermarked-References.pdf",
+        path: "/sample/watermarked-References.pdf",
         size: "0.15 MB",
         num_pages: 2,
         estimated_read_time: "1.20 minutes",
@@ -363,7 +363,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Sigmund Freud",
-        path: "/samples/watermarked-Sigmund-Freud.pdf",
+        path: "/sample/watermarked-Sigmund-Freud.pdf",
         size: "0.11 MB",
         num_pages: 4,
         estimated_read_time: "2.40 minutes",
@@ -373,7 +373,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Stage A Heart Failure",
-        path: "/samples/watermarked-Stage-A-Heart-Failure.pdf",
+        path: "/sample/watermarked-Stage-A-Heart-Failure.pdf",
         size: "0.14 MB",
         num_pages: 5,
         estimated_read_time: "3.00 minutes",
@@ -383,7 +383,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Stress Management",
-        path: "/samples/watermarked-Stress-Management.pdf",
+        path: "/sample/watermarked-Stress-Management.pdf",
         size: "0.14 MB",
         num_pages: 7,
         estimated_read_time: "4.20 minutes",
@@ -393,7 +393,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Testtaking",
-        path: "/samples/watermarked-TestTaking.pdf",
+        path: "/sample/watermarked-TestTaking.pdf",
         size: "0.11 MB",
         num_pages: 5,
         estimated_read_time: "3.00 minutes",
@@ -403,7 +403,7 @@ export const contentStore = defineStore("content", () => {
     },
     {
         filename: "Week 4 Signature Assignment Pediatric Comprehensive Soap Note Pt 2 Bp",
-        path: "/samples/watermarked-Week-4-Signature-Assignment-Pediatric-Comprehensive-SOAP-Note-Pt-2-BP.pdf",
+        path: "/sample/watermarked-Week-4-Signature-Assignment-Pediatric-Comprehensive-SOAP-Note-Pt-2-BP.pdf",
         size: "0.08 MB",
         num_pages: 5,
         estimated_read_time: "3.00 minutes",

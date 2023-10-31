@@ -28,17 +28,17 @@ const visible = ref(false)
 </script>
 
 <template>
-  <PrimeDialog v-model:visible="visible" modal :header="filename" :style="{ width: '50rem' }"
+  <PrimeDialog maximizable v-model:visible="visible" modal :header="filename" :style="{ width: '600' }"
     :breakpoints="{ '1199px': '75vw', '575px': '90vw' }">
     <p>
       <span><b>{{ type }}</b> - <small>{{ num_pages }} pages</small></span>
-      <small>{{ estimated_read_time }} Read</small>
+      - <small>{{ estimated_read_time }} Read</small>
     </p>
-    <object class="bg-slate-100" type="application/pdf" width="100%" height="500" :data="path">
+    <object class="bg-slate-100" type="application/pdf" width="100%" height="1240px" :data="path">
       Your browser does not support PDFs.
     </object>
 
-    <UiCalculator type="horizontal" />
+    <SectionCTA />
   </PrimeDialog>
   <div class="card mx-1 max-w-xs bg-slate-50 hover:shadow-md">
     <div class="card-body p-4">
@@ -60,5 +60,15 @@ const visible = ref(false)
 <style lang="scss" scoped>
 .p-rating-item-active {
   @apply bg-primary;
+}
+
+object {
+  #toolbar {
+    display: none !important;
+  }
+
+  #sidenav-container {
+    display: none !important;
+  }
 }
 </style>
