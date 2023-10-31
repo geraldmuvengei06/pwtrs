@@ -48,10 +48,25 @@ let { key_factors } = contentStore();
                 >
               </li>
             </ul>
+            <UiPayment class="sm:inline" />
 
             <div class="flex flex-row justify-start items-center gap-4 mt-4">
-              <UiPayment class="sm:inline" />
               <UiRatingsTotal class="hidden sm:flex" />
+              <div
+                class="flex items-center justify-center sm:justify-start flex-row rounded-lg"
+              >
+                <div class="w-24 mr-1">
+                  <UiLogo />
+                </div>
+                <p
+                  class="text-base sm:text-lg w-1/4 flex flex-row items-center"
+                >
+                  <span
+                    class="pi pi-star-fill text-orange-400 text-base sm:text-lg"
+                  ></span>
+                  <span class="text-black">4.9</span>
+                </p>
+              </div>
             </div>
 
             <div class="flex gap-4">

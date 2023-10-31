@@ -28,4 +28,6 @@ const { data, pending, error, refresh } = await useAsyncData(
       </ContentDoc>
     </article>
   </div>
+
+  <SectionCTADark />
 </template>

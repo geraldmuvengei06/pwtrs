@@ -28,13 +28,17 @@ const responsiveOptions = ref([
   <div class="container mx-auto py-8 sm:py-16 max-w-7xl">
     <div class="section-header my-8 text-center max-w-lg mx-auto px-4">
       <h2 class="text-2xl sm:text-4xl">What Other Students Say</h2>
-      <p>
-        Reviews from our clients.
-      </p>
+      <p>Reviews from our clients.</p>
 
       <UiRatingsTotal />
     </div>
-    <PrimeCarousel :value="reviews" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" class="mb-4">
+    <PrimeCarousel
+      :value="reviews"
+      :numVisible="4"
+      :numScroll="3"
+      :responsiveOptions="responsiveOptions"
+      class="mb-4"
+    >
       <template #item="slotProps">
         <UiReview v-bind="slotProps.data" />
       </template>

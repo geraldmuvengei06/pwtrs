@@ -12,7 +12,7 @@ let props = defineProps<{
     <div
       class="flex items-center justify-center sm:justify-start flex-row rounded-lg"
     >
-      <div class="w-24">
+      <div class="w-28">
         <NuxtImg alt="" id="nuxt-img" src="/img/reviewsio.png" />
       </div>
       <p class="text-base sm:text-lg w-1/4 flex flex-row items-center">
@@ -26,7 +26,7 @@ let props = defineProps<{
     <div
       class="flex items-center justify-center sm:justify-start flex-row rounded-lg"
     >
-      <div class="w-24">
+      <div class="w-28">
         <NuxtImg alt="" id="nuxt-img" src="/img/sitejabber.png" />
       </div>
       <p class="text-base sm:text-lg w-1/4 flex flex-row items-center">

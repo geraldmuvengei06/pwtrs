@@ -1,12 +1,15 @@
 <script setup>
-let title = "FAQs";
+const { page_content } = contentStore();
+let title = "FAQ";
+let content = page_content[title];
+
 useSeoMeta({
-  title: title,
-  ogTitle: title,
-  description: "This is my amazing site, let me tell you all about it.",
-  ogDescription: "This is my amazing site, let me tell you all about it.",
-  ogImage: "",
-  twitterCard: "summary_large_image",
+  title: content.metaTitle,
+  ogTitle: content.metaTitle,
+  description: content?.metaDescription,
+  ogDescription: content?.metaDescription,
+  ogImage: "/img/Questions-pana.png",
+  twitterCard: "/img/Questions-pana.png",
 });
 </script>
 <template>
@@ -30,8 +33,7 @@ useSeoMeta({
               >
             </h1>
             <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">
-              Trust your assignments to an essay writing service with the
-              <b>fastest delivery time</b> and fully original content.
+              {{ content?.subtitle }}
             </p>
             <UiPayment class="hidden sm:inline" />
           </div>

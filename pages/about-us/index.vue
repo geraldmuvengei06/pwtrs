@@ -1,19 +1,22 @@
 <script setup>
-let { key_factors, contacts } = contentStore();
+let { key_factors, contacts, page_content } = contentStore();
 
 let title = "About Us";
+
+let content = page_content[title];
+
 useSeoMeta({
-  title: title,
-  ogTitle: title,
-  description: "This is my amazing site, let me tell you all about it.",
-  ogDescription: "This is my amazing site, let me tell you all about it.",
-  ogImage: "",
-  twitterCard: "summary_large_image",
+  title: content.metaTitle,
+  ogTitle: content.metaTitle,
+  description: content?.metaDescription,
+  ogDescription: content?.metaDescription,
+  ogImage: "/img/Conversation-pana.png",
+  twitterCard: "/img/Conversation-pana.png",
 });
 </script>
 
 <template>
-  <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
+  <div v-once class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
     <div class="container mx-auto py-8">
       <div class="hero rounded-xl min-h-min relative">
         <UiBgShade />
@@ -33,8 +36,7 @@ useSeoMeta({
               >
             </h1>
             <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">
-              Trust your assignments to an essay writing service with the
-              <b>fastest delivery time</b> and fully original content.
+              {{ content?.subtitle }}
             </p>
 
             <ul class="w-full text-lg hover:bg-transparent py-4">
@@ -62,21 +64,17 @@ useSeoMeta({
   <div class="container max-w-5xl mx-auto bg-primary rounded-2xl">
     <UiCalculator />
   </div>
-  <div class="container mx-auto max-w-4xl py-12 px-4">
+  <div v-once class="container mx-auto max-w-4xl py-12 px-4">
     <article
       class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg"
     >
       <section>
         <h2>
-          Welcome to Proswriters.com – Your Trusted Partner for Academic
-          Writing!
+          {{ content?.title }}
         </h2>
+        <h5>{{ content?.subtitle }}</h5>
         <p>
-          At Proswriters.com, we take pride in being a premier online essay
-          writing service dedicated to helping students achieve their academic
-          goals. With a team of expert writers and a commitment to excellence,
-          we've been serving students just like you for <em>[X years]</em>,
-          offering top-notch essays, research papers, and more.
+          {{ content?.description }}
         </p>
       </section>
 

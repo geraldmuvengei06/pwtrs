@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
-const { samples } = contentStore()
+const { samples } = contentStore();
 
 const responsiveOptions = ref([
   {
@@ -28,8 +28,15 @@ const responsiveOptions = ref([
       <h2 class="text-2xl sm:text-4xl">Check Out Our Samples</h2>
       <p>Original. Quality. On time</p>
     </div>
-    <PrimeCarousel :value="samples" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" circular
-      :autoplayInterval="3000" class="mb-4">
+    <PrimeCarousel
+      :value="samples"
+      :numVisible="4"
+      :numScroll="3"
+      :responsiveOptions="responsiveOptions"
+      circular
+      :autoplayInterval="3000"
+      class="mb-4"
+    >
       <template #item="slotProps">
         <UiSample v-bind="slotProps.data" />
       </template>
