@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
   // Fetch all documents
   const docs = await serverQueryContent(event).find();
   const sitemap = new SitemapStream({
-    hostname: runtimeConfig?.public.websiteUrl || "https://proswriters.com",
+    hostname: runtimeConfig?.public.websiteUrl || "https://Onlinessaywriting.com",
   });
 
   for (const doc of docs) {

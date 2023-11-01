@@ -5,7 +5,7 @@ description: Privacy Policy
 
 **Last updated: [28th Oct 2023]**
 
-Proswriters.com ("Company," "we," or "us") respects the privacy of our users ("user" or "you"). This Privacy Policy applies to our website,[www.proswriters.com](http://www.proswriters.com/), and governs data collection and usage. By using the website, you consent to the data practices described in this policy.
+Onlinessaywriting.com ("Company," "we," or "us") respects the privacy of our users ("user" or "you"). This Privacy Policy applies to our website,[www.Onlinessaywriting.com](http://www.Onlinessaywriting.com/), and governs data collection and usage. By using the website, you consent to the data practices described in this policy.
 
 ### **Collection of Personal Information**
 
@@ -29,7 +29,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 
 ### Contact Us
 
-If you have any questions or suggestions about our Privacy Policy, please contact us at support@proswriters.com.
+If you have any questions or suggestions about our Privacy Policy, please contact us at support@Onlinessaywriting.com.
 
 ### Cookies and Web Beacons
 
@@ -49,7 +49,7 @@ This online privacy policy applies only to information collected through our web
 
 ### Terms and Conditions
 
-Please also visit our Terms and Conditions section establishing the use, disclaimers, and limitations of liability governing the use of our website at https://proswriters.com/legal/terms-of-use
+Please also visit our Terms and Conditions section establishing the use, disclaimers, and limitations of liability governing the use of our website at https://Onlinessaywriting.com/legal/terms-of-use
 
 ### Your Consent
 
@@ -69,6 +69,6 @@ We will retain your personal information for as long as necessary to provide you
 
 ### Contact Us
 
-If you have any questions or concerns about our privacy policy or your personal information, please contact us by email at support@proswriters.com.
+If you have any questions or concerns about our privacy policy or your personal information, please contact us by email at support@Onlinessaywriting.com.
 
-In summary, Proswriters.com is committed to protecting the privacy of its users and takes all necessary measures to ensure that personal information is collected, used, and retained in accordance with all applicable laws and regulations. We only collect personal information that is necessary to provide our services, and we do not share, sell, or rent this information to any third parties. Users have the right to access, control, and delete their personal information at any time. If you have any questions or concerns about our privacy policy, please contact us at support@proswriters.com and we will be happy to assist you.
+In summary, Onlinessaywriting.com is committed to protecting the privacy of its users and takes all necessary measures to ensure that personal information is collected, used, and retained in accordance with all applicable laws and regulations. We only collect personal information that is necessary to provide our services, and we do not share, sell, or rent this information to any third parties. Users have the right to access, control, and delete their personal information at any time. If you have any questions or concerns about our privacy policy, please contact us at support@Onlinessaywriting.com and we will be happy to assist you.

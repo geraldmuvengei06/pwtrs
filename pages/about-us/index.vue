@@ -127,7 +127,7 @@ useSeoMeta({
       <section>
         <h2>Your Academic Success, Our Priority</h2>
         <p>
-          At Proswriters.com, your academic success is our top priority. We're
+          At Onlinessaywriting.com, your academic success is our top priority. We're
           here to help you excel in your studies and reach your educational
           goals.
         </p>
