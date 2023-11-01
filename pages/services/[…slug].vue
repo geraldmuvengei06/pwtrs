@@ -27,10 +27,8 @@ useSeoMeta({
         <div class="hero-content flex-col sm:flex-row-reverse">
           <div class="w-full md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">
             <h1 class="text-3xl sm:text-5xl font-bold sm:hidden mb-2">
-              <span
-                class="bg-gradient-to-tr from-primary to-secondary bg-clip-text text-transparent"
-                >{{ data?.title }}</span
-              >
+              <span class="bg-gradient-to-tr from-primary to-secondary bg-clip-text text-transparent">{{ data?.title
+              }}</span>
             </h1>
 
             <UiOrderFormDescription type="verticle" />
@@ -38,10 +36,8 @@ useSeoMeta({
 
           <div class="sm:w-2/3">
             <h1 class="text-3xl sm:text-5xl font-bold hidden sm:inline">
-              <span
-                class="bg-gradient-to-tr from-primary to-secondary bg-clip-text text-transparent"
-                >{{ data?.title }}</span
-              >
+              <span class="bg-gradient-to-tr from-primary to-secondary bg-clip-text text-transparent">{{ data?.title
+              }}</span>
             </h1>
 
             <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">
@@ -49,15 +45,8 @@ useSeoMeta({
             </p>
 
             <ul class="w-full text-lg hover:bg-transparent py-4">
-              <li
-                v-for="(factor, i) in key_factors"
-                :key="i + 'f'"
-                class="hover:bg-transparent"
-              >
-                <span class="px-0"
-                  ><i class="pi pi-check text-xl mr-2 text-primary"></i
-                  >{{ factor.item }}</span
-                >
+              <li v-for="(factor, i) in key_factors" :key="i + 'f'" class="hover:bg-transparent">
+                <span class="px-0"><i class="pi pi-check text-xl mr-2 text-primary"></i>{{ factor.item }}</span>
               </li>
             </ul>
 
@@ -72,8 +61,7 @@ useSeoMeta({
     <SectionSamples />
     <div class="container mx-auto max-w-4xl py-12 px-4">
       <article
-        class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg"
-      >
+        class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg">
         <ContentDoc>
           <template #not-found>
             <UiContentNotFound />

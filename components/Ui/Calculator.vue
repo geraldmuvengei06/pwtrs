@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  type: "horizontal" | "verticle";
+  type?: "horizontal" | "verticle" | undefined;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -90,10 +90,8 @@ async function calculatePrice() {
     const res = await http.post("/Orders/CalculatePrice/", calcPriceForm.value);
 
     let totals = res?.data?.Data?.totals;
-    console.log("total", totals);
     total.value = "$" + totals[totals.length - 1].value;
   } catch (error) {
-    console.log("error", error);
     throw error;
   } finally {
     calculating.value = false;
@@ -121,96 +119,52 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div
-    :class="[
-      'card bg-white/70',
-      type == 'verticle' ? 'min-w-[320px] sm:max-w-xs' : '',
-    ]"
-  >
+  <div :class="[
+    'card bg-white/70',
+    type == 'verticle' ? 'min-w-[320px] sm:max-w-xs' : '',
+  ]">
     <div class="card-body p-4 sm:p-4">
-      <div
-        v-if="loading"
-        :class="[
-          'flex gap-3 items-center animate-pulse',
-          type == 'horizontal'
-            ? 'flex-col md:flex-row'
-            : 'flex-col md:flex-col',
-        ]"
-      >
-        <div
-          v-for="i in 5"
-          :key="i"
-          :class="[
-            'h-12  bg-slate-200 rounded',
-            type == 'horizontal' ? 'w-full md:w-1/5' : 'w-full md:w-full',
-          ]"
-        ></div>
+      <div v-if="loading" :class="[
+        'flex gap-3 items-center animate-pulse',
+        type == 'horizontal'
+          ? 'flex-col md:flex-row'
+          : 'flex-col md:flex-col',
+      ]">
+        <div v-for="i in 5" :key="i" :class="[
+          'h-12  bg-slate-200 rounded',
+          type == 'horizontal' ? 'w-full md:w-1/5' : 'w-full md:w-full',
+        ]"></div>
       </div>
-      <form
-        v-else
-        @submit.prevent="calculatePrice"
-        :class="[
-          'flex gap-2 sm:gap-3 md:gap-4',
-          type == 'horizontal'
-            ? 'flex-col md:flex-row md:items-center'
-            : 'flex-col md:flex-col',
-        ]"
-      >
+      <form v-else @submit.prevent="calculatePrice" :class="[
+        'flex gap-2 sm:gap-3 md:gap-4',
+        type == 'horizontal'
+          ? 'flex-col md:flex-row md:items-center'
+          : 'flex-col md:flex-col',
+      ]">
         <div class="p-inputgroup flex-1">
-          <PrimeDropdown
-            optionLabel="desc"
-            optionValue="id"
-            class="shadow bg-white border-primary-content"
-            v-model="calcPriceForm.academic_level"
-            @change="calculatePrice"
-            :options="setups.academic_levels"
-            placeholder="Academic Level"
-          />
+          <PrimeDropdown optionLabel="desc" optionValue="id" class="shadow bg-white border-primary-content"
+            v-model="calcPriceForm.academic_level" @change="calculatePrice" :options="setups.academic_levels"
+            placeholder="Academic Level" />
         </div>
         <div class="p-inputgroup flex-1">
-          <PrimeDropdown
-            :filter="true"
-            optionLabel="desc"
-            optionValue="id"
-            class="shadow bg-white border-primary-content"
-            placehoder="Select type of paper"
-            v-model="calcPriceForm.document_type"
-            @change="calculatePrice"
-            :options="setups.document_types"
-          />
+          <PrimeDropdown :filter="true" optionLabel="desc" optionValue="id" class="shadow bg-white border-primary-content"
+            placehoder="Select type of paper" v-model="calcPriceForm.document_type" @change="calculatePrice"
+            :options="setups.document_types" />
         </div>
         <div class="p-inputgroup flex-1">
-          <PrimeDropdown
-            :filter="true"
-            optionLabel="desc"
-            optionValue="id"
-            class="shadow bg-white border-primary-content"
-            placehoder="Select urgency"
-            v-model="calcPriceForm.urgency"
-            @change="calculatePrice"
-            :options="setups.urgency"
-          />
+          <PrimeDropdown :filter="true" optionLabel="desc" optionValue="id" class="shadow bg-white border-primary-content"
+            placehoder="Select urgency" v-model="calcPriceForm.urgency" @change="calculatePrice"
+            :options="setups.urgency" />
         </div>
-        <div
-          class="p-inputgroup bg-white border-primary-content flex-1 px-0 rounded-lg"
-        >
+        <div class="p-inputgroup bg-white border-primary-content flex-1 px-0 rounded-lg">
           <span
             class="p-inputgroup-addon cursor-pointer text-primary bg-slate-100 border-primary-content hover:bg-primary-content"
-            @click="pages(false)"
-            >-</span
-          >
-          <PrimeInputNumber
-            class="text-center"
-            :min="1"
-            placeholder="No of pages"
-            @change="calculatePrice"
-            v-model="calcPriceForm.pages"
-          />
+            @click="pages(false)">-</span>
+          <PrimeInputNumber class="text-center" :min="1" placeholder="No of pages" @change="calculatePrice"
+            v-model="calcPriceForm.pages" />
           <span
             class="p-inputgroup-addon cursor-pointer text-primary bg-slate-100 border-primary-content hover:bg-primary-content"
-            @click="pages(true)"
-            >+</span
-          >
+            @click="pages(true)">+</span>
         </div>
         <div class="flex flex-row flex-1 items-center justify-between">
           <div class="mx-2">
@@ -222,10 +176,7 @@ onMounted(async () => {
           </button>
         </div>
 
-        <UiRatingsTotal
-          classnames="justify-between sm:justify-start"
-          v-if="type == 'verticle'"
-        />
+        <UiRatingsTotal classnames="justify-between sm:justify-start" v-if="type == 'verticle'" />
       </form>
     </div>
   </div>

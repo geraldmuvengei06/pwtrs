@@ -325,8 +325,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 4,
       estimated_read_time: "2.40 minutes",
       type: "Reflection Essay",
-      created_at: "2023-10-30 10:08:06",
-      modified_at: "2023-10-30 10:08:06",
     },
     {
       filename: "Advanced Pharmacology",
@@ -335,8 +333,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 3,
       estimated_read_time: "1.80 minutes",
       type: "Research Paper",
-      created_at: "2023-10-30 10:08:06",
-      modified_at: "2023-10-30 10:08:06",
     },
     {
       filename: "Comprehensive Integrated Psychiatric Assessment",
@@ -345,8 +341,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 5,
       estimated_read_time: "3.00 minutes",
       type: "Assessment Essay",
-      created_at: "2023-10-30 10:08:06",
-      modified_at: "2023-10-30 10:08:06",
     },
     {
       filename: "Diversity In Health Care Purnell Nursing Model",
@@ -355,8 +349,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 7,
       estimated_read_time: "4.20 minutes",
       type: "Essay",
-      created_at: "2023-10-30 10:08:06",
-      modified_at: "2023-10-30 10:08:06",
     },
     {
       filename: "Focused Assessment Of The Lungs And Thorax",
@@ -365,8 +357,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 7,
       estimated_read_time: "4.20 minutes",
       type: "Essay",
-      created_at: "2023-10-30 10:08:07",
-      modified_at: "2023-10-30 10:08:07",
     },
     {
       filename: "Internal And External Data",
@@ -375,8 +365,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 4,
       estimated_read_time: "2.40 minutes",
       type: "Essay",
-      created_at: "2023-10-30 10:08:07",
-      modified_at: "2023-10-30 10:08:07",
     },
     {
       filename: "Learning Needs Assessment",
@@ -385,8 +373,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 6,
       estimated_read_time: "3.60 minutes",
       type: "Assessment",
-      created_at: "2023-10-30 10:08:07",
-      modified_at: "2023-10-30 10:08:07",
     },
     {
       filename: "Quality Healthcare Measuring Np Performance",
@@ -395,8 +381,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 9,
       estimated_read_time: "5.40 minutes",
       type: "Essay",
-      created_at: "2023-10-30 10:08:08",
-      modified_at: "2023-10-30 10:08:08",
     },
     {
       filename:
@@ -406,8 +390,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 26,
       estimated_read_time: "15.60 minutes",
       type: "Paper",
-      created_at: "2023-10-30 10:08:09",
-      modified_at: "2023-10-30 10:08:09",
     },
     {
       filename: "NPR Concept Plan",
@@ -416,8 +398,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 2,
       estimated_read_time: "1.20 minutes",
       type: "Plan",
-      created_at: "2023-10-30 10:08:09",
-      modified_at: "2023-10-30 10:08:09",
     },
     {
       filename: "Sigmund Freud",
@@ -426,8 +406,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 4,
       estimated_read_time: "2.40 minutes",
       type: "Paper",
-      created_at: "2023-10-30 10:08:10",
-      modified_at: "2023-10-30 10:08:10",
     },
     {
       filename: "Stage A Heart Failure",
@@ -436,8 +414,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 5,
       estimated_read_time: "3.00 minutes",
       type: "Essay",
-      created_at: "2023-10-30 10:08:10",
-      modified_at: "2023-10-30 10:08:10",
     },
     {
       filename: "Stress Management",
@@ -446,8 +422,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 7,
       estimated_read_time: "4.20 minutes",
       type: "Essay",
-      created_at: "2023-10-30 10:08:10",
-      modified_at: "2023-10-30 10:08:10",
     },
     {
       filename: "Testtaking",
@@ -456,8 +430,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 5,
       estimated_read_time: "3.00 minutes",
       type: "Essay",
-      created_at: "2023-10-30 10:08:10",
-      modified_at: "2023-10-30 10:08:10",
     },
     {
       filename:
@@ -467,8 +439,6 @@ export const contentStore = defineStore("content", () => {
       num_pages: 5,
       estimated_read_time: "3.00 minutes",
       type: "Assignment",
-      created_at: "2023-10-30 10:08:11",
-      modified_at: "2023-10-30 10:08:11",
     },
   ];
 

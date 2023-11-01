@@ -1,7 +1,6 @@
 import { UiReview } from '#build/components';
 
 <script setup>
-import { ref, onMounted } from "vue";
 
 const { reviews } = contentStore();
 
@@ -32,15 +31,8 @@ const responsiveOptions = ref([
 
       <UiRatingsTotal />
     </div>
-    <PrimeCarousel
-      :value="reviews"
-      :numVisible="4"
-      :numScroll="3"
-      :responsiveOptions="responsiveOptions"
-      circular
-      :autoplayInterval="3000"
-      class="mb-4"
-    >
+    <PrimeCarousel :value="reviews" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" circular
+      :autoplayInterval="3000" class="mb-4">
       <template #item="slotProps">
         <UiReview v-bind="slotProps.data" />
       </template>
