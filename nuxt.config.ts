@@ -94,6 +94,9 @@ export default defineNuxtConfig({
       strict: true,
     },
   },
+  routeRules: {
+    '/': { prerender: true },
+  },
 
   // chatwoot: {
   //   init: {
