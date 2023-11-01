@@ -103,6 +103,10 @@ Benefits:
 - Improved comprehension of the subject matter
 - Enhanced academic performance
 
+:::CTA{title="Best Essay Writer Online" action="Ace Your Essays Now!"}
+Are you tired of spending endless hours on your essays? Our expert essay writers are here to help. We craft essays that are tailored to your needs, ensuring you get the grades you deserve. Let's make academic writing a breeze for you.
+:::
+
 ## Editing and Proofreading
 
 Mistakes can cost you valuable marks. Our editing and proofreading service guarantees error-free and polished essays. Make your work stand out and leave a lasting impression on your professors.
@@ -143,7 +147,3 @@ We understand that academic challenges can arise at any time. That's why our cus
 Our commitment to your academic success goes beyond essay writing. We provide a wealth of educational resources, essay writing tips, and guidelines to help you improve your writing skills. We believe in not just delivering essays but in empowering you to become a better writer and thinker. Explore our blog and educational materials to enhance your academic prowess.
 
 Don't hesitate to reach out to us, as we are here to assist you on every step of your academic journey. Your success begins with proswriters.com.
-
-:::CTA{title="Best Essay Writer Online" action="Ace Your Essays Now!"}
-Are you tired of spending endless hours on your essays? Our expert essay writers are here to help. We craft essays that are tailored to your needs, ensuring you get the grades you deserve. Let's make academic writing a breeze for you.
-:::

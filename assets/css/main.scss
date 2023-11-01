@@ -3,9 +3,21 @@
 html,
 body {
   background-color: #fff;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Roboto Slab", Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-    sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol,
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Roboto Slab",
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    apple color emoji,
+    segoe ui emoji,
+    Segoe UI Symbol,
     noto color emoji;
   @apply w-full;
   margin: 0;
@@ -18,9 +30,21 @@ li,
 small,
 b,
 strong {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Roboto Slab", Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-    sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol,
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Roboto Slab",
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    apple color emoji,
+    segoe ui emoji,
+    Segoe UI Symbol,
     noto color emoji;
   @apply leading-loose;
 }
@@ -31,9 +55,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Young Serif", system-ui, -apple-system, BlinkMacSystemFont,
-    "Roboto Slab", Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-    sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol,
+  font-family:
+    "Young Serif",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Roboto Slab",
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    apple color emoji,
+    segoe ui emoji,
+    Segoe UI Symbol,
     noto color emoji;
   @apply leading-relaxed;
 }

@@ -1,26 +1,5 @@
 <script setup lang="ts">
-let unique = [
-  {
-    icon: "pi pi-verified",
-    title: "Original Content",
-    // description: '',
-  },
-  {
-    icon: "pi pi-verified",
-    title: "Verified Writers",
-    // description: '',
-  },
-  {
-    icon: "pi pi-verified",
-    title: "24/7 Support",
-    // description: '',
-  },
-  {
-    icon: "pi pi-verified",
-    title: "Secure and Confidential",
-    // description: '',
-  },
-];
+const { why_us } = contentStore()
 </script>
 
 <template>
@@ -32,31 +11,26 @@ let unique = [
             <h2 class="text-2xl sm:text-4xl text-white">Why Us</h2>
           </div>
           <ul class="my-4">
-            <li
-              v-for="i in 5"
-              :key="i + 'ds'"
-              class="py-3 sm:pb-4"
-              :class="i < 5 && 'border-b border-b-slate-500'"
-            >
+            <li v-for="item, i in why_us" :key="i + 'ds'" class="py-3 sm:pb-4"
+              :class="i < 5 && 'border-b border-b-slate-500'">
               <div class="flex items-center">
-                <div class="flex-shrink-0">
-                  <span
-                    class="text-3xl text-slate-50 dark:text-slate-100 pi pi-user"
-                  ></span>
+                <!-- <div class="flex-shrink-0">
+                  <span class="text-3xl text-primary pi pi-check"></span>
+                </div> -->
+                <div class="bg-success text-white px-2 pt-2 rounded-lg">
+                  <span class="text-2xl pi pi-verified"></span>
                 </div>
                 <div class="flex-1 min-w-0 ml-4">
-                  <p class="text-sm font-medium text-slate-300">
-                    12+ Years helping students in their studies
+                  <p class="text-lg font-medium text-slate-300">
+                    {{ item.title }}
                   </p>
-                  <p class="text-sm text-slate-100 dark:text-slate-150">
-                    We have extensive experience in writing papers on all types
-                    and subjects.
+                  <p class="text-sm text-slate-100">
+                    {{ item.description }}
                   </p>
                 </div>
-                <!-- <div
-                                        class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        $320
-                                    </div> -->
+                <!-- <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                  $320
+                </div> -->
               </div>
             </li>
           </ul>

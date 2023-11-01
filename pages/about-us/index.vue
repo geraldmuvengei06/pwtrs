@@ -21,34 +21,20 @@ useSeoMeta({
       <div class="hero rounded-xl min-h-min relative">
         <UiBgShade />
         <div class="hero-content flex-col sm:flex-row-reverse">
-          <NuxtImg
-            alt=""
-            id="nuxt-img"
-            src="/img/Conversation-pana.png"
-            class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5"
-          />
+          <NuxtImg alt="" id="nuxt-img" src="/img/Conversation-pana.png"
+            class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
           <div class="sm:z-10">
             <h1 class="text-3xl sm:text-5xl font-bold">
-              <span
-                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-                >About Us</span
-              >
+              <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">About Us</span>
             </h1>
             <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">
               {{ content?.subtitle }}
             </p>
 
             <ul class="w-full text-lg hover:bg-transparent py-4">
-              <li
-                v-for="(factor, i) in key_factors"
-                :key="i + 'f'"
-                class="hover:bg-transparent"
-              >
-                <span class="px-0"
-                  ><i class="pi pi-check text-xl mr-2 text-primary"></i
-                  >{{ factor.item }}</span
-                >
+              <li v-for="(factor, i) in key_factors" :key="i + 'f'" class="hover:bg-transparent">
+                <span class="px-0"><i class="pi pi-check text-xl mr-2 text-primary"></i>{{ factor.item }}</span>
               </li>
             </ul>
 
@@ -66,8 +52,7 @@ useSeoMeta({
   </div>
   <div v-once class="container mx-auto max-w-4xl py-12 px-4">
     <article
-      class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg"
-    >
+      class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg">
       <section>
         <h2>
           {{ content?.title }}

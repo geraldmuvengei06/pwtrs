@@ -17,8 +17,8 @@ const props = withDefaults(defineProps<Props>(), {
   <div class="card glass hover:shadow-md">
     <div class="card-body p-4">
       <div class="avatar">
-        <div class="bg-primary text-white p-2 rounded-xl">
-          <span class="text-4xl" :class="icon"></span>
+        <div class="bg-primary text-white p-2 rounded-lg">
+          <span class="text-2xl" :class="icon"></span>
         </div>
       </div>
       <h2 class="card-title">{{ title }}</h2>

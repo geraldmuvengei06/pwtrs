@@ -1,6 +1,6 @@
 <script setup>
-let experts = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 
+const { experts } = contentStore()
 const responsiveOptions = ref([
   {
     breakpoint: "1199px",
