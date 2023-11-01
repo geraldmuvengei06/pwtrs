@@ -1,14 +1,13 @@
 <script setup>
-
-let title = "Contact Us"
+let title = "Contact Us";
 useSeoMeta({
   title: title,
   ogTitle: title,
-  description: 'This is my amazing site, let me tell you all about it.',
-  ogDescription: 'This is my amazing site, let me tell you all about it.',
-  ogImage: '',
-  twitterCard: 'summary_large_image',
-})
+  description: "This is my amazing site, let me tell you all about it.",
+  ogDescription: "This is my amazing site, let me tell you all about it.",
+  ogImage: "",
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <template>
@@ -36,22 +35,20 @@ useSeoMeta({
           </div>
 
           <div class="sm:z-10">
-            <h1 class="text-3xl sm:text-5xl font-bold "><span
-                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Contact Us</span></h1>
-            <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">Trust your assignments to an essay writing service with the
-              <b>fastest
-                delivery time</b> and fully original content.
+            <h1 class="text-3xl sm:text-5xl font-bold">
+              <span
+                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+                >Contact Us</span
+              >
+            </h1>
+            <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">
+              Trust your assignments to an essay writing service with the
+              <b>fastest delivery time</b> and fully original content.
             </p>
 
-
             <UiProtection class="hidden sm:inline" />
-
-
-
           </div>
-
         </div>
-
       </div>
     </div>
   </div>

@@ -1,10 +1,10 @@
-import { serverQueryContent } from '#content/server'
-import { SitemapStream, streamToPromise } from 'sitemap'
-const runtimeConfig = useRuntimeConfig()
+import { serverQueryContent } from "#content/server";
+import { SitemapStream, streamToPromise } from "sitemap";
+const runtimeConfig = useRuntimeConfig();
 
 export default defineEventHandler(async (event) => {
   // Fetch all documents
-  const docs = await serverQueryContent(event).find()
+  const docs = await serverQueryContent(event).find();
   const sitemap = new SitemapStream({
     hostname: runtimeConfig?.public.websiteUrl || 'https://nursingessayonline.com'
   })
@@ -12,10 +12,10 @@ export default defineEventHandler(async (event) => {
   for (const doc of docs) {
     sitemap.write({
       url: doc._path,
-      changefreq: 'daily'
-    })
+      changefreq: "daily",
+    });
   }
-  sitemap.end()
+  sitemap.end();
 
-  return streamToPromise(sitemap)
-})
+  return streamToPromise(sitemap);
+});

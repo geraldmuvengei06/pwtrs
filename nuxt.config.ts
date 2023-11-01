@@ -3,71 +3,90 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "nursingessayonline",
+      title: process.env.NUXT_WEBSITE_NAME,
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
       script: [
         // ...
         {
-          hid: 'tawk.to',
-          src:
-            'https://embed.tawk.to/6293c890b0d10b6f3e74a1ff/1g48keu47',
+          hid: "tawk.to",
+          src: "https://embed.tawk.to/" + process.env.NUXT_TAWK_CODE,
 
-          defer: true
-        }
-      ]
+          defer: true,
+        },
+      ],
     },
     // pageTransition: { name: 'page', mode: 'out-in' },
-
   },
   runtimeConfig: {
     public: {
-      websiteUrl:  process.env.NUXT_WEBSITE_URL,
-      apiBase: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
-    }
+      websiteName: process.env.NUXT_WEBSITE_NAME,
+      websiteUrl: process.env.NUXT_WEBSITE_URL,
+      orderUrl: process.env.NUXT_ORDER_URL || "/orders/ordernow/",
+      homeUrl: process.env.NUXT_HOME_URL || "/orders/home/",
+      whatsappNumber: process.env.NUXT_WHATSAPP_NUMBER,
+      supportEmail: process.env.NUXT_SUPPORT_EMAIL,
+      apiUrl: "https://api.urgentwriters.com", // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+    },
   },
   devtools: { enabled: false },
   modules: [
-    '@nuxtjs/tailwindcss',
-    'nuxt-primevue',
-    '@pinia/nuxt',
+    "@nuxtjs/tailwindcss",
+    "nuxt-primevue",
+    "@pinia/nuxt",
     "@nuxt/image",
-    'nuxt-simple-sitemap',
-    '@nuxt/content',
+    "nuxt-simple-sitemap",
+    "@nuxt/content",
     // '@productdevbook/chatwoot'
   ],
   css: [
-    'primevue/resources/themes/tailwind-light/theme.css',
-    '@/assets/css/main.scss',
-    "primeicons/primeicons.css"
+    "primevue/resources/themes/tailwind-light/theme.css",
+    "@/assets/css/main.scss",
+    "primeicons/primeicons.css",
   ],
   components: [
     {
-      path: '~/components/ui',
+      path: "~/components/ui",
       // this is required else Nuxt will autoImport `.ts` file
-      extensions: ['.vue'],
+      extensions: [".vue"],
       // prefix for your components, eg: UiButton
-      prefix: 'Ui'
+      prefix: "Ui",
     },
     {
-      path: '~/components',
-      extensions: ['.vue'],
+      path: "~/components",
+      extensions: [".vue"],
     },
   ],
 
   primevue: {
     usePrimeVue: true,
     options: {
-      ripple: true
+      ripple: true,
     },
     components: {
-      prefix: 'Prime',
-      include: ['Carousel', 'Button', 'Rating', 'InputText', 'InputNumber', 'Message', 'Accordion', 'AccordionTab', 'Timeline', 'Menubar'],
-      exclude: undefined
+      prefix: "Prime",
+      include: [
+        "Carousel",
+        "Toast",
+        "Avatar",
+        "Button",
+        "Rating",
+        "InputText",
+        "InputNumber",
+        "Message",
+        "Accordion",
+        "AccordionTab",
+        "Timeline",
+        "Menubar",
+        "InputNumber",
+        "Dropdown",
+        "Dialog",
+      ],
+      exclude: undefined,
     },
   },
 
   pinia: {
-    storesDirs: ['./stores/**'],
+    storesDirs: ["./stores/**"],
   },
 
   router: {
@@ -90,13 +109,13 @@ export default defineNuxtConfig({
   //   partytown: false,
   // },
   site: {
-    url: 'https://nursingessayonline.com',
+    url: process.env.NUXT_WEBSITE_URL,
   },
 
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml']
-    }
-  }
-
-})
+      routes: ["/sitemap.xml"],
+      ignore: ["/orders"],
+    },
+  },
+});
