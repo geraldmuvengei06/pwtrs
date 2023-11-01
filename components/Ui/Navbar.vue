@@ -46,7 +46,8 @@ watch(
 </script>
 <template>
   <header class="drop-shadow  bg-gradient-to-br from-[#F2F8FC]/80 to-[#FEF6F4]/80 backdrop-blur sticky top-0 z-40">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 sm:p-6 lg:px-8" aria-label="Global">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between py-1 sm:py-2  px-4 sm:px-6 lg:px-8"
+      aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">{{ runtimeConfig.public.websiteName }}</span>
