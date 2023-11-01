@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 import axios from "axios";
 const title = "Cost of your order";
-const total = ref("$0.0");
+const total = ref("$12.0");
 const calculating = ref(false);
 const loading = ref(true);
 
