@@ -61,7 +61,6 @@ useSeoMeta({
               </li>
             </ul>
 
-            <!-- <UiRatingsTotal classnames="ustify-start md:justify-start" /> -->
             <UiPayment />
           </div>
         </div>
@@ -71,7 +70,6 @@ useSeoMeta({
 
   <div>
     <SectionSamples />
-    <!-- <SectionCTADark /> -->
     <div class="container mx-auto max-w-4xl py-12 px-4">
       <article
         class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg"
@@ -81,31 +79,9 @@ useSeoMeta({
             <UiContentNotFound />
           </template>
         </ContentDoc>
-        <!-- <ContentRenderer :value="data">
-              <ContentRendererMarkdown :value="data" ></ContentRendererMarkdown>
-            </ContentRenderer> -->
       </article>
     </div>
     <SectionReviews />
     <SectionCTA />
   </div>
 </template>
-
-<style lang="scss" scoped>
-// h1 {
-//     @apply text-3xl sm:text-5xl mt-3 mb-2;
-// }
-// h2 {
-//     @apply text-2xl sm:text-4xl mt-3 mb-2;
-// }
-// h3 {
-//     @apply text-xl sm:text-3xl mt-3 mb-2;
-// }
-// h4 {
-//     @apply text-lg sm:text-2xl mt-3 mb-2;
-// }
-
-// h5 {
-//     @apply text-base sm:text-xl mt-3 mb-2;
-// }
-</style>

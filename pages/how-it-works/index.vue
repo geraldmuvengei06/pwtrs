@@ -43,7 +43,6 @@ useSeoMeta({
     </div>
   </div>
   <div class="">
-    <!-- <SectionHowItWorks /> -->
     <SectionHowItWorksTimeline />
     <div class="container max-w-5xl mx-auto bg-primary rounded-2xl">
       <UiCalculator />

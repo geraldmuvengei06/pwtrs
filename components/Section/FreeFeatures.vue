@@ -10,7 +10,7 @@ const { why_us } = contentStore();
           <div class="section-header my-8">
             <h2 class="text-2xl sm:text-4xl text-white">Why Us</h2>
           </div>
-          <ul class="my-4">
+          <ul class="my-4" v-once>
             <li
               v-for="(item, i) in why_us"
               :key="i + 'ds'"
@@ -18,9 +18,6 @@ const { why_us } = contentStore();
               :class="i < 5 && 'border-b border-b-slate-500'"
             >
               <div class="flex items-center">
-                <!-- <div class="flex-shrink-0">
-                  <span class="text-3xl text-primary pi pi-check"></span>
-                </div> -->
                 <div class="bg-secondary text-white px-2 pt-2 rounded-lg">
                   <span class="text-2xl pi pi-verified"></span>
                 </div>
@@ -32,9 +29,6 @@ const { why_us } = contentStore();
                     {{ item.description }}
                   </p>
                 </div>
-                <!-- <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                  $320
-                </div> -->
               </div>
             </li>
           </ul>

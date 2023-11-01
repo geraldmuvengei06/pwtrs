@@ -43,11 +43,6 @@ const responsiveOptions = ref([
           <UiExpert v-bind="slotProps.data" />
         </template>
       </PrimeCarousel>
-
-      <!-- <div class="flex gap-4 items-center justify-center">
-
-                <button class="sm:mt-9 btn btn-primary flex">Hire an Expert Writer</button>
-            </div> -->
     </div>
   </div>
 </template>

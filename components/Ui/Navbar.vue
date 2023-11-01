@@ -92,17 +92,11 @@ watch(
               class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5"
             >
               <div class="p-4">
-                <!-- Services menu -->
                 <div
                   v-for="item in services"
                   :key="item.link"
                   class="group relative flex items-center gap-x-6 rounded-lg py-1 text-sm leading-6 hover:bg-gray-50"
                 >
-                  <!-- <div
-                    class="flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    <component :is="item.icon || BookOpenIcon" class="h-6 w-6 text-gray-600 group-hover:text-primary"
-                      aria-hidden="true" />
-                  </div> -->
                   <div class="flex-auto">
                     <NuxtLink
                       :to="item.link"

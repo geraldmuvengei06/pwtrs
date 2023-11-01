@@ -51,10 +51,6 @@ let { menu, services, order_url, home_url, goTo } = contentStore();
           <details v-else class="dropdown">
             <summary tabindex="0">{{ item.name }}</summary>
             <ul tabindex="0" class="p-2 w-80 overflow-y-scroll shadow">
-              <!-- <li v-for="service, i in item.items" :key="i + 's'" >
-                                <NuxtLink :to="service.link">{{ service.item }}</NuxtLink>
-                            </li>
-                            <li v-if="services.length > 5"><span>...</span></li> -->
               <ContentList path="/services" v-slot="{ list }">
                 <NuxtLink
                   v-for="service in list"
@@ -86,7 +82,6 @@ let { menu, services, order_url, home_url, goTo } = contentStore();
 
 <style lang="scss" scoped>
 .dropdown-content {
-  // min-width: calc(100% - 20px) !important;
   width: 96vw !important;
 }
 

@@ -3,7 +3,6 @@ let notification = ref(false);
 </script>
 
 <template>
-  <!-- Promo -->
   <UiAlert v-if="notification" />
   <UiNavbar />
   <slot></slot>

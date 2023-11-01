@@ -60,7 +60,6 @@ let accordion_items = [
             >
               <PrimeAccordionTab v-for="(tab, i) in accordion_items" :key="i">
                 <template #header>
-                  <!-- <i :class="tab.icon"></i> -->
                   <div class="avatar" :class="active == i && 'animate-bounces'">
                     <div class="p-2 rounded-xl">
                       <span

@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- <small>Secure Payment:</small> -->
-
     <div class="flex flex-row gap-4">
       <div
         class="payment-icon bg-white p-1 rounded"

@@ -30,10 +30,6 @@
           />
         </a>
       </template>
-      <!-- <div class="navbar-end flex gap-2">
-                    <a class="btn btn-primary">Order Now</a>
-                    <a class="btn btn-primary btn-outline hidden sm:flex">Dashboard</a>
-                </div> -->
     </PrimeMenubar>
   </div>
 </template>

@@ -36,7 +36,5 @@ let props = withDefaults(defineProps<Props>(), {
     <p class="flex items-center gap-4 my-2">
       <span class="pi pi-envelope"></span>{{ contacts?.mail }}
     </p>
-
-    <!-- <button class="btn btn-primary bgg-primary-500 text-white mt-8" @click="toggle('open')">Talk to an Agent</button> -->
   </div>
 </template>

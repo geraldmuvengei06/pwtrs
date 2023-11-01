@@ -69,7 +69,6 @@ const visible = ref(false);
         >
           View
         </button>
-        <!-- <button @click="goTo(`${order_url}`)" class="btn btn-primary btn-outline">Order Now</button> -->
       </div>
     </div>
   </div>
