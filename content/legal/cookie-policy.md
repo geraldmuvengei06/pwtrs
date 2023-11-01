@@ -7,7 +7,7 @@ description: Cookie Policy
 
 ### Introduction
 
-At proswriters.com, we are committed to safeguarding your privacy and ensuring a smooth user experience. This Cookie Policy outlines how we use cookies and similar technologies on our website. By using our services, you consent to our use of cookies as described herein.
+At onlinessaywriting.com, we are committed to safeguarding your privacy and ensuring a smooth user experience. This Cookie Policy outlines how we use cookies and similar technologies on our website. By using our services, you consent to our use of cookies as described herein.
 
 ### What Are Cookies?
 
