@@ -1,13 +1,15 @@
 <script setup>
-let title = "Essay Writing Service";
+let title = "Your Trusted Partner for Writing Excellence";
+const runtimeConfig = useRuntimeConfig();
+
+const site_name = runtimeConfig.public.websiteName;
 
 useSeoMeta({
   title: title,
   ogTitle: title,
-  description: "This is my amazing site, let me tell you all about it.",
-  ogDescription: "This is my amazing site, let me tell you all about it.",
+  description: `Discover ${site_name}, the best online nursing essay service. We are your dedicated team of expert writers, ready to craft top-quality essays and papers for you.`,
+  ogDescription: `Discover ${site_name}, the best online nursing essay service. We are your dedicated team of expert writers, ready to craft top-quality essays and papers for you.`,
   ogImage: "",
-  twitterCard: "summary_large_image",
 });
 </script>
 

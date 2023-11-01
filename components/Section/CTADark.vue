@@ -9,7 +9,7 @@ let { order_url, goTo } = contentStore();
         class="flex flex-col items-center sm:flex-row bg-neutral text-neutral-content rounded-lg gap-4 hover:shadow-lg"
       >
         <NuxtImg
-          alt=""
+          alt="our A+ essay is just a click away"
           id="nuxt-img"
           class="w-48 sm:w-1/3 max-w-xs m-4 m-4"
           src="/img/creative-writing-animate.svg"

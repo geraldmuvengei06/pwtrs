@@ -8,8 +8,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   icon: "pi pi-verified",
   title: "",
-  description:
-    "",
+  description: "",
 });
 </script>
 

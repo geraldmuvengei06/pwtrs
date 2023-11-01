@@ -27,8 +27,7 @@ useSeoMeta({
         <div class="hero-content flex-col sm:flex-row-reverse">
           <div class="w-full md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">
             <h1 class="text-3xl sm:text-5xl font-bold sm:hidden mb-2">
-              <span class="text-base-content">{{ data?.title
-              }}</span>
+              <span class="text-base-content">{{ data?.title }}</span>
             </h1>
 
             <UiCalculator type="verticle" />
@@ -36,8 +35,7 @@ useSeoMeta({
 
           <div class="sm:w-2/3">
             <h1 class="text-3xl sm:text-5xl font-bold hidden sm:inline">
-              <span class="text-base-content">{{ data?.title
-              }}</span>
+              <span class="text-base-content">{{ data?.title }}</span>
             </h1>
 
             <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">
@@ -63,7 +61,8 @@ useSeoMeta({
     <!-- <SectionCTADark /> -->
     <div class="container mx-auto max-w-4xl py-12 px-4">
       <article
-        class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg">
+        class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg"
+      >
         <ContentDoc>
           <template #not-found>
             <UiContentNotFound />

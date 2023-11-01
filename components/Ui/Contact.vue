@@ -21,7 +21,11 @@ let props = withDefaults(defineProps<Props>(), {
       <div class="avatar-group -space-x-6" v-once>
         <div class="avatar" v-for="i in 3" :key="i">
           <div class="w-12 sm:w-16">
-            <NuxtImg alt="" id="nuxt-img" :src="`/experts/writer${i + 3}.jpeg`" />
+            <NuxtImg
+              alt="Expert Nursing  Essay Writers"
+              id="nuxt-img"
+              :src="`/experts/writer${i + 3}.jpeg`"
+            />
           </div>
         </div>
       </div>

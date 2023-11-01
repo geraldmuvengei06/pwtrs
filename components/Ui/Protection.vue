@@ -46,7 +46,12 @@
         title=""
         data-original-title="DMCA"
       >
-        <NuxtImg alt="" id="nuxt-img" class="h-5 sm:h-7" src="/img/dmca.png" />
+        <NuxtImg
+          alt="Safe and Secure"
+          id="nuxt-img"
+          class="h-5 sm:h-7"
+          src="/img/dmca.png"
+        />
       </div>
     </div>
   </div>

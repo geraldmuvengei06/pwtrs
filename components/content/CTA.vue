@@ -14,7 +14,7 @@ const props = defineProps<{
         class="flex flex-col items-center sm:flex-row bg-neutral text-neutral-content rounded-lg gap-4 hover:shadow-lg"
       >
         <NuxtImg
-          alt=""
+          alt="Order Now"
           id="nuxt-img"
           class="w-48 sm:w-1/3 max-w-xs m-4"
           src="/img/Creative-writing-amico.png"
@@ -43,7 +43,7 @@ const props = defineProps<{
             class="sm:mt-9 btn btn-primary flex"
             v-else
           >
-            Hire an Expert Writer
+            Order Now
           </button>
         </div>
       </div>

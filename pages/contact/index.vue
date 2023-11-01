@@ -1,12 +1,13 @@
 <script setup>
+const { page_content } = contentStore();
 let title = "Contact Us";
+let content = page_content[title];
+
 useSeoMeta({
-  title: title,
-  ogTitle: title,
-  description: "This is my amazing site, let me tell you all about it.",
-  ogDescription: "This is my amazing site, let me tell you all about it.",
-  ogImage: "",
-  twitterCard: "summary_large_image",
+  title: content.metaTitle,
+  ogTitle: content.metaTitle,
+  description: content?.metaDescription,
+  ogDescription: content?.metaDescription,
 });
 </script>
 
@@ -16,14 +17,6 @@ useSeoMeta({
       <div class="hero rounded-xl min-h-min relative">
         <UiBgShade />
         <div class="hero-content flex-col sm:flex-row-reverse">
-          <!-- <div class=" max-w-xs sm:max-w-sm md:max-w-md"> -->
-          <!-- <client-only>
-                            <Vue3Lottie animationLink="/lotties/hero-2.json" />
-                        </client-only> -->
-          <!-- </div> -->
-          <!-- <NuxtImg alt=""  id="nuxt-img" src="/img/typing-animate.svg"
-            class=" md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" /> -->
-
           <div class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-full sm:w-2/5">
             <div class="">
               <div class="card glass my-8">
@@ -38,12 +31,11 @@ useSeoMeta({
             <h1 class="text-3xl sm:text-5xl font-bold">
               <span
                 class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-                >Contact Us</span
+                >{{ content.title }}</span
               >
             </h1>
             <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">
-              Trust your assignments to an essay writing service with the
-              <b>fastest delivery time</b> and fully original content.
+              {{ content?.description }}
             </p>
 
             <UiProtection class="hidden sm:inline" />

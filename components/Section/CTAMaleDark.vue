@@ -30,7 +30,7 @@ let { order_url, goTo } = contentStore();
         </div>
 
         <NuxtImg
-          alt=""
+          alt="Ace your grades with our services"
           id="nuxt-img"
           class="w-48 sm:w-1/3 max-w-xs m-4"
           src="/img/Telecommuting-pana.png"

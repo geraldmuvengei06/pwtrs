@@ -19,18 +19,6 @@ let _rating = toRef(props?.rating);
 
 <template>
   <div class="card mx-1 bg-slate-50 hover:shadow-md">
-    <!-- <figure class="px-10 pt-10"> -->
-    <!-- <div class="avatar">
-                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                    <NuxtImg alt=""  id="nuxt-img" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-            </div> -->
-    <!-- <div class="avatar placeholder">
-                <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
-                    <span class="text-xl">JO</span>
-                </div>
-            </div>  -->
-    <!-- </figure> -->
     <div class="card-body p-4">
       <h4 class="card-title mb-0">{{ customer }}</h4>
 
@@ -38,7 +26,6 @@ let _rating = toRef(props?.rating);
 
       <p>{{ review }}</p>
       <div class="card-actions">
-        <!-- <PrimeRating class="text-primary" v-model="_rating" readonly /> -->
         <div class="flex items-center space-x-1">
           <svg
             class="w-4 h-4"

@@ -1,6 +1,5 @@
 <script setup>
-
-const { experts } = contentStore()
+const { experts } = contentStore();
 const responsiveOptions = ref([
   {
     breakpoint: "1199px",
@@ -26,12 +25,20 @@ const responsiveOptions = ref([
       <div class="section-header my-8 text-center max-w-lg mx-auto">
         <h2 class="text-2xl sm:text-4xl">A Wide Selection of Expert Writers</h2>
         <p>
-          A wide selection of expert writers who can handle a variety of topics, subjects, and academic levels!
+          A wide selection of expert writers who can handle a variety of topics,
+          subjects, and academic levels!
         </p>
       </div>
 
-      <PrimeCarousel :value="experts" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions" circular
-        :autoplayInterval="3000" class="mb-4">
+      <PrimeCarousel
+        :value="experts"
+        :numVisible="4"
+        :numScroll="3"
+        :responsiveOptions="responsiveOptions"
+        circular
+        :autoplayInterval="3000"
+        class="mb-4"
+      >
         <template #item="slotProps">
           <UiExpert v-bind="slotProps.data" />
         </template>

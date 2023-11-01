@@ -5,6 +5,13 @@ const { data, pending, error, refresh } = await useAsyncData(
   `content-${path}`,
   () => queryContent().where({ _path: path }).findOne(),
 );
+
+useSeoMeta({
+  title: data?.title,
+  ogTitle: data?.title,
+  description: data?.description,
+  ogDescription: data?.description,
+});
 </script>
 
 <template>

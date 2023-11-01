@@ -1,12 +1,13 @@
 <script setup>
-let title = "How it Works";
+const { page_content } = contentStore();
+let title = "How It Works";
+let content = page_content[title];
+
 useSeoMeta({
-  title: title,
-  ogTitle: title,
-  description: "This is my amazing site, let me tell you all about it.",
-  ogDescription: "This is my amazing site, let me tell you all about it.",
-  ogImage: "",
-  twitterCard: "summary_large_image",
+  title: content.metaTitle,
+  ogTitle: content.metaTitle,
+  description: content?.metaDescription,
+  ogDescription: content?.metaDescription,
 });
 </script>
 
@@ -17,7 +18,7 @@ useSeoMeta({
         <UiBgShade />
         <div class="hero-content flex-col sm:flex-row-reverse">
           <NuxtImg
-            alt=""
+            alt="How it Works"
             id="nuxt-img"
             src="/img/Problem-solving-pana.png"
             class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5"
@@ -27,7 +28,7 @@ useSeoMeta({
             <h1 class="text-3xl sm:text-5xl font-bold">
               <span
                 class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-                >How it Works</span
+                >{{ content.title }}</span
               >
             </h1>
             <p class="pt-6 text-lg sm:max-w-xs lg:max-w-max">
@@ -35,7 +36,7 @@ useSeoMeta({
               <b>fastest delivery time</b> and fully original content.
             </p>
 
-            <UiPayment class="hidden sm:inline" />
+            <p>{{ content.description }}</p>
           </div>
         </div>
       </div>

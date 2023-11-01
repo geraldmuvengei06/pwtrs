@@ -35,7 +35,7 @@ const { how_it_works } = contentStore();
                 {{ slotProps.item.date }}
               </div>
               <NuxtImg
-                alt=""
+                alt="How it works"
                 v-if="slotProps.item.image"
                 :src="`/img/${slotProps.item.image}`"
                 :alt="slotProps.item.name"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { why_us } = contentStore()
+const { why_us } = contentStore();
 </script>
 
 <template>
@@ -11,8 +11,12 @@ const { why_us } = contentStore()
             <h2 class="text-2xl sm:text-4xl text-white">Why Us</h2>
           </div>
           <ul class="my-4">
-            <li v-for="item, i in why_us" :key="i + 'ds'" class="py-3 sm:pb-4"
-              :class="i < 5 && 'border-b border-b-slate-500'">
+            <li
+              v-for="(item, i) in why_us"
+              :key="i + 'ds'"
+              class="py-3 sm:pb-4"
+              :class="i < 5 && 'border-b border-b-slate-500'"
+            >
               <div class="flex items-center">
                 <!-- <div class="flex-shrink-0">
                   <span class="text-3xl text-primary pi pi-check"></span>
