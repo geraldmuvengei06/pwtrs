@@ -1,11 +1,8 @@
 <template>
   <div>
-    <small>Protected by:</small>
-    <br />
-
     <div class="flex flex-row items-end gap-4">
       <div
-        class=""
+        class="bg-white p-2 rounded-lg"
         data-toggle="tooltip"
         data-placement="top"
         title=""
@@ -40,7 +37,7 @@
       </div>
 
       <div
-        class=""
+        class="bg-white p-2 rounded-lg"
         data-toggle="tooltip"
         data-placement="top"
         title=""

@@ -191,9 +191,11 @@ onMounted(async () => {
             :options="setups.urgency"
           />
         </div>
-        <div class="p-inputgroup bg-white border-primary-content flex-1 px-0">
+        <div
+          class="p-inputgroup bg-white border-primary-content flex-1 px-0 rounded-lg"
+        >
           <span
-            class="p-inputgroup-addon cursor-pointer text-primary bg-slate-100 hover:bg-primary-content"
+            class="p-inputgroup-addon cursor-pointer text-primary bg-slate-100 border-primary-content hover:bg-primary-content"
             @click="pages(false)"
             >-</span
           >
@@ -205,7 +207,7 @@ onMounted(async () => {
             v-model="calcPriceForm.pages"
           />
           <span
-            class="p-inputgroup-addon cursor-pointer text-primary bg-slate-100 hover:bg-primary-content"
+            class="p-inputgroup-addon cursor-pointer text-primary bg-slate-100 border-primary-content hover:bg-primary-content"
             @click="pages(true)"
             >+</span
           >

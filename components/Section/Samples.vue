@@ -33,8 +33,6 @@ const responsiveOptions = ref([
       :numVisible="4"
       :numScroll="3"
       :responsiveOptions="responsiveOptions"
-      circular
-      :autoplayInterval="3000"
       class="mb-4"
     >
       <template #item="slotProps">

@@ -19,14 +19,14 @@ const total_saved = free_features.reduce((accumulator, currentItem) => {
         <span>{{ feat?.feat }}</span>
         <span class="flex flex-row items-center gap-1">
           <strike class="font-bold">${{ feat?.cost }}</strike>
-          <div class="badge badge-success">Off!</div>
+          <div class="badge badge-secondary">Off!</div>
         </span>
       </div>
       <div class="divider font-bold text-xl">Saved ${{ total_saved }}</div>
       <h6 class="text-center">Get These Features for Free</h6>
       <button
         @click="goTo(`${order_url}`)"
-        class="sm:mt-4 btn btn-success mx-auto"
+        class="sm:mt-4 btn btn-secondary mx-auto"
       >
         Order Now
       </button>

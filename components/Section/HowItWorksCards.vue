@@ -9,9 +9,7 @@ const { how_it_works } = contentStore();
         <h2 class="text-base font-semibold leading-7 text-primary">
           How to order
         </h2>
-        <h5
-          class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-        >
+        <h5 class="mt-2 text-3xl sm:text-4xl">
           Follow these steps to place your order
         </h5>
         <p class="mt-6 text-lg leading-8 text-gray-600"></p>

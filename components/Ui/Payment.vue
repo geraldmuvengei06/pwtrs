@@ -4,7 +4,7 @@
 
     <div class="flex flex-row gap-4">
       <div
-        class="payment-icon"
+        class="payment-icon bg-white p-1 rounded"
         data-toggle="tooltip"
         data-placement="top"
         title=""
@@ -22,7 +22,7 @@
       </div>
 
       <div
-        class="payment-icon"
+        class="payment-icon bg-white p-1 rounded"
         data-toggle="tooltip"
         data-placement="top"
         title=""
@@ -40,7 +40,7 @@
       </div>
 
       <div
-        class="payment-icon"
+        class="payment-icon bg-white p-1 rounded"
         data-toggle="tooltip"
         data-placement="top"
         title=""

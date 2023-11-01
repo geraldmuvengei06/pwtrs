@@ -21,7 +21,7 @@ const { why_us } = contentStore();
                 <!-- <div class="flex-shrink-0">
                   <span class="text-3xl text-primary pi pi-check"></span>
                 </div> -->
-                <div class="bg-success text-white px-2 pt-2 rounded-lg">
+                <div class="bg-secondary text-white px-2 pt-2 rounded-lg">
                   <span class="text-2xl pi pi-verified"></span>
                 </div>
                 <div class="flex-1 min-w-0 ml-4">

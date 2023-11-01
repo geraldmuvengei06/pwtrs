@@ -58,7 +58,7 @@ let { key_factors } = contentStore();
             <div class="flex flex-row justify-start items-center gap-4 mt-4">
               <UiRatingsTotal class="hidden sm:flex" />
               <div
-                class="flex items-center justify-center sm:justify-start flex-row rounded-lg"
+                class="hidden sm:flex items-center justify-center sm:justify-start flex-row rounded-lg"
               >
                 <div class="w-24 mr-1">
                   <UiLogo />
