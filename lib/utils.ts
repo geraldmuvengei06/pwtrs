@@ -6,10 +6,21 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+
+function isFullURL(route: string) {
+  const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/
+  return urlPattern.test(route)
+}
+
 export function generateFullUrl(path: string, params: any, query: any) {
   const runtimeConfig = useRuntimeConfig();
-
-  let url = runtimeConfig?.public?.websiteUrl + path;
+  
+  let url = ''
+  if (isFullURL(path)) {
+    url = path
+  } else {
+    url = runtimeConfig?.public?.websiteUrl + path;
+  }
 
   // Add parameters to the path
   if (params) {

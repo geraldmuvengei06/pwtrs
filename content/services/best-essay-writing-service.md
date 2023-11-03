@@ -117,8 +117,7 @@ Benefits:
 - Enhanced clarity and coherence
 - Improved writing skills
 
-:::FreeFeature
-:::
+:::FreeFeature:::
 
 ## Why most students choose our service.
 
