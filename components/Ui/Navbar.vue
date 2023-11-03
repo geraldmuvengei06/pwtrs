@@ -127,7 +127,7 @@ watch(
             <XMarkIcon class="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div class="mt-6 flow-root">
+        <div class="mt-8 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
               <Disclosure as="div" class="-mx-3" v-slot="{ open }">

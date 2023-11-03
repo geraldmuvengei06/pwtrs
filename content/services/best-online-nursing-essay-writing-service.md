@@ -145,4 +145,5 @@ Once your draft is ready for review, you'll receive a notification. Take your ti
 
 When you're satisfied with the final product, you can download your essay. You can now submit and wait to receive the highest grade possible!
 
-:::FreeFeature:::
+:::FreeFeature
+:::

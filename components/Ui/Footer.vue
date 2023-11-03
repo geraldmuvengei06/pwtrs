@@ -30,7 +30,7 @@ const services = navigation?.value?.length > 0 ? navigation?.value[0]?.children 
           <header class="font-bold text-slate-100">Services</header>
           <div v-once>
             <NuxtLink v-for="service, i in services" :key="service?._path" :to="service?._path"
-              class="flex flex-col my-1 max-w-xs text-ellipsis overflow-hidden">
+              class="flex flex-col my-2 max-w-xs text-ellipsis overflow-hidden">
               {{ service?.title }}
             </NuxtLink>
           </div>

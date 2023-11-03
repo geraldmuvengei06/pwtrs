@@ -320,7 +320,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Annotated Bibliography",
           "type": "Essay",
-          "path": "./sample/watermarked-annotated-bibliography.pdf",
+          "path": "/sample/watermarked-annotated-bibliography.pdf",
           "size": "0.16 MB",
           "created_at": "2023-11-03 16:03:56",
           "modified_at": "2023-11-03 16:03:56",
@@ -330,7 +330,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Brain Death And Ethical Considerations",
           "type": "Essay",
-          "path": "./sample/watermarked-brain-death-and-ethical-considerations.pdf",
+          "path": "/sample/watermarked-brain-death-and-ethical-considerations.pdf",
           "size": "0.10 MB",
           "created_at": "2023-11-03 16:03:56",
           "modified_at": "2023-11-03 16:03:56",
@@ -340,7 +340,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Cannabis And Mental Health",
           "type": "Essay",
-          "path": "./sample/watermarked-cannabis-and-mental-health.pdf",
+          "path": "/sample/watermarked-cannabis-and-mental-health.pdf",
           "size": "0.16 MB",
           "created_at": "2023-11-03 16:03:56",
           "modified_at": "2023-11-03 16:03:56",
@@ -350,7 +350,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Carl Jung Contributions To Psychotherapy",
           "type": "Essay",
-          "path": "./sample/watermarked-carl-jung-contributions-to-psychotherapy.pdf",
+          "path": "/sample/watermarked-carl-jung-contributions-to-psychotherapy.pdf",
           "size": "0.10 MB",
           "created_at": "2023-11-03 16:03:57",
           "modified_at": "2023-11-03 16:03:57",
@@ -360,7 +360,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Psychotherapies  Exploring Informed Consent",
           "type": "Essay",
-          "path": "./sample/watermarked-psychotherapies--exploring-informed-consent.pdf",
+          "path": "/sample/watermarked-psychotherapies--exploring-informed-consent.pdf",
           "size": "0.11 MB",
           "created_at": "2023-11-03 16:03:57",
           "modified_at": "2023-11-03 16:03:57",
@@ -370,7 +370,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Reply To Discussion Responses",
           "type": "Discussion Responses",
-          "path": "./sample/watermarked-reply-to-discussion-responses.pdf",
+          "path": "/sample/watermarked-reply-to-discussion-responses.pdf",
           "size": "0.07 MB",
           "created_at": "2023-11-03 16:03:57",
           "modified_at": "2023-11-03 16:03:57",
@@ -380,7 +380,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Soap Note Bacterial Vaginosis",
           "type": "Essay",
-          "path": "./sample/watermarked-soap-note-bacterial-vaginosis.pdf",
+          "path": "/sample/watermarked-soap-note-bacterial-vaginosis.pdf",
           "size": "0.21 MB",
           "created_at": "2023-11-03 16:03:58",
           "modified_at": "2023-11-03 16:03:58",
@@ -390,7 +390,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Soap Note",
           "type": "Soap Note",
-          "path": "./sample/watermarked-soap-note.pdf",
+          "path": "/sample/watermarked-soap-note.pdf",
           "size": "0.13 MB",
           "created_at": "2023-11-03 16:03:58",
           "modified_at": "2023-11-03 16:03:58",
@@ -400,7 +400,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "The Assure Model ",
           "type": "Essay",
-          "path": "./sample/watermarked-the-assure-model-.pdf",
+          "path": "/sample/watermarked-the-assure-model-.pdf",
           "size": "0.07 MB",
           "created_at": "2023-11-03 16:03:58",
           "modified_at": "2023-11-03 16:03:58",
@@ -408,9 +408,9 @@ export const contentStore = defineStore("content", () => {
           "estimated_read_time": "6.00 minutes"
       },
       {
-          "filename": "Theory Concept Application In Professional Nursing Practice Jean Watsons Midrange Theory Of Human Caring ",
+          "filename": "Theory Concept Application In Professional Nursing...",
           "type": "Paper",
-          "path": "./sample/watermarked-theory-concept-application-in-professional-nursing-practice-jean-watsons-midrange-theory-of-human-caring-.pdf",
+          "path": "/sample/watermarked-theory-concept-application-in-professional-nursing-practice-jean-watsons-midrange-theory-of-human-caring-.pdf",
           "size": "0.17 MB",
           "created_at": "2023-11-03 16:03:58",
           "modified_at": "2023-11-03 16:03:58",
@@ -420,7 +420,7 @@ export const contentStore = defineStore("content", () => {
       {
           "filename": "Underlying Framework Watsons Caring Theory ",
           "type": "Essay",
-          "path": "./sample/watermarked-underlying-framework-watsons-caring-theory-.pdf",
+          "path": "/sample/watermarked-underlying-framework-watsons-caring-theory-.pdf",
           "size": "0.14 MB",
           "created_at": "2023-11-03 16:03:59",
           "modified_at": "2023-11-03 16:03:59",
