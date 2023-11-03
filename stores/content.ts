@@ -316,130 +316,117 @@ export const contentStore = defineStore("content", () => {
     },
   ];
 
-  const samples = [
-    {
-      filename:
-        "A Personal Reflection On Future Career Path As A Nurse And How To Care For Self And Patients",
-      path: "/sample/watermarked-A-Personal-Reflection-on-Future-Career-Path-as-a-Nurse-and-How-to-Care-for-Self-and-Patients.pdf",
-      size: "0.05 MB",
-      num_pages: 4,
-      estimated_read_time: "2.40 minutes",
-      type: "Reflection Essay",
-    },
-    {
-      filename: "Advanced Pharmacology",
-      path: "/sample/watermarked-Advanced-Pharmacology.pdf",
-      size: "0.10 MB",
-      num_pages: 3,
-      estimated_read_time: "1.80 minutes",
-      type: "Research Paper",
-    },
-    {
-      filename: "Comprehensive Integrated Psychiatric Assessment",
-      path: "/sample/watermarked-Comprehensive-integrated-psychiatric-assessment.pdf",
-      size: "0.12 MB",
-      num_pages: 5,
-      estimated_read_time: "3.00 minutes",
-      type: "Assessment Essay",
-    },
-    {
-      filename: "Diversity In Health Care Purnell Nursing Model",
-      path: "/sample/watermarked-Diversity-in-Health-Care-Purnell-nursing-Model.pdf",
-      size: "0.15 MB",
-      num_pages: 7,
-      estimated_read_time: "4.20 minutes",
-      type: "Essay",
-    },
-    {
-      filename: "Focused Assessment Of The Lungs And Thorax",
-      path: "/sample/watermarked-Focused-Assessment-of-the-Lungs-and-Thorax.pdf",
-      size: "0.13 MB",
-      num_pages: 7,
-      estimated_read_time: "4.20 minutes",
-      type: "Essay",
-    },
-    {
-      filename: "Internal And External Data",
-      path: "/sample/watermarked-Internal-and-external-data.pdf",
-      size: "0.07 MB",
-      num_pages: 4,
-      estimated_read_time: "2.40 minutes",
-      type: "Essay",
-    },
-    {
-      filename: "Learning Needs Assessment",
-      path: "/sample/watermarked-Learning-Needs-Assessment.pdf",
-      size: "0.15 MB",
-      num_pages: 6,
-      estimated_read_time: "3.60 minutes",
-      type: "Assessment",
-    },
-    {
-      filename: "Quality Healthcare Measuring Np Performance",
-      path: "/sample/watermarked-Quality-Healthcare-Measuring-NP-Performance.pdf",
-      size: "0.09 MB",
-      num_pages: 9,
-      estimated_read_time: "5.40 minutes",
-      type: "Essay",
-    },
-    {
-      filename:
-        "Reducing Barriers To Selfhelp Tools Among Women With Depression ",
-      path: "/sample/watermarked-REDUCING-BARRIERS-TO-SELFHELP-TOOLS-AMONG-WOMEN-WITH-DEPRESSION-.pdf",
-      size: "0.17 MB",
-      num_pages: 26,
-      estimated_read_time: "15.60 minutes",
-      type: "Paper",
-    },
-    {
-      filename: "NPR Concept Plan",
-      path: "/sample/watermarked-References.pdf",
-      size: "0.15 MB",
-      num_pages: 2,
-      estimated_read_time: "1.20 minutes",
-      type: "Plan",
-    },
-    {
-      filename: "Sigmund Freud",
-      path: "/sample/watermarked-Sigmund-Freud.pdf",
-      size: "0.11 MB",
-      num_pages: 4,
-      estimated_read_time: "2.40 minutes",
-      type: "Paper",
-    },
-    {
-      filename: "Stage A Heart Failure",
-      path: "/sample/watermarked-Stage-A-Heart-Failure.pdf",
-      size: "0.14 MB",
-      num_pages: 5,
-      estimated_read_time: "3.00 minutes",
-      type: "Essay",
-    },
-    {
-      filename: "Stress Management",
-      path: "/sample/watermarked-Stress-Management.pdf",
-      size: "0.14 MB",
-      num_pages: 7,
-      estimated_read_time: "4.20 minutes",
-      type: "Essay",
-    },
-    {
-      filename: "Testtaking",
-      path: "/sample/watermarked-TestTaking.pdf",
-      size: "0.11 MB",
-      num_pages: 5,
-      estimated_read_time: "3.00 minutes",
-      type: "Essay",
-    },
-    {
-      filename:
-        "Week 4 Signature Assignment Pediatric Comprehensive Soap Note Pt 2 Bp",
-      path: "/sample/watermarked-Week-4-Signature-Assignment-Pediatric-Comprehensive-SOAP-Note-Pt-2-BP.pdf",
-      size: "0.08 MB",
-      num_pages: 5,
-      estimated_read_time: "3.00 minutes",
-      type: "Assignment",
-    },
+    const samples = [
+      {
+          "filename": "Annotated Bibliography",
+          "type": "Essay",
+          "path": "./sample/watermarked-annotated-bibliography.pdf",
+          "size": "0.16 MB",
+          "created_at": "2023-11-03 16:03:56",
+          "modified_at": "2023-11-03 16:03:56",
+          "num_pages": 6,
+          "estimated_read_time": "12.00 minutes"
+      },
+      {
+          "filename": "Brain Death And Ethical Considerations",
+          "type": "Essay",
+          "path": "./sample/watermarked-brain-death-and-ethical-considerations.pdf",
+          "size": "0.10 MB",
+          "created_at": "2023-11-03 16:03:56",
+          "modified_at": "2023-11-03 16:03:56",
+          "num_pages": 4,
+          "estimated_read_time": "8.00 minutes"
+      },
+      {
+          "filename": "Cannabis And Mental Health",
+          "type": "Essay",
+          "path": "./sample/watermarked-cannabis-and-mental-health.pdf",
+          "size": "0.16 MB",
+          "created_at": "2023-11-03 16:03:56",
+          "modified_at": "2023-11-03 16:03:56",
+          "num_pages": 15,
+          "estimated_read_time": "30.00 minutes"
+      },
+      {
+          "filename": "Carl Jung Contributions To Psychotherapy",
+          "type": "Essay",
+          "path": "./sample/watermarked-carl-jung-contributions-to-psychotherapy.pdf",
+          "size": "0.10 MB",
+          "created_at": "2023-11-03 16:03:57",
+          "modified_at": "2023-11-03 16:03:57",
+          "num_pages": 4,
+          "estimated_read_time": "8.00 minutes"
+      },
+      {
+          "filename": "Psychotherapies  Exploring Informed Consent",
+          "type": "Essay",
+          "path": "./sample/watermarked-psychotherapies--exploring-informed-consent.pdf",
+          "size": "0.11 MB",
+          "created_at": "2023-11-03 16:03:57",
+          "modified_at": "2023-11-03 16:03:57",
+          "num_pages": 3,
+          "estimated_read_time": "6.00 minutes"
+      },
+      {
+          "filename": "Reply To Discussion Responses",
+          "type": "Discussion Responses",
+          "path": "./sample/watermarked-reply-to-discussion-responses.pdf",
+          "size": "0.07 MB",
+          "created_at": "2023-11-03 16:03:57",
+          "modified_at": "2023-11-03 16:03:57",
+          "num_pages": 3,
+          "estimated_read_time": "6.00 minutes"
+      },
+      {
+          "filename": "Soap Note Bacterial Vaginosis",
+          "type": "Essay",
+          "path": "./sample/watermarked-soap-note-bacterial-vaginosis.pdf",
+          "size": "0.21 MB",
+          "created_at": "2023-11-03 16:03:58",
+          "modified_at": "2023-11-03 16:03:58",
+          "num_pages": 13,
+          "estimated_read_time": "26.00 minutes"
+      },
+      {
+          "filename": "Soap Note",
+          "type": "Soap Note",
+          "path": "./sample/watermarked-soap-note.pdf",
+          "size": "0.13 MB",
+          "created_at": "2023-11-03 16:03:58",
+          "modified_at": "2023-11-03 16:03:58",
+          "num_pages": 6,
+          "estimated_read_time": "12.00 minutes"
+      },
+      {
+          "filename": "The Assure Model ",
+          "type": "Essay",
+          "path": "./sample/watermarked-the-assure-model-.pdf",
+          "size": "0.07 MB",
+          "created_at": "2023-11-03 16:03:58",
+          "modified_at": "2023-11-03 16:03:58",
+          "num_pages": 3,
+          "estimated_read_time": "6.00 minutes"
+      },
+      {
+          "filename": "Theory Concept Application In Professional Nursing Practice Jean Watsons Midrange Theory Of Human Caring ",
+          "type": "Paper",
+          "path": "./sample/watermarked-theory-concept-application-in-professional-nursing-practice-jean-watsons-midrange-theory-of-human-caring-.pdf",
+          "size": "0.17 MB",
+          "created_at": "2023-11-03 16:03:58",
+          "modified_at": "2023-11-03 16:03:58",
+          "num_pages": 10,
+          "estimated_read_time": "20.00 minutes"
+      },
+      {
+          "filename": "Underlying Framework Watsons Caring Theory ",
+          "type": "Essay",
+          "path": "./sample/watermarked-underlying-framework-watsons-caring-theory-.pdf",
+          "size": "0.14 MB",
+          "created_at": "2023-11-03 16:03:59",
+          "modified_at": "2023-11-03 16:03:59",
+          "num_pages": 3,
+          "estimated_read_time": "6.00 minutes"
+      }
   ];
 
   const unique = [
