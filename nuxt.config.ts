@@ -25,7 +25,8 @@ export default defineNuxtConfig({
       homeUrl: process.env.NUXT_HOME_URL || "/orders/home/",
       whatsappNumber: process.env.NUXT_WHATSAPP_NUMBER,
       supportEmail: process.env.NUXT_SUPPORT_EMAIL,
-      apiUrl: process.env.NUXT_PUBLIC_API_BASE
+      baseURL: process.env.NUXT_PUBLIC_API_BASE,
+      baseToken: process.env.NUXT_PUBLIC_API_TOKEN
     },
   },
   devtools: { enabled: false },

@@ -35,3 +35,5 @@ export function generateFullUrl(path: string, params: any, query: any) {
 
   return url;
 }
+
+
