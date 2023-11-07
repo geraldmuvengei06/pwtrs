@@ -1,6 +1,6 @@
 ---
 title: Nursing Homework Help
-subtitle: Whether you're seeking the best essay writing service, need a professional essay writer, or simply want to explore the world of online essay writing, you're in the right place.
+subtitle: Get expert assistance for your nursing homework.
 description: Term Paper Writing Service - Your Path to Academic Excellence
 date:
 cover:

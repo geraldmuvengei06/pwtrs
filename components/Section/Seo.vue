@@ -60,7 +60,8 @@
             their arguments.
           </p>
           <h3>
-            Professional Nursing Term Paper Writing Services
+            Professional <NuxtLink to="/services/nursing-term-paper-writing-service">Nursing Term Paper Writing Services
+            </NuxtLink>
           </h3>
           <p>
             Nursing, in general, is a complex subject. As a result, nursing research has critical scientific value because
