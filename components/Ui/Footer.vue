@@ -3,9 +3,10 @@ let { menu, legal } = contentStore();
 
 const year = new Date().getFullYear();
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation('services'))
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 
-const services = navigation?.value?.length > 0 ? navigation?.value[0]?.children : []
+const blog = navigation?.value?.length > 0 ? navigation?.value[0]?.children : []
+const services = navigation?.value?.length > 0 ? navigation?.value[2]?.children : []
 
 </script>
 
@@ -36,12 +37,21 @@ const services = navigation?.value?.length > 0 ? navigation?.value[0]?.children 
           </div>
         </nav>
         <nav>
+
+          <header class="font-bold text-slate-100">Blog</header>
+          <div v-once>
+            <NuxtLink v-for="article, i in blog" :key="article?._path" :to="article?._path"
+              class="flex flex-col my-2 max-w-xs text-ellipsis overflow-hidden">
+              {{ article?.title }}
+            </NuxtLink>
+          </div>
+        </nav>
+        <nav>
           <header class="font-bold text-slate-100">Company</header>
           <NuxtLink v-for="(item, i) in menu" :key="i + 'x'" :to="item?.link" class="link link-hover"><span
               v-if="item.icon" class="mr-2" :class="item.icon"></span>{{ item.name }}</NuxtLink>
-        </nav>
-        <nav>
-          <header class="font-bold text-slate-100">Legal</header>
+
+          <header class="font-bold text-slate-100 mt-4">Legal</header>
           <NuxtLink v-for="(l, i) in legal" :key="i" :to="l.link" class="link link-hover">{{ l.name }}</NuxtLink>
         </nav>
       </footer>

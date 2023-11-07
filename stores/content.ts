@@ -81,6 +81,10 @@ export const contentStore = defineStore("content", () => {
   ];
 
   const menu = [
+    // {
+    //   name: "Blog",
+    //   link: '/blog'
+    // },
     {
       name: "Samples",
       link: "/samples",
