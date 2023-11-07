@@ -32,7 +32,6 @@ If the essay submitted is not to your satisfaction, you are always guaranteed un
 :::CTA{title="Best Essay Writer Online" action="Order Your A+ Essay"}
 Are you tired of spending endless hours on your essays? Our expert essay writers are here to help. We craft essays that are tailored to your needs, ensuring you get the grades you deserve. Let's make academic writing a breeze for you.
 :::
-
 ## Here are some additional services that we provide:
 
 - When you share your information with us, we follow a strict confidentiality policy where no third party is involved. This helps to dispel any doubts they may have.
