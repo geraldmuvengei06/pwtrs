@@ -113,6 +113,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    preset: 'node-server',
     prerender: {
       routes: ["/sitemap.xml"],
       ignore: ["/orders"],
