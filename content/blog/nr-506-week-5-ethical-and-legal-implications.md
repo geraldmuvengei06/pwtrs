@@ -3,7 +3,6 @@ title: NR 500 Week 5 - Ethical and Legal implications
 subtitle: NR 500 Week 5 - Ethical and Legal implications! 1500+ Experts Ready to Craft Your A+ Essay. Order Now!
 description: NR 500 Week 5 - Ethical and Legal implications! 1500+ Experts Ready to Craft Your A+ Essay. Order Now!
 date: 29th Oct 2023
-cover:
 ---
 
 ## NR 506 Week 5: Ethical and Legal Implications

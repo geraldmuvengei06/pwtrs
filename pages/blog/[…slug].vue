@@ -42,6 +42,12 @@ useSeoMeta({
               {{ data?.subtitle }}
             </p>
 
+            <ul class="w-full text-lg hover:bg-transparent py-4">
+              <li v-for="(factor, i) in key_factors" :key="i + 'f'" class="hover:bg-transparent">
+                <span class="px-0"><i class="pi pi-check text-xl mr-2 text-primary"></i>{{ factor.item }}</span>
+              </li>
+            </ul>
+
             <UiPayment />
           </div>
         </div>
@@ -53,8 +59,7 @@ useSeoMeta({
     <SectionSamples />
     <div class="container mx-auto max-w-4xl py-12 px-4">
       <article
-        class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg"
-      >
+        class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg">
         <ContentDoc>
           <template #not-found>
             <UiContentNotFound />
