@@ -1,21 +1,15 @@
-import { hasInjectionContext, getCurrentInstance, version, ref, watchEffect, watch, inject, toRef, isRef, defineAsyncComponent, readonly, useSSRContext, unref, defineComponent, computed, h, resolveComponent, onMounted, nextTick, mergeProps, withCtx, createTextVNode, createApp, reactive, effectScope, isReactive, toRaw, getCurrentScope, onScopeDispose, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, shallowRef, shallowReactive, isReadonly, toRefs, markRaw, Suspense, Transition, isShallow } from 'vue';
-import { u as useRuntimeConfig$1, n as createError$1, $ as $fetch, q as hasProtocol, r as parseURL, t as parseQuery, v as createHooks, x as withTrailingSlash, y as withoutTrailingSlash, z as withQuery, A as isScriptProtocol, l as joinURL, B as sanitizeStatusCode, C as withHttps, D as defu } from '../nitro/node-server.mjs';
+import { hasInjectionContext, getCurrentInstance, version, ref, watchEffect, watch, inject, toRef, isRef, defineAsyncComponent, readonly, useSSRContext, unref, defineComponent, computed, h, resolveComponent, onMounted, nextTick, mergeProps, withCtx, createTextVNode, createApp, effectScope, reactive, isReactive, toRaw, getCurrentScope, onScopeDispose, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, shallowRef, shallowReactive, isReadonly, toRefs, markRaw, Suspense, Transition, isShallow } from 'vue';
+import { u as useRuntimeConfig$1, k as createError$1, $ as $fetch, n as hasProtocol, p as parseURL, o as parseQuery, q as createHooks, w as withTrailingSlash, r as withoutTrailingSlash, t as withQuery, v as isScriptProtocol, j as joinURL, x as sanitizeStatusCode, y as withHttps, z as defu } from '../nitro/node-server.mjs';
 import { getActiveHead } from 'unhead';
 import { defineHeadPlugin, composableNames, unpackMeta } from '@unhead/shared';
 import { useRoute as useRoute$1, createMemoryHistory, createRouter, START_LOCATION, RouterView } from 'vue-router';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrRenderSuspense, ssrRenderVNode } from 'vue/server-renderer';
 import 'node:http';
 import 'node:https';
-import 'node:zlib';
-import 'node:stream';
-import 'node:buffer';
-import 'node:util';
-import 'node:url';
-import 'node:net';
-import 'node:fs';
-import 'node:path';
 import 'fs';
 import 'path';
+import 'node:fs';
+import 'node:url';
 import 'unified';
 import 'mdast-util-to-string';
 import 'micromark';
@@ -146,11 +140,12 @@ const NuxtPluginIndicator = "__nuxt_plugin";
 function createNuxtApp(options) {
   let hydratingCount = 0;
   const nuxtApp = {
+    _scope: effectScope(),
     provide: void 0,
     globalName: "nuxt",
     versions: {
       get nuxt() {
-        return "3.7.4";
+        return "3.8.0";
       },
       get vue() {
         return nuxtApp.vueApp.version;
@@ -165,7 +160,7 @@ function createNuxtApp(options) {
     static: {
       data: {}
     },
-    runWithContext: (fn) => callWithNuxt(nuxtApp, fn),
+    runWithContext: (fn) => nuxtApp._scope.run(() => callWithNuxt(nuxtApp, fn)),
     isHydrating: false,
     deferHydration() {
       if (!nuxtApp.isHydrating) {
@@ -376,17 +371,24 @@ const coreComposableNames = [
   "@unhead/vue": [...coreComposableNames, ...composableNames]
 });
 function useSeoMeta(input, options) {
-  const headInput = ref({});
-  watchEffect(() => {
-    const resolvedMeta = resolveUnrefHeadInput(input);
-    const { title, titleTemplate, ...meta } = resolvedMeta;
-    headInput.value = {
-      title,
-      titleTemplate,
-      meta: unpackMeta(meta)
-    };
+  const { title, titleTemplate, ...meta } = input;
+  return useHead({
+    title,
+    titleTemplate,
+    // @ts-expect-error runtime type
+    _flatMeta: meta
+  }, {
+    ...options,
+    transform(t) {
+      const meta2 = unpackMeta({ ...t._flatMeta });
+      delete t._flatMeta;
+      return {
+        // @ts-expect-error runtime type
+        ...t,
+        meta: meta2
+      };
+    }
   });
-  return useHead(headInput, options);
 }
 const LayoutMetaSymbol = Symbol("layout-meta");
 const PageRouteSymbol = Symbol("route");
@@ -461,6 +463,7 @@ const navigateTo = (to, options) => {
     }
   }
   if (isExternal) {
+    nuxtApp._scope.stop();
     if (options == null ? void 0 : options.replace) {
       location.replace(toPath);
     } else {
@@ -497,6 +500,11 @@ const createError = (err) => {
   _err.__nuxt_error = true;
   return _err;
 };
+const appLayoutTransition = false;
+const appPageTransition = false;
+const appKeepalive = false;
+const nuxtLinkDefaults = { "componentName": "NuxtLink" };
+const asyncDataDefaults = { "deep": true };
 const useStateKeyPrefix = "$s";
 function useState(...args) {
   const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
@@ -527,9 +535,6 @@ function useRequestEvent(nuxtApp = /* @__PURE__ */ useNuxtApp()) {
   var _a;
   return (_a = nuxtApp.ssrContext) == null ? void 0 : _a.event;
 }
-const appLayoutTransition = false;
-const appPageTransition = false;
-const appKeepalive = false;
 function definePayloadReducer(name, reduce) {
   {
     (/* @__PURE__ */ useNuxtApp()).ssrContext._payloadReducers[name] = reduce;
@@ -727,7 +732,7 @@ function defineNuxtLink(options) {
     }
   });
 }
-const __nuxt_component_3 = /* @__PURE__ */ defineNuxtLink({ componentName: "NuxtLink" });
+const __nuxt_component_4 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
 const unhead_KgADcZ0jPj = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:head",
   enforce: "pre",
@@ -864,7 +869,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-248c9ce5.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-bce0bbad.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "blog-slug",
+    path: "/blog/:slug()",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/_…slug_-65a7ff2a.mjs').then((m) => m.default || m)
   },
   {
     name: "contact",
@@ -872,7 +885,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-68d341fa.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-e03dda95.mjs').then((m) => m.default || m)
   },
   {
     name: "faq",
@@ -880,7 +893,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-386504ed.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-6bfb5fc2.mjs').then((m) => m.default || m)
   },
   {
     name: "how-it-works",
@@ -888,7 +901,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-97da9c4d.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-be46d213.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -896,31 +909,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-cc0894bc.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-81fa5ed7.mjs').then((m) => m.default || m)
   },
   {
-    name: "legal-cookie-policy",
-    path: "/legal/cookie-policy",
+    name: "legal-slug",
+    path: "/legal/:slug(.*)*",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/cookie-policy-339425c1.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "legal-privacy-policy",
-    path: "/legal/privacy-policy",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/privacy-policy-b1b9de17.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "legal-terms-of-use",
-    path: "/legal/terms-of-use",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/terms-of-use-20345fe6.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_...slug_-8395c960.mjs').then((m) => m.default || m)
   },
   {
     name: "samples",
@@ -928,7 +925,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-bbe80c19.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-18365f77.mjs').then((m) => m.default || m)
   },
   {
     name: "services-slug",
@@ -936,23 +933,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/_…slug_-0c9135a8.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "services-index.backup",
-    path: "/services/index.backup",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/index.backup-ed358511.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "services-slug-backup",
-    path: "/services/slug-backup",
-    meta: {},
-    alias: [],
-    redirect: void 0,
-    component: () => import('./_nuxt/index-718d5822.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_…slug_-eeed1463.mjs').then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {
@@ -1021,8 +1002,14 @@ const validate = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {
     return result;
   }
 });
+const manifest_45route_45rule = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {
+  {
+    return;
+  }
+});
 const globalMiddleware = [
-  validate
+  validate,
+  manifest_45route_45rule
 ];
 const namedMiddleware = {};
 const plugin$1 = /* @__PURE__ */ defineNuxtPlugin({
@@ -1637,15 +1624,15 @@ const revive_payload_server_eJ33V7gbc6 = /* @__PURE__ */ defineNuxtPlugin({
     }
   }
 });
-const LazyCTA = defineAsyncComponent(() => import('./_nuxt/CTA-9f556b25.mjs').then((r) => r.default));
-const LazyFreeFeature = defineAsyncComponent(() => import('./_nuxt/FreeFeature-bcf0f5d2.mjs').then((r) => r.default));
-const LazySamples = defineAsyncComponent(() => import('./_nuxt/Samples-f6299b13.mjs').then((r) => r.default));
-const LazyContentDoc = defineAsyncComponent(() => import('./_nuxt/ContentDoc-c75da1b9.mjs').then((r) => r.default));
-const LazyContentList = defineAsyncComponent(() => import('./_nuxt/ContentList-eea7ba8c.mjs').then((r) => r.default));
-const LazyContentNavigation = defineAsyncComponent(() => import('./_nuxt/ContentNavigation-10b98660.mjs').then((r) => r.default));
-const LazyContentQuery = defineAsyncComponent(() => import('./_nuxt/ContentQuery-13f862c4.mjs').then((r) => r.default));
-const LazyContentRenderer = defineAsyncComponent(() => import('./_nuxt/ContentRenderer-6b0894f7.mjs').then((r) => r.default));
-const LazyContentRendererMarkdown = defineAsyncComponent(() => import('./_nuxt/ContentRendererMarkdown-65285412.mjs').then((r) => r.default));
+const LazyCTA = defineAsyncComponent(() => import('./_nuxt/CTA-4efc6b5b.mjs').then((r) => r.default));
+const LazyFreeFeature = defineAsyncComponent(() => import('./_nuxt/FreeFeature-d7a4d9b9.mjs').then((r) => r.default));
+const LazySamples = defineAsyncComponent(() => import('./_nuxt/Samples-cff24b83.mjs').then((r) => r.default));
+const LazyContentDoc = defineAsyncComponent(() => import('./_nuxt/ContentDoc-e1ecc280.mjs').then((r) => r.default));
+const LazyContentList = defineAsyncComponent(() => import('./_nuxt/ContentList-bbff05a2.mjs').then((r) => r.default));
+const LazyContentNavigation = defineAsyncComponent(() => import('./_nuxt/ContentNavigation-afa7f201.mjs').then((r) => r.default));
+const LazyContentQuery = defineAsyncComponent(() => import('./_nuxt/ContentQuery-e3889df6.mjs').then((r) => r.default));
+const LazyContentRenderer = defineAsyncComponent(() => import('./_nuxt/ContentRenderer-a9dfb55b.mjs').then((r) => r.default));
+const LazyContentRendererMarkdown = defineAsyncComponent(() => import('./_nuxt/ContentRendererMarkdown-989635eb.mjs').then((r) => r.default));
 const LazyContentSlot = defineAsyncComponent(() => import('./_nuxt/ContentSlot-ccead881.mjs').then((r) => r.default));
 const LazyDocumentDrivenEmpty = defineAsyncComponent(() => import('./_nuxt/DocumentDrivenEmpty-e7fcdb87.mjs').then((r) => r.default));
 const LazyDocumentDrivenNotFound = defineAsyncComponent(() => import('./_nuxt/DocumentDrivenNotFound-84f1d547.mjs').then((r) => r.default));
@@ -1653,20 +1640,21 @@ const LazyMarkdown = defineAsyncComponent(() => import('./_nuxt/Markdown-47a9cc0
 const LazyProseCode = defineAsyncComponent(() => import('./_nuxt/ProseCode-d6bca6a9.mjs').then((r) => r.default));
 const LazyProseCodeInline = defineAsyncComponent(() => import('./_nuxt/ProseCodeInline-1ac42f9e.mjs').then((r) => r.default));
 const LazyProsePre = defineAsyncComponent(() => import('./_nuxt/ProsePre-b1575e13.mjs').then((r) => r.default));
-const LazyProseA = defineAsyncComponent(() => import('./_nuxt/ProseA-8c5c6a4e.mjs').then((r) => r.default));
+const LazyProseA = defineAsyncComponent(() => import('./_nuxt/ProseA-27d53526.mjs').then((r) => r.default));
 const LazyProseBlockquote = defineAsyncComponent(() => import('./_nuxt/ProseBlockquote-f0ecd881.mjs').then((r) => r.default));
 const LazyProseEm = defineAsyncComponent(() => import('./_nuxt/ProseEm-26c31e3f.mjs').then((r) => r.default));
-const LazyProseH1 = defineAsyncComponent(() => import('./_nuxt/ProseH1-6ce21740.mjs').then((r) => r.default));
-const LazyProseH2 = defineAsyncComponent(() => import('./_nuxt/ProseH2-4761b62c.mjs').then((r) => r.default));
-const LazyProseH3 = defineAsyncComponent(() => import('./_nuxt/ProseH3-2266da7b.mjs').then((r) => r.default));
-const LazyProseH4 = defineAsyncComponent(() => import('./_nuxt/ProseH4-8aeb6909.mjs').then((r) => r.default));
-const LazyProseH5 = defineAsyncComponent(() => import('./_nuxt/ProseH5-f983c04c.mjs').then((r) => r.default));
-const LazyProseH6 = defineAsyncComponent(() => import('./_nuxt/ProseH6-a562a622.mjs').then((r) => r.default));
+const LazyProseH1 = defineAsyncComponent(() => import('./_nuxt/ProseH1-54c8b042.mjs').then((r) => r.default));
+const LazyProseH2 = defineAsyncComponent(() => import('./_nuxt/ProseH2-d0222d54.mjs').then((r) => r.default));
+const LazyProseH3 = defineAsyncComponent(() => import('./_nuxt/ProseH3-59558567.mjs').then((r) => r.default));
+const LazyProseH4 = defineAsyncComponent(() => import('./_nuxt/ProseH4-19f32ea0.mjs').then((r) => r.default));
+const LazyProseH5 = defineAsyncComponent(() => import('./_nuxt/ProseH5-ead8ce93.mjs').then((r) => r.default));
+const LazyProseH6 = defineAsyncComponent(() => import('./_nuxt/ProseH6-b1b9fe8b.mjs').then((r) => r.default));
 const LazyProseHr = defineAsyncComponent(() => import('./_nuxt/ProseHr-3bc5395b.mjs').then((r) => r.default));
-const LazyProseImg = defineAsyncComponent(() => import('./_nuxt/ProseImg-9b4a3641.mjs').then((r) => r.default));
+const LazyProseImg = defineAsyncComponent(() => import('./_nuxt/ProseImg-a7900bb4.mjs').then((r) => r.default));
 const LazyProseLi = defineAsyncComponent(() => import('./_nuxt/ProseLi-c07cbd34.mjs').then((r) => r.default));
 const LazyProseOl = defineAsyncComponent(() => import('./_nuxt/ProseOl-3fd2650c.mjs').then((r) => r.default));
 const LazyProseP = defineAsyncComponent(() => import('./_nuxt/ProseP-093d4e81.mjs').then((r) => r.default));
+const LazyProseScript = defineAsyncComponent(() => import('./_nuxt/ProseScript-bfe5d4dd.mjs').then((r) => r.default));
 const LazyProseStrong = defineAsyncComponent(() => import('./_nuxt/ProseStrong-a05b7f0e.mjs').then((r) => r.default));
 const LazyProseTable = defineAsyncComponent(() => import('./_nuxt/ProseTable-facb5362.mjs').then((r) => r.default));
 const LazyProseTbody = defineAsyncComponent(() => import('./_nuxt/ProseTbody-1ade67d9.mjs').then((r) => r.default));
@@ -1675,16 +1663,20 @@ const LazyProseTh = defineAsyncComponent(() => import('./_nuxt/ProseTh-30000ab8.
 const LazyProseThead = defineAsyncComponent(() => import('./_nuxt/ProseThead-28094b57.mjs').then((r) => r.default));
 const LazyProseTr = defineAsyncComponent(() => import('./_nuxt/ProseTr-fdd30ae4.mjs').then((r) => r.default));
 const LazyProseUl = defineAsyncComponent(() => import('./_nuxt/ProseUl-6d4d9f20.mjs').then((r) => r.default));
-const LazyPrimeInputNumber = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/inputnumber.esm-a35ec836.mjs').then((r) => r.default));
-const LazyPrimeInputText = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/inputtext.esm-8950b342.mjs').then((r) => r.default));
-const LazyPrimeRating = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/rating.esm-6e813c0b.mjs').then((r) => r.default));
-const LazyPrimeButton = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/button.esm-d3ec9afd.mjs').then((r) => r.default));
-const LazyPrimeTimeline = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/timeline.esm-6c1d120e.mjs').then((r) => r.default));
-const LazyPrimeAccordion = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/accordion.esm-eda2be4c.mjs').then((r) => r.default));
-const LazyPrimeAccordionTab = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/accordiontab.esm-96bee9db.mjs').then((r) => r.default));
-const LazyPrimeMenubar = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/menubar.esm-a24463f5.mjs').then((r) => r.default));
-const LazyPrimeMessage = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/message.esm-63076f29.mjs').then((r) => r.default));
-const LazyPrimeCarousel = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/carousel.esm-f3e46384.mjs').then((r) => r.default));
+const LazyPrimeDropdown = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/dropdown.esm-186515d3.mjs').then((r) => r.default));
+const LazyPrimeInputNumber = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/inputnumber.esm-5c9b63ba.mjs').then((r) => r.default));
+const LazyPrimeInputText = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/inputtext.esm-46d0c8e0.mjs').then((r) => r.default));
+const LazyPrimeRating = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/rating.esm-401083fa.mjs').then((r) => r.default));
+const LazyPrimeButton = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/button.esm-6474ac22.mjs').then((r) => r.default));
+const LazyPrimeTimeline = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/timeline.esm-29a7c19d.mjs').then((r) => r.default));
+const LazyPrimeAccordion = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/accordion.esm-2db0b246.mjs').then((r) => r.default));
+const LazyPrimeAccordionTab = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/accordiontab.esm-975bf4c1.mjs').then((r) => r.default));
+const LazyPrimeDialog = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/dialog.esm-1a72dc17.mjs').then((r) => r.default));
+const LazyPrimeMenubar = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/menubar.esm-20ad9c6e.mjs').then((r) => r.default));
+const LazyPrimeMessage = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/message.esm-f65c788b.mjs').then((r) => r.default));
+const LazyPrimeToast = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/toast.esm-e7ee07c0.mjs').then((r) => r.default));
+const LazyPrimeCarousel = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/carousel.esm-927e0b7f.mjs').then((r) => r.default));
+const LazyPrimeAvatar = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/avatar.esm-aeddd171.mjs').then((r) => r.default));
 const lazyGlobalComponents = [
   ["CTA", LazyCTA],
   ["FreeFeature", LazyFreeFeature],
@@ -1716,6 +1708,7 @@ const lazyGlobalComponents = [
   ["ProseLi", LazyProseLi],
   ["ProseOl", LazyProseOl],
   ["ProseP", LazyProseP],
+  ["ProseScript", LazyProseScript],
   ["ProseStrong", LazyProseStrong],
   ["ProseTable", LazyProseTable],
   ["ProseTbody", LazyProseTbody],
@@ -1724,6 +1717,7 @@ const lazyGlobalComponents = [
   ["ProseThead", LazyProseThead],
   ["ProseTr", LazyProseTr],
   ["ProseUl", LazyProseUl],
+  ["PrimeDropdown", LazyPrimeDropdown],
   ["PrimeInputNumber", LazyPrimeInputNumber],
   ["PrimeInputText", LazyPrimeInputText],
   ["PrimeRating", LazyPrimeRating],
@@ -1731,9 +1725,12 @@ const lazyGlobalComponents = [
   ["PrimeTimeline", LazyPrimeTimeline],
   ["PrimeAccordion", LazyPrimeAccordion],
   ["PrimeAccordionTab", LazyPrimeAccordionTab],
+  ["PrimeDialog", LazyPrimeDialog],
   ["PrimeMenubar", LazyPrimeMenubar],
   ["PrimeMessage", LazyPrimeMessage],
-  ["PrimeCarousel", LazyPrimeCarousel]
+  ["PrimeToast", LazyPrimeToast],
+  ["PrimeCarousel", LazyPrimeCarousel],
+  ["PrimeAvatar", LazyPrimeAvatar]
 ];
 const components_plugin_KR1HBZs4kY = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:global-components",
@@ -1954,11 +1951,23 @@ var DomHandler = {
     }
     return -1;
   },
-  addMultipleClasses: function addMultipleClasses(element, className) {
+  addMultipleClasses: function addMultipleClasses(element, classNames) {
     var _this = this;
-    if (element && className) {
-      className.split(" ").forEach(function(style) {
-        return _this.addClass(element, style);
+    if (element && classNames) {
+      [classNames].flat().filter(Boolean).forEach(function(cNames) {
+        return cNames.split(" ").forEach(function(className) {
+          return _this.addClass(element, className);
+        });
+      });
+    }
+  },
+  removeMultipleClasses: function removeMultipleClasses(element, classNames) {
+    var _this2 = this;
+    if (element && classNames) {
+      [classNames].flat().filter(Boolean).forEach(function(cNames) {
+        return cNames.split(" ").forEach(function(className) {
+          return _this2.removeClass(element, className);
+        });
       });
     }
   },
@@ -2023,7 +2032,7 @@ var DomHandler = {
     }
   },
   setAttributes: function setAttributes(element) {
-    var _this2 = this;
+    var _this3 = this;
     var attributes = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
     if (this.isElement(element)) {
       var computedStyles = function computedStyles2(rule, value) {
@@ -2054,7 +2063,7 @@ var DomHandler = {
           if (matchedEvent) {
             element.addEventListener(matchedEvent[1].toLowerCase(), value);
           } else if (key === "p-bind") {
-            _this2.setAttributes(element, value);
+            _this3.setAttributes(element, value);
           } else {
             value = key === "class" ? _toConsumableArray$2(new Set(computedStyles("class", value))).join(" ").trim() : key === "style" ? computedStyles("style", value).join(";").trim() : value;
             (element.$attrs = element.$attrs || {}) && (element.$attrs[key] = value);
@@ -2588,6 +2597,33 @@ var ConnectedOverlayScrollHandler = /* @__PURE__ */ function() {
   }]);
   return ConnectedOverlayScrollHandler2;
 }();
+function primebus() {
+  var allHandlers = /* @__PURE__ */ new Map();
+  return {
+    on: function on(type, handler2) {
+      var handlers = allHandlers.get(type);
+      if (!handlers)
+        handlers = [handler2];
+      else
+        handlers.push(handler2);
+      allHandlers.set(type, handlers);
+    },
+    off: function off(type, handler2) {
+      var handlers = allHandlers.get(type);
+      if (handlers) {
+        handlers.splice(handlers.indexOf(handler2) >>> 0, 1);
+      }
+    },
+    emit: function emit(type, evt) {
+      var handlers = allHandlers.get(type);
+      if (handlers) {
+        handlers.slice().map(function(handler2) {
+          handler2(evt);
+        });
+      }
+    }
+  };
+}
 function _slicedToArray$3(arr, i) {
   return _arrayWithHoles$3(arr) || _iterableToArrayLimit$3(arr, i) || _unsupportedIterableToArray$1$1(arr, i) || _nonIterableRest$3();
 }
@@ -2638,7 +2674,7 @@ function _arrayWithoutHoles$1(arr) {
   if (Array.isArray(arr))
     return _arrayLikeToArray$1$1(arr);
 }
-function _createForOfIteratorHelper(o, allowArrayLike) {
+function _createForOfIteratorHelper$2(o, allowArrayLike) {
   var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"];
   if (!it) {
     if (Array.isArray(o) || (it = _unsupportedIterableToArray$1$1(o)) || allowArrayLike && o && typeof o.length === "number") {
@@ -2792,11 +2828,11 @@ var ObjectUtils = {
   filter: function filter(value, fields, filterValue) {
     var filteredItems = [];
     if (value) {
-      var _iterator = _createForOfIteratorHelper(value), _step;
+      var _iterator = _createForOfIteratorHelper$2(value), _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done; ) {
           var item = _step.value;
-          var _iterator2 = _createForOfIteratorHelper(fields), _step2;
+          var _iterator2 = _createForOfIteratorHelper$2(fields), _step2;
           try {
             for (_iterator2.s(); !(_step2 = _iterator2.n()).done; ) {
               var field = _step2.value;
@@ -2842,7 +2878,7 @@ var ObjectUtils = {
   },
   contains: function contains(value, list) {
     if (value != null && list && list.length) {
-      var _iterator3 = _createForOfIteratorHelper(list), _step3;
+      var _iterator3 = _createForOfIteratorHelper$2(list), _step3;
       try {
         for (_iterator3.s(); !(_step3 = _iterator3.n()).done; ) {
           var val = _step3.value;
@@ -3013,23 +3049,23 @@ function UniqueComponentId() {
   return "".concat(prefix).concat(lastId);
 }
 function _toConsumableArray$3(arr) {
-  return _arrayWithoutHoles$3(arr) || _iterableToArray$3(arr) || _unsupportedIterableToArray$4(arr) || _nonIterableSpread$3();
+  return _arrayWithoutHoles$3(arr) || _iterableToArray$3(arr) || _unsupportedIterableToArray$5(arr) || _nonIterableSpread$3();
 }
 function _nonIterableSpread$3() {
   throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
-function _unsupportedIterableToArray$4(o, minLen) {
+function _unsupportedIterableToArray$5(o, minLen) {
   if (!o)
     return;
   if (typeof o === "string")
-    return _arrayLikeToArray$4(o, minLen);
+    return _arrayLikeToArray$5(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor)
     n = o.constructor.name;
   if (n === "Map" || n === "Set")
     return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
-    return _arrayLikeToArray$4(o, minLen);
+    return _arrayLikeToArray$5(o, minLen);
 }
 function _iterableToArray$3(iter) {
   if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null)
@@ -3037,9 +3073,9 @@ function _iterableToArray$3(iter) {
 }
 function _arrayWithoutHoles$3(arr) {
   if (Array.isArray(arr))
-    return _arrayLikeToArray$4(arr);
+    return _arrayLikeToArray$5(arr);
 }
-function _arrayLikeToArray$4(arr, len) {
+function _arrayLikeToArray$5(arr, len) {
   if (len == null || len > arr.length)
     len = arr.length;
   for (var i = 0, arr2 = new Array(len); i < len; i++)
@@ -3114,6 +3150,286 @@ var FilterMatchMode = {
   DATE_IS_NOT: "dateIsNot",
   DATE_BEFORE: "dateBefore",
   DATE_AFTER: "dateAfter"
+};
+function _createForOfIteratorHelper(o, allowArrayLike) {
+  var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"];
+  if (!it) {
+    if (Array.isArray(o) || (it = _unsupportedIterableToArray$4(o)) || allowArrayLike && o && typeof o.length === "number") {
+      if (it)
+        o = it;
+      var i = 0;
+      var F = function F2() {
+      };
+      return { s: F, n: function n() {
+        if (i >= o.length)
+          return { done: true };
+        return { done: false, value: o[i++] };
+      }, e: function e(_e) {
+        throw _e;
+      }, f: F };
+    }
+    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  var normalCompletion = true, didErr = false, err;
+  return { s: function s() {
+    it = it.call(o);
+  }, n: function n() {
+    var step = it.next();
+    normalCompletion = step.done;
+    return step;
+  }, e: function e(_e2) {
+    didErr = true;
+    err = _e2;
+  }, f: function f() {
+    try {
+      if (!normalCompletion && it["return"] != null)
+        it["return"]();
+    } finally {
+      if (didErr)
+        throw err;
+    }
+  } };
+}
+function _unsupportedIterableToArray$4(o, minLen) {
+  if (!o)
+    return;
+  if (typeof o === "string")
+    return _arrayLikeToArray$4(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor)
+    n = o.constructor.name;
+  if (n === "Map" || n === "Set")
+    return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
+    return _arrayLikeToArray$4(o, minLen);
+}
+function _arrayLikeToArray$4(arr, len) {
+  if (len == null || len > arr.length)
+    len = arr.length;
+  for (var i = 0, arr2 = new Array(len); i < len; i++)
+    arr2[i] = arr[i];
+  return arr2;
+}
+var FilterService = {
+  filter: function filter2(value, fields, filterValue, filterMatchMode, filterLocale) {
+    var filteredItems = [];
+    if (!value) {
+      return filteredItems;
+    }
+    var _iterator = _createForOfIteratorHelper(value), _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done; ) {
+        var item = _step.value;
+        if (typeof item === "string") {
+          if (this.filters[filterMatchMode](item, filterValue, filterLocale)) {
+            filteredItems.push(item);
+            continue;
+          }
+        } else {
+          var _iterator2 = _createForOfIteratorHelper(fields), _step2;
+          try {
+            for (_iterator2.s(); !(_step2 = _iterator2.n()).done; ) {
+              var field = _step2.value;
+              var fieldValue = ObjectUtils.resolveFieldData(item, field);
+              if (this.filters[filterMatchMode](fieldValue, filterValue, filterLocale)) {
+                filteredItems.push(item);
+                break;
+              }
+            }
+          } catch (err) {
+            _iterator2.e(err);
+          } finally {
+            _iterator2.f();
+          }
+        }
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+    return filteredItems;
+  },
+  filters: {
+    startsWith: function startsWith(value, filter3, filterLocale) {
+      if (filter3 === void 0 || filter3 === null || filter3.trim() === "") {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      var filterValue = ObjectUtils.removeAccents(filter3.toString()).toLocaleLowerCase(filterLocale);
+      var stringValue = ObjectUtils.removeAccents(value.toString()).toLocaleLowerCase(filterLocale);
+      return stringValue.slice(0, filterValue.length) === filterValue;
+    },
+    contains: function contains2(value, filter3, filterLocale) {
+      if (filter3 === void 0 || filter3 === null || typeof filter3 === "string" && filter3.trim() === "") {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      var filterValue = ObjectUtils.removeAccents(filter3.toString()).toLocaleLowerCase(filterLocale);
+      var stringValue = ObjectUtils.removeAccents(value.toString()).toLocaleLowerCase(filterLocale);
+      return stringValue.indexOf(filterValue) !== -1;
+    },
+    notContains: function notContains(value, filter3, filterLocale) {
+      if (filter3 === void 0 || filter3 === null || typeof filter3 === "string" && filter3.trim() === "") {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      var filterValue = ObjectUtils.removeAccents(filter3.toString()).toLocaleLowerCase(filterLocale);
+      var stringValue = ObjectUtils.removeAccents(value.toString()).toLocaleLowerCase(filterLocale);
+      return stringValue.indexOf(filterValue) === -1;
+    },
+    endsWith: function endsWith(value, filter3, filterLocale) {
+      if (filter3 === void 0 || filter3 === null || filter3.trim() === "") {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      var filterValue = ObjectUtils.removeAccents(filter3.toString()).toLocaleLowerCase(filterLocale);
+      var stringValue = ObjectUtils.removeAccents(value.toString()).toLocaleLowerCase(filterLocale);
+      return stringValue.indexOf(filterValue, stringValue.length - filterValue.length) !== -1;
+    },
+    equals: function equals2(value, filter3, filterLocale) {
+      if (filter3 === void 0 || filter3 === null || typeof filter3 === "string" && filter3.trim() === "") {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      if (value.getTime && filter3.getTime)
+        return value.getTime() === filter3.getTime();
+      else
+        return ObjectUtils.removeAccents(value.toString()).toLocaleLowerCase(filterLocale) == ObjectUtils.removeAccents(filter3.toString()).toLocaleLowerCase(filterLocale);
+    },
+    notEquals: function notEquals(value, filter3, filterLocale) {
+      if (filter3 === void 0 || filter3 === null || typeof filter3 === "string" && filter3.trim() === "") {
+        return false;
+      }
+      if (value === void 0 || value === null) {
+        return true;
+      }
+      if (value.getTime && filter3.getTime)
+        return value.getTime() !== filter3.getTime();
+      else
+        return ObjectUtils.removeAccents(value.toString()).toLocaleLowerCase(filterLocale) != ObjectUtils.removeAccents(filter3.toString()).toLocaleLowerCase(filterLocale);
+    },
+    "in": function _in(value, filter3) {
+      if (filter3 === void 0 || filter3 === null || filter3.length === 0) {
+        return true;
+      }
+      for (var i = 0; i < filter3.length; i++) {
+        if (ObjectUtils.equals(value, filter3[i])) {
+          return true;
+        }
+      }
+      return false;
+    },
+    between: function between(value, filter3) {
+      if (filter3 == null || filter3[0] == null || filter3[1] == null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      if (value.getTime)
+        return filter3[0].getTime() <= value.getTime() && value.getTime() <= filter3[1].getTime();
+      else
+        return filter3[0] <= value && value <= filter3[1];
+    },
+    lt: function lt(value, filter3) {
+      if (filter3 === void 0 || filter3 === null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      if (value.getTime && filter3.getTime)
+        return value.getTime() < filter3.getTime();
+      else
+        return value < filter3;
+    },
+    lte: function lte(value, filter3) {
+      if (filter3 === void 0 || filter3 === null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      if (value.getTime && filter3.getTime)
+        return value.getTime() <= filter3.getTime();
+      else
+        return value <= filter3;
+    },
+    gt: function gt(value, filter3) {
+      if (filter3 === void 0 || filter3 === null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      if (value.getTime && filter3.getTime)
+        return value.getTime() > filter3.getTime();
+      else
+        return value > filter3;
+    },
+    gte: function gte(value, filter3) {
+      if (filter3 === void 0 || filter3 === null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      if (value.getTime && filter3.getTime)
+        return value.getTime() >= filter3.getTime();
+      else
+        return value >= filter3;
+    },
+    dateIs: function dateIs(value, filter3) {
+      if (filter3 === void 0 || filter3 === null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      return value.toDateString() === filter3.toDateString();
+    },
+    dateIsNot: function dateIsNot(value, filter3) {
+      if (filter3 === void 0 || filter3 === null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      return value.toDateString() !== filter3.toDateString();
+    },
+    dateBefore: function dateBefore(value, filter3) {
+      if (filter3 === void 0 || filter3 === null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      return value.getTime() < filter3.getTime();
+    },
+    dateAfter: function dateAfter(value, filter3) {
+      if (filter3 === void 0 || filter3 === null) {
+        return true;
+      }
+      if (value === void 0 || value === null) {
+        return false;
+      }
+      return value.getTime() > filter3.getTime();
+    }
+  },
+  register: function register(rule, fn) {
+    this.filters[rule] = fn;
+  }
 };
 function _typeof$5(o) {
   "@babel/helpers - typeof";
@@ -3339,6 +3655,35 @@ var PrimeVue = {
     };
     app.config.globalProperties.$primevue = PrimeVue2;
     app.provide(PrimeVueSymbol, PrimeVue2);
+  }
+};
+var ToastEventBus = primebus();
+var PrimeVueToastSymbol = Symbol();
+function useToast() {
+  var PrimeVueToast = inject(PrimeVueToastSymbol);
+  if (!PrimeVueToast) {
+    throw new Error("No PrimeVue Toast provided!");
+  }
+  return PrimeVueToast;
+}
+var ToastService = {
+  install: function install2(app) {
+    var ToastService2 = {
+      add: function add(message) {
+        ToastEventBus.emit("add", message);
+      },
+      remove: function remove3(message) {
+        ToastEventBus.emit("remove", message);
+      },
+      removeGroup: function removeGroup(group) {
+        ToastEventBus.emit("remove-group", group);
+      },
+      removeAllGroups: function removeAllGroups() {
+        ToastEventBus.emit("remove-all-groups");
+      }
+    };
+    app.config.globalProperties.$toast = ToastService2;
+    app.provide(PrimeVueToastSymbol, ToastService2);
   }
 };
 function _typeof$4(o) {
@@ -3836,7 +4181,9 @@ var BaseDirective = {
         $name: name,
         $host: el,
         $binding: binding,
-        $el: $prevInstance["$el"] || void 0,
+        $modifiers: binding === null || binding === void 0 ? void 0 : binding.modifiers,
+        $value: binding === null || binding === void 0 ? void 0 : binding.value,
+        $el: $prevInstance["$el"] || el || void 0,
         $style: _objectSpread$1({
           classes: void 0,
           inlineStyles: void 0,
@@ -4046,7 +4393,7 @@ var BadgeDirective = BaseBadgeDirective.extend("badge", {
     }
   }
 });
-var css$1 = "\n@layer primevue {\n    .p-tooltip {\n        position:absolute;\n        display:none;\n        padding: .25em .5rem;\n        max-width: 12.5rem;\n    }\n\n    .p-tooltip.p-tooltip-right,\n    .p-tooltip.p-tooltip-left {\n        padding: 0 .25rem;\n    }\n\n    .p-tooltip.p-tooltip-top,\n    .p-tooltip.p-tooltip-bottom {\n        padding:.25em 0;\n    }\n\n    .p-tooltip .p-tooltip-text {\n        white-space: pre-line;\n        word-break: break-word;\n    }\n\n    .p-tooltip-arrow {\n        position: absolute;\n        width: 0;\n        height: 0;\n        border-color: transparent;\n        border-style: solid;\n    }\n\n    .p-tooltip-right .p-tooltip-arrow {\n        margin-top: -.25rem;\n        border-width: .25em .25em .25em 0;\n    }\n\n    .p-tooltip-left .p-tooltip-arrow {\n        margin-top: -.25rem;\n        border-width: .25em 0 .25em .25rem;\n    }\n\n    .p-tooltip.p-tooltip-top {\n        padding: .25em 0;\n    }\n\n    .p-tooltip-top .p-tooltip-arrow {\n        margin-left: -.25rem;\n        border-width: .25em .25em 0;\n    }\n\n    .p-tooltip-bottom .p-tooltip-arrow {\n        margin-left: -.25rem;\n        border-width: 0 .25em .25rem;\n    }\n}\n";
+var css$1 = "\n@layer primevue {\n    .p-tooltip {\n        position:absolute;\n        display:none;\n        pointer-events: none;\n        padding: .25em .5rem;\n        max-width: 12.5rem;\n    }\n\n    .p-tooltip.p-tooltip-right,\n    .p-tooltip.p-tooltip-left {\n        padding: 0 .25rem;\n    }\n\n    .p-tooltip.p-tooltip-top,\n    .p-tooltip.p-tooltip-bottom {\n        padding:.25em 0;\n    }\n\n    .p-tooltip .p-tooltip-text {\n        white-space: pre-line;\n        word-break: break-word;\n    }\n\n    .p-tooltip-arrow {\n        position: absolute;\n        width: 0;\n        height: 0;\n        border-color: transparent;\n        border-style: solid;\n    }\n\n    .p-tooltip-right .p-tooltip-arrow {\n        margin-top: -.25rem;\n        border-width: .25em .25em .25em 0;\n    }\n\n    .p-tooltip-left .p-tooltip-arrow {\n        margin-top: -.25rem;\n        border-width: .25em 0 .25em .25rem;\n    }\n\n    .p-tooltip.p-tooltip-top {\n        padding: .25em 0;\n    }\n\n    .p-tooltip-top .p-tooltip-arrow {\n        margin-left: -.25rem;\n        border-width: .25em .25em 0;\n    }\n\n    .p-tooltip-bottom .p-tooltip-arrow {\n        margin-left: -.25rem;\n        border-width: 0 .25em .25rem;\n    }\n}\n";
 var classes$1 = {
   root: "p-tooltip p-component",
   arrow: "p-tooltip-arrow",
@@ -4908,6 +5255,7 @@ const primevue_plugin_egKpok8Auk = /* @__PURE__ */ defineNuxtPlugin(({ vueApp })
   const config = ((_a = runtimeConfig == null ? void 0 : runtimeConfig.public) == null ? void 0 : _a.primevue) ?? {};
   const { usePrimeVue = true, options = {} } = config;
   usePrimeVue && vueApp.use(PrimeVue, options);
+  vueApp.use(ToastService);
   vueApp.directive("badge", BadgeDirective);
   vueApp.directive("tooltip", Tooltip);
   vueApp.directive("ripple", Ripple);
@@ -4923,6 +5271,83 @@ const plugins = [
   components_plugin_KR1HBZs4kY,
   primevue_plugin_egKpok8Auk
 ];
+const removeUndefinedProps = (props) => Object.fromEntries(Object.entries(props).filter(([, value]) => value !== void 0));
+const setupForUseMeta = (metaFactory, renderChild) => (props, ctx) => {
+  useHead(() => metaFactory({ ...removeUndefinedProps(props), ...ctx.attrs }, ctx));
+  return () => {
+    var _a, _b;
+    return renderChild ? (_b = (_a = ctx.slots).default) == null ? void 0 : _b.call(_a) : null;
+  };
+};
+const globalProps = {
+  accesskey: String,
+  autocapitalize: String,
+  autofocus: {
+    type: Boolean,
+    default: void 0
+  },
+  class: [String, Object, Array],
+  contenteditable: {
+    type: Boolean,
+    default: void 0
+  },
+  contextmenu: String,
+  dir: String,
+  draggable: {
+    type: Boolean,
+    default: void 0
+  },
+  enterkeyhint: String,
+  exportparts: String,
+  hidden: {
+    type: Boolean,
+    default: void 0
+  },
+  id: String,
+  inputmode: String,
+  is: String,
+  itemid: String,
+  itemprop: String,
+  itemref: String,
+  itemscope: String,
+  itemtype: String,
+  lang: String,
+  nonce: String,
+  part: String,
+  slot: String,
+  spellcheck: {
+    type: Boolean,
+    default: void 0
+  },
+  style: String,
+  tabindex: String,
+  title: String,
+  translate: String
+};
+const Meta = /* @__PURE__ */ defineComponent({
+  // eslint-disable-next-line vue/no-reserved-component-names
+  name: "Meta",
+  inheritAttrs: false,
+  props: {
+    ...globalProps,
+    charset: String,
+    content: String,
+    httpEquiv: String,
+    name: String,
+    body: Boolean,
+    renderPriority: [String, Number]
+  },
+  setup: setupForUseMeta((props) => {
+    const meta = { ...props };
+    if (meta.httpEquiv) {
+      meta["http-equiv"] = meta.httpEquiv;
+      delete meta.httpEquiv;
+    }
+    return {
+      meta: [meta]
+    };
+  })
+});
 const _wrapIf = (component, props, slots) => {
   props = props === true ? {} : props;
   return { default: () => {
@@ -4931,9 +5356,9 @@ const _wrapIf = (component, props, slots) => {
   } };
 };
 const layouts = {
-  404: () => import('./_nuxt/404-b7ba9de9.mjs').then((m) => m.default || m),
-  500: () => import('./_nuxt/500-bc798b55.mjs').then((m) => m.default || m),
-  default: () => import('./_nuxt/default-00e25661.mjs').then((m) => m.default || m)
+  404: () => import('./_nuxt/404-77b7a065.mjs').then((m) => m.default || m),
+  500: () => import('./_nuxt/500-84c8e555.mjs').then((m) => m.default || m),
+  default: () => import('./_nuxt/default-6557e904.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = /* @__PURE__ */ defineComponent({
   name: "LayoutLoader",
@@ -5026,7 +5451,7 @@ const LayoutProvider = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const __nuxt_component_1 = /* @__PURE__ */ defineComponent({
+const __nuxt_component_2 = /* @__PURE__ */ defineComponent({
   name: "NuxtLoadingIndicator",
   props: {
     throttle: {
@@ -5178,7 +5603,7 @@ const RouteProvider = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const __nuxt_component_2 = /* @__PURE__ */ defineComponent({
+const __nuxt_component_3 = /* @__PURE__ */ defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -5213,6 +5638,7 @@ const __nuxt_component_2 = /* @__PURE__ */ defineComponent({
       return h(RouterView, { name: props.name, route: props.route, ...attrs }, {
         default: (routeProps) => {
           if (!routeProps.Component) {
+            done();
             return;
           }
           const key = generateRouteKey(routeProps, props.pageKey);
@@ -5269,23 +5695,37 @@ const _sfc_main$2 = {
   __name: "app",
   __ssrInlineRender: true,
   setup(__props) {
+    const runtimeConfig = /* @__PURE__ */ useRuntimeConfig();
     useHead({
       titleTemplate: (titleChunk) => {
-        return titleChunk ? `${titleChunk} - nursingessayonline` : "nursingessayonline";
+        return titleChunk ? `${titleChunk} - ${runtimeConfig.public.websiteName}` : runtimeConfig.public.websiteName;
       }
     });
     return (_ctx, _push, _parent, _attrs) => {
+      const _component_Meta = Meta;
       const _component_NuxtLayout = __nuxt_component_0;
-      const _component_NuxtLoadingIndicator = __nuxt_component_1;
-      const _component_NuxtPage = __nuxt_component_2;
+      const _component_NuxtLoadingIndicator = __nuxt_component_2;
+      const _component_NuxtPage = __nuxt_component_3;
       _push(`<div${ssrRenderAttrs(_attrs)}>`);
+      _push(ssrRenderComponent(_component_Meta, {
+        name: "robots",
+        content: "index, follow"
+      }, null, _parent));
+      _push(ssrRenderComponent(_component_Meta, {
+        "http-equiv": "Content-Type",
+        content: "text/html; charset=utf-8"
+      }, null, _parent));
+      _push(ssrRenderComponent(_component_Meta, {
+        name: "language",
+        content: "English"
+      }, null, _parent));
       _push(ssrRenderComponent(_component_NuxtLayout, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(ssrRenderComponent(_component_NuxtLoadingIndicator, {
               duration: 2e3,
               height: 5,
-              color: "#7CB078"
+              color: "#3f50b5"
             }, null, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_NuxtPage, null, null, _parent2, _scopeId));
           } else {
@@ -5293,7 +5733,7 @@ const _sfc_main$2 = {
               createVNode(_component_NuxtLoadingIndicator, {
                 duration: 2e3,
                 height: 5,
-                color: "#7CB078"
+                color: "#3f50b5"
               }),
               createVNode(_component_NuxtPage)
             ];
@@ -5326,7 +5766,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b, _c, _d, _e, _f, _g;
       const _component_NuxtLayout = __nuxt_component_0;
-      const _component_NuxtLink = __nuxt_component_3;
+      const _component_NuxtLink = __nuxt_component_4;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-w-full min-h-screen bg-white" }, _attrs))}><div class="error-container sm:absolute px-4 my-10 mx-9 right-0 left-0 top-0 bottom-0 border border-primary border-t-0 border-b-0 flex flex-col-reverse sm:flex-row justify-around items-center"><div class="py-4">`);
       _push(ssrRenderComponent(_component_NuxtLayout, {
         stack: (_a = _ctx.error) == null ? void 0 : _a.stack,
@@ -5445,5 +5885,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { BaseStyle as B, DomHandler as D, ObjectUtils as O, Ripple as R, UniqueComponentId as U, ZIndexUtils as Z, _imports_0 as _, useRoute as a, useRouter as b, createError as c, useHead as d, entry$1 as default, useRuntimeConfig as e, useRequestEvent as f, useNuxtApp as g, defineStore as h, useStyle as i, useState as j, __nuxt_component_3 as k, useSeoMeta as u };
+export { BaseStyle as B, ConnectedOverlayScrollHandler as C, DomHandler as D, FilterService as F, ObjectUtils as O, Ripple as R, ToastEventBus as T, UniqueComponentId as U, ZIndexUtils as Z, _imports_0 as _, useRoute as a, useRuntimeConfig as b, createError as c, useHead as d, entry$1 as default, useState as e, __nuxt_component_4 as f, useRequestEvent as g, useNuxtApp as h, defineStore as i, useStyle as j, asyncDataDefaults as k, FocusTrap as l, useToast as m, primebus as p, useSeoMeta as u };
 //# sourceMappingURL=server.mjs.map

@@ -1,5 +1,5 @@
 import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'vue-bundle-renderer/runtime';
-import { e as eventHandler, b as setResponseHeader, f as send, h as getResponseStatus, i as setResponseStatus, j as setResponseHeaders, k as useNitroApp, l as joinURL, u as useRuntimeConfig, m as getQuery, n as createError, o as getRouteRules, p as getResponseStatusText } from '../nitro/node-server.mjs';
+import { e as eventHandler, a as setResponseHeader, b as send, g as getResponseStatus, c as setResponseStatus, f as setResponseHeaders, h as useNitroApp, j as joinURL, u as useRuntimeConfig, i as getQuery, k as createError, l as getRouteRules, m as getResponseStatusText } from '../nitro/node-server.mjs';
 import { stringify, uneval } from 'devalue';
 import { renderToString } from 'vue/server-renderer';
 import { renderSSRHead } from '@unhead/ssr';
@@ -33,7 +33,7 @@ function defineRenderHandler(handler) {
     if (response.statusCode || response.statusMessage) {
       setResponseStatus(event, response.statusCode, response.statusMessage);
     }
-    return typeof response.body === "string" ? response.body : JSON.stringify(response.body);
+    return response.body;
   });
 }
 
@@ -104,7 +104,7 @@ function createServerHead(options = {}) {
 
 const unheadPlugins = [];
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"}],"style":[],"script":[{"hid":"tawk.to","src":"https://embed.tawk.to/6293c890b0d10b6f3e74a1ff/1g48keu47","defer":true}],"noscript":[],"title":"nursingessayonline"};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"}],"style":[],"script":[{"hid":"tawk.to","src":"https://embed.tawk.to/65429eaca84dd54dc4878feb/1he63nkm1","defer":true}],"noscript":[],"title":"nursingessayonline"};
 
 const appRootId = "__nuxt";
 
