@@ -13,7 +13,15 @@ jobs:
   build:
 
     runs-on: self-hosted
-
+    env:
+      NUXT_WEBSITE_NAME: "onlinessaywriting"
+      NUXT_WEBSITE_URL: "https://onlinessaywriting.com"
+      NUXT_ORDER_URL: "/orders/"
+      NUXT_HOME_URL: "/orders/home/"
+      NUXT_API_URL: "https://api.urgentwriters.com"
+      NUXT_TAWK_CODE: "6293c890b0d10b6f3e74a1ff/1g48keu47"
+      NUXT_WHATSAPP_NUMBER: "+16072340327"
+      NUXT_SUPPORT_EMAIL: "support@onlinessaywriting.com"
     strategy:
       matrix:
         node-version: [18.x]
