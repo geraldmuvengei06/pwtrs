@@ -4,7 +4,7 @@ import { camelize, getCurrentInstance, toHandlerKey } from "vue";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
-}
+} 
 
 
 function isFullURL(route: string) {
