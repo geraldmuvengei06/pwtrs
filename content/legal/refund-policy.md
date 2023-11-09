@@ -7,7 +7,7 @@ description: Terms of use
 
 ## 1. Eligibility for Refunds
 
-We aim to provide high-quality essay writing services at Nursingessayonline.com. You are eligible for a refund under the following circumstances:
+We aim to provide high-quality essay writing services at onlinessaywriting.com. You are eligible for a refund under the following circumstances:
 
 ### 1.1 Plagiarism
 
