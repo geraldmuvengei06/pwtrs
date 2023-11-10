@@ -3,9 +3,9 @@ let { menu, order_url, home_url, goTo } = contentStore();
 const runtimeConfig = useRuntimeConfig();
 
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation('services'))
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 
-const services = navigation?.value?.length > 0 ? navigation?.value[0]?.children : []
+const services = navigation?.value?.length > 0 ? navigation?.value[2]?.children : []
 
 
 import { ref } from "vue";
@@ -55,13 +55,11 @@ watch(
         </a>
       </div>
       <div class="flex lg:hidden gap-2">
-        <button @click="goTo(`${order_url}`)" class="btn btn-primary ">
-          Order Now
-        </button>
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 z-50"
           @click="mobileMenuOpen = true">
           <span class="sr-only">Open main menu</span>
-          <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+          <Bars3Icon class="h-6 w-6" aria-hidden="true" @click="mobileMenuOpen = !mobileMenuOpen" />
         </button>
       </div>
       <PopoverGroup class="hidden lg:flex lg:gap-x-4">
@@ -151,7 +149,9 @@ watch(
             </div>
             <div class="py-6">
               <div class="flex gap-2">
-
+                <button @click="goTo(`${order_url}`)" class="btn btn-primary ">
+                  Order Now
+                </button>
                 <button @click="goTo(`${home_url}`)" class="btn btn-secondary btn-outline">
                   Dashboard
                 </button>
