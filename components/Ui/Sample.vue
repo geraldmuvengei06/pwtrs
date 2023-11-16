@@ -28,8 +28,6 @@ const visible = ref(false);
 <template>
   <PrimeDialog maximizable v-model:visible="visible" modal :header="filename" :style="{ width: '600' }"
     :breakpoints="{ '1199px': '75vw', '575px': '90vw' }">
-  <PrimeDialog maximizable v-model:visible="visible" modal :header="filename" :style="{ width: '600' }"
-    :breakpoints="{ '1199px': '75vw', '575px': '90vw' }">
     <p>
       <span><b>{{ type }}</b> - <small>{{ num_pages }} pages</small></span>
       <!-- - <small>{{ estimated_read_time }} Read</small> -->
@@ -51,7 +49,6 @@ const visible = ref(false);
       <div class="divider py-0 my-0 border-slate-50"></div>
 
       <div class="card-actions justify-between">
-        <button class="btn btn-primary btn-outline btn-sm" @click="visible = true">
         <button class="btn btn-primary btn-outline btn-sm" @click="visible = true">
           View
         </button>

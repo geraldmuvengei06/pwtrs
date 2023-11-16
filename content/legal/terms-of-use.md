@@ -5,8 +5,8 @@ description: Terms of use
 
 **Last updated: [28th Oct 2023]**
 
-Welcome to Onlinessaywriting.com (the "Website"). By accessing or using the Website, you agree to be bound by the following terms and conditions (the "Terms of Use"). If you do not agree to the Terms of Use, you may not use the Website.
-Welcome to Onlinessaywriting.com (the "Website"). By accessing or using the Website, you agree to be bound by the following terms and conditions (the "Terms of Use"). If you do not agree to the Terms of Use, you may not use the Website.
+Welcome to nursingessayonline.com (the "Website"). By accessing or using the Website, you agree to be bound by the following terms and conditions (the "Terms of Use"). If you do not agree to the Terms of Use, you may not use the Website.
+Welcome to nursingessayonline.com (the "Website"). By accessing or using the Website, you agree to be bound by the following terms and conditions (the "Terms of Use"). If you do not agree to the Terms of Use, you may not use the Website.
 
 ### 1. Use of the Website
 
@@ -28,15 +28,15 @@ Welcome to Onlinessaywriting.com (the "Website"). By accessing or using the Webs
 
 ### 4. Intellectual Property
 
-- The Website, including but not limited to its text, images, graphics, logos, icons, and software, is the property of Onlinessaywriting.com and is protected by copyright and trademark laws.
-- You may not reproduce, distribute, or create derivative works from any content on the Website without express written permission from Onlinessaywriting.com.
-- The Website, including but not limited to its text, images, graphics, logos, icons, and software, is the property of Onlinessaywriting.com and is protected by copyright and trademark laws.
-- You may not reproduce, distribute, or create derivative works from any content on the Website without express written permission from Onlinessaywriting.com.
+- The Website, including but not limited to its text, images, graphics, logos, icons, and software, is the property of nursingessayonline.com and is protected by copyright and trademark laws.
+- You may not reproduce, distribute, or create derivative works from any content on the Website without express written permission from nursingessayonline.com.
+- The Website, including but not limited to its text, images, graphics, logos, icons, and software, is the property of nursingessayonline.com and is protected by copyright and trademark laws.
+- You may not reproduce, distribute, or create derivative works from any content on the Website without express written permission from nursingessayonline.com.
 
 ### 5. Disclaimer
 
-- The Website is provided on an "as is" and "as available" basis. Onlinessaywriting.com makes no representations or warranties of any kind, express or implied, as to the operation of the Website or the information, content, materials, or products included on the Website.
-- The Website is provided on an "as is" and "as available" basis. Onlinessaywriting.com makes no representations or warranties of any kind, express or implied, as to the operation of the Website or the information, content, materials, or products included on the Website.
+- The Website is provided on an "as is" and "as available" basis. nursingessayonline.com makes no representations or warranties of any kind, express or implied, as to the operation of the Website or the information, content, materials, or products included on the Website.
+- The Website is provided on an "as is" and "as available" basis. nursingessayonline.com makes no representations or warranties of any kind, express or implied, as to the operation of the Website or the information, content, materials, or products included on the Website.
 - com will not be liable for any damages of any kind arising from the use of the Website, including but not limited to direct, indirect, incidental, punitive, and consequential damages.
 
 ### 6. Changes to the Terms of Use
@@ -50,14 +50,14 @@ Welcome to Onlinessaywriting.com (the "Website"). By accessing or using the Webs
 
 ### 8. Contact Information
 
-- If you have any questions about these Terms of Use, please contact us at info@Onlinessaywriting.com
+- If you have any questions about these Terms of Use, please contact us at info@nursingessayonline.com
 
 ### 9. User Accounts
 
 - In order to access certain services on the Website, you may be required to create an account.
 - You are responsible for maintaining the confidentiality of your account and password, and you are fully responsible for all activities that occur under your account.
-- You agree to immediately notify Onlinessaywriting.com of any unauthorized use of your account or password.
-- You agree to immediately notify Onlinessaywriting.com of any unauthorized use of your account or password.
+- You agree to immediately notify nursingessayonline.com of any unauthorized use of your account or password.
+- You agree to immediately notify nursingessayonline.com of any unauthorized use of your account or password.
 
 ### 10. Service Provider
 
@@ -70,8 +70,8 @@ Welcome to Onlinessaywriting.com (the "Website"). By accessing or using the Webs
 
 ### 12. Indemnification
 
-- You agree to indemnify and hold Onlinessaywriting.com, its affiliates, officers, agents, and employees harmless from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your use of the Website, your violation of the Terms of Use, or your violation of any rights of another person or entity.
-- You agree to indemnify and hold Onlinessaywriting.com, its affiliates, officers, agents, and employees harmless from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your use of the Website, your violation of the Terms of Use, or your violation of any rights of another person or entity.
+- You agree to indemnify and hold nursingessayonline.com, its affiliates, officers, agents, and employees harmless from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your use of the Website, your violation of the Terms of Use, or your violation of any rights of another person or entity.
+- You agree to indemnify and hold nursingessayonline.com, its affiliates, officers, agents, and employees harmless from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your use of the Website, your violation of the Terms of Use, or your violation of any rights of another person or entity.
 
 ### 13. Plagiarism
 
@@ -88,8 +88,8 @@ Welcome to Onlinessaywriting.com (the "Website"). By accessing or using the Webs
 ### 15. Delivery and Revisions
 
 - com will deliver the work on or before the deadline agreed upon with the customer.
-- In case of any revisions needed, the customer is required to provide clear instructions and Onlinessaywriting.com will make the revisions within a reasonable time frame.
-- In case of any revisions needed, the customer is required to provide clear instructions and Onlinessaywriting.com will make the revisions within a reasonable time frame.
+- In case of any revisions needed, the customer is required to provide clear instructions and nursingessayonline.com will make the revisions within a reasonable time frame.
+- In case of any revisions needed, the customer is required to provide clear instructions and nursingessayonline.com will make the revisions within a reasonable time frame.
 - Any additional revisions beyond the scope of the original order will be charged extra.
 
 ### 16. Limitation of Liability
@@ -97,5 +97,5 @@ Welcome to Onlinessaywriting.com (the "Website"). By accessing or using the Webs
 - com will not be held liable for any damages resulting from the use of our services or the inability to use our services.
 - com will not be held liable for any loss of income or profits, loss of business or data, or any indirect, special, incidental, or consequential damages.
 
-By using Onlinessaywriting.com services, you agree to these terms and conditions and understand that they govern your use of the Website. If you do not agree to these terms and conditions, please do not use the Website.
-By using Onlinessaywriting.com services, you agree to these terms and conditions and understand that they govern your use of the Website. If you do not agree to these terms and conditions, please do not use the Website.
+By using nursingessayonline.com services, you agree to these terms and conditions and understand that they govern your use of the Website. If you do not agree to these terms and conditions, please do not use the Website.
+By using nursingessayonline.com services, you agree to these terms and conditions and understand that they govern your use of the Website. If you do not agree to these terms and conditions, please do not use the Website.

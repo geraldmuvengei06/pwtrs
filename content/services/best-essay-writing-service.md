@@ -146,4 +146,4 @@ We understand that academic challenges can arise at any time. That's why our cus
 
 Our commitment to your academic success goes beyond essay writing. We provide a wealth of educational resources, essay writing tips, and guidelines to help you improve your writing skills. We believe in not just delivering essays but in empowering you to become a better writer and thinker. Explore our blog and educational materials to enhance your academic prowess.
 
-Don't hesitate to reach out to us, as we are here to assist you on every step of your academic journey. Your success begins with Onlinessaywriting.com.
+Don't hesitate to reach out to us, as we are here to assist you on every step of your academic journey. Your success begins with nursingessayonline.com.
