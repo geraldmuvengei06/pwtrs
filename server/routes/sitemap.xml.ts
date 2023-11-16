@@ -6,8 +6,8 @@ export default defineEventHandler(async (event) => {
   // Fetch all documents
   const docs = await serverQueryContent(event).find();
   const sitemap = new SitemapStream({
-    hostname: runtimeConfig?.public.websiteUrl || "https://Onlinessaywriting.com",
-  });
+    hostname: runtimeConfig?.public.websiteUrl || 'https://nursingessayonline.com'
+  })
 
   for (const doc of docs) {
     sitemap.write({

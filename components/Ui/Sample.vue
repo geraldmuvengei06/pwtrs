@@ -28,9 +28,11 @@ const visible = ref(false);
 <template>
   <PrimeDialog maximizable v-model:visible="visible" modal :header="filename" :style="{ width: '600' }"
     :breakpoints="{ '1199px': '75vw', '575px': '90vw' }">
+  <PrimeDialog maximizable v-model:visible="visible" modal :header="filename" :style="{ width: '600' }"
+    :breakpoints="{ '1199px': '75vw', '575px': '90vw' }">
     <p>
       <span><b>{{ type }}</b> - <small>{{ num_pages }} pages</small></span>
-      - <small>{{ estimated_read_time }} Read</small>
+      <!-- - <small>{{ estimated_read_time }} Read</small> -->
     </p>
     <iframe class="bg-slate-100 border-none" width="100%" height="1240px" :src="path">
       Your browser does not support PDFs.
@@ -45,9 +47,11 @@ const visible = ref(false);
         <span>{{ filename }}</span>
       </h4>
       <span><b>{{ type }}</b> - <small>{{ num_pages }} pages</small></span>
+      <span><b>{{ type }}</b> - <small>{{ num_pages }} pages</small></span>
       <div class="divider py-0 my-0 border-slate-50"></div>
 
       <div class="card-actions justify-between">
+        <button class="btn btn-primary btn-outline btn-sm" @click="visible = true">
         <button class="btn btn-primary btn-outline btn-sm" @click="visible = true">
           View
         </button>
