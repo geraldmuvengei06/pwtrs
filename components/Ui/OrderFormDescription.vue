@@ -28,7 +28,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="card bg-white sm:bg-gradient-to-tr sm:from-[#F2F8FC] sm:to-[#FEF6F4] shadow-lg flat">
+  <div class="card bg-white sm:bg-gradient-to-tr sm:from-[#F2F8FC] sm:to-[#FEF6F4] shadow-lg flat sm:w-fit">
     <form @submit.prevent="submitDescription" class="card-body p-4 flex"
       :class="type == 'verticle' ? 'flex-column' : 'flex-column md:flex-row'">
       <div class="form-control">
