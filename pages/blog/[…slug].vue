@@ -16,25 +16,20 @@ useSeoMeta({
   ogImage: data?.cover,
   twitterCard: "summary_large_image",
 });
+
+
 </script>
 
 <template>
   <div class="bg-gradient-to-tr from-[#F2F8FC] to-[#FEF6F4]">
     <div class="mx-auto py-8">
-      <div class="hero rounded-xl min-h-min relative">
+      <div class="max-w-7xl mx-auto rounded-xl min-h-min relative">
         <UiBgShade />
 
-        <div class="hero-content flex-col sm:flex-row-reverse">
-          <div class="w-full md:max-w-lg lg:max-w-xl sm:w-80 md:w-4/12">
-            <h1 class="text-3xl sm:text-5xl font-bold sm:hidden mb-2">
-              <span class="text-base-content">{{ data?.title }}</span>
-            </h1>
-
-            <UiCalculator type="verticle" />
-          </div>
-
-          <div class="sm:w-2/3">
-            <h1 class="text-3xl sm:text-5xl font-bold hidden sm:inline">
+        <div class="flex flex-wrap sm:items-center">
+          <div class="w-full md:w-1/2 lg:w-2/3 xl:w-3/4 p-4">
+            <!-- Content for the first column -->
+            <h1 class="text-3xl sm:text-5xl font-bold ">
               <span class="text-base-content">{{ data?.title }}</span>
             </h1>
 
@@ -44,24 +39,36 @@ useSeoMeta({
 
             <UiPayment />
           </div>
+
+          <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+            <!-- Content for the second column -->
+            <UiOrderFormDescription type="verticle" />
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <div>
-    <SectionSamples />
-    <div class="container mx-auto max-w-4xl py-12 px-4">
-      <article
-        class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg"
-      >
-        <ContentDoc>
-          <template #not-found>
-            <UiContentNotFound />
-          </template>
-        </ContentDoc>
-      </article>
+    <div class="container mx-auto max-w-7xl py-12 px-4 grid gap-4 grid-cols-12">
+      <div class="col-span-12 sm:col-span-8 order-last sm:order-first">
+        <article
+          class="prose prose-slate min-w-full prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white p-4 rounded-lg">
+          <NuxtImg class="rounded w-full overflow-hidden" v-if="data?.cover" format="webp" loading="lazy"
+            :src="data?.cover" />
+          <ContentDoc>
+            <template #not-found>
+              <UiContentNotFound />
+            </template>
+          </ContentDoc>
+        </article>
+      </div>
+
+      <aside class="col-span-12 sm:col-span-4">
+        <UiTableOfContents :toc="data?.body?.toc" />
+      </aside>
     </div>
+    <SectionSamples />
     <SectionReviews />
     <SectionCTA />
   </div>

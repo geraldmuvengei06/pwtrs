@@ -22,14 +22,14 @@ const { how_it_works } = contentStore();
             <div class="card-body p-4">
               <div class="card-subtitle">
                 <strong class="text-xl sm:text-2xl">{{
-                  slotProps.item.title
-                }}</strong>
+                                  slotProps.item.title
+                                  }}</strong>
                 <br />
                 {{ slotProps.item.date }}
               </div>
-              <NuxtImg alt="How it works" v-if="slotProps.item.image" :src="`/img/${slotProps.item.image}`"
-                :alt="slotProps.item.name" class="shadow-1" />
-              <span class="prose prose-stone list text-left" v-html="slotProps.item.description"></span>
+              <NuxtImg format="webp" loading="lazy" alt="How it works" v-if="slotProps.item.image"
+                :src="`/img/${slotProps.item.image}`" :alt="slotProps.item.name" class="shadow-1" />
+              <span class="prose prose-slate list text-left" v-html="slotProps.item.description"></span>
             </div>
           </div>
         </template>

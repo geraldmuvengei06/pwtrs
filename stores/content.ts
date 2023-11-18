@@ -15,13 +15,27 @@ export const contentStore = defineStore("content", () => {
       description: `${site_name} is your destination for excellence in nursing essay writing. With a dedicated team of the best online writers, we're committed to delivering top-quality essays and papers. Whether you need us to 'write my essay for me' or 'write my paper,' we're here to ensure your academic success. Discover our commitment to excellence and experience the difference with ${site_name}.`,
     },
     "Contact Us": {
-      metaTitle: `Your Trusted Partner for Writing Excellence`,
-      metaDescription: `Discover ${site_name}, the best online nursing essay service. We are your dedicated team of expert writers, ready to craft top-quality essays and papers for you.`,
+      metaTitle: `Contact ${site_name} for Expert Nursing Essay Writing Assistance`,
+      metaDescription: `Get in touch with ${site_name}, your trusted partner for writing excellence. Our dedicated team of expert writers is ready to assist you with top-quality nursing essays and papers. Reach out for 'Write My Essay for Me' and 'Write My Paper' requests.`,
       title: `Contact Us`,
-      subtitle:
-        "Excellence in Every 'Write My Essay for Me' and 'Write My Paper' Request",
-      description: `${site_name} is your destination for excellence in nursing essay writing. With a dedicated team of the best online writers, we're committed to delivering top-quality essays and papers. Whether you need us to 'write my essay for me' or 'write my paper,' we're here to ensure your academic success. Discover our commitment to excellence and experience the difference with ${site_name}.`,
+      subtitle: "Excellence in Every 'Write My Essay for Me' and 'Write My Paper' Request",
+      description: `Contact ${site_name} for all your nursing essay writing needs. Our committed team ensures academic success by delivering top-quality essays and papers. Whether it's a 'write my essay for me' or 'write my paper' request, experience the difference with ${site_name}.`,
     },
+    "Blog": {
+      metaTitle: `Explore Insights and Excellence at ${site_name}'s Blog`,
+      metaDescription: `Discover ${site_name}, the best online nursing essay service, through our insightful blog. Our dedicated team of expert writers shares valuable information on top-quality essay and paper crafting. Stay informed and engaged with our 'Write My Essay for Me' and 'Write My Paper' content.`,
+      title: `Blog`,
+      subtitle: "Excellence in Every 'Write My Essay for Me' and 'Write My Paper' Request",
+      description: `Explore ${site_name}'s blog for excellence in nursing essay writing. Our best online writers share valuable insights, ensuring top-quality essays and papers. Whether it's 'write my essay for me' or 'write my paper,' ${site_name} is your destination for academic success.`,
+    },
+    "Services": {
+      metaTitle: `Discover Top-Quality Nursing Essay Services at ${site_name}`,
+      metaDescription: `Explore the best online nursing essay services at ${site_name}. Our dedicated team of expert writers is ready to craft top-quality essays and papers for your academic success. Choose ${site_name} for 'Write My Essay for Me' and 'Write My Paper' requests.`,
+      title: `Services`,
+      subtitle: "Excellence in Every 'Write My Essay for Me' and 'Write My Paper' Request",
+      description: ` ${site_name} is your destination for excellence in nursing essay writing services. Our dedicated team of the best online writers ensures top-quality essays and papers. Whether it's 'write my essay for me' or 'write my paper,' trust ${site_name} for your academic success.`,
+    },
+    
     "How It Works": {
       metaTitle: `How We Deliver Excellence`,
       metaDescription: `Explore the seamless process of ${site_name}, the best online nursing essay service, to fulfill 'write my essay for me' and 'write my paper' requests.`,
@@ -105,7 +119,13 @@ export const contentStore = defineStore("content", () => {
       name: "About Us",
       link: "/about-us",
     },
+
+    {
+      name: "Blog",
+      link: "/blog",
+    },
   ];
+
 
   const key_factors = [
     {

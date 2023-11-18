@@ -7,8 +7,8 @@ let { order_url, goTo } = contentStore();
     <div class="container mx-auto py-8 sm:py-16 max-w-7xl px-4 sm:px-8">
       <div
         class="flex flex-col items-center sm:flex-row bg-neutral text-neutral-content rounded-lg gap-4 hover:shadow-lg">
-        <NuxtImg alt="our A+ essay is just a click away" id="nuxt-img" class="w-48 sm:w-1/3 max-w-xs m-4"
-          src="/img/creative-writing-animate.svg" />
+        <NuxtImg format="webp" loading="lazy" alt="our A+ essay is just a click away" id="nuxt-img"
+          class="w-48 sm:w-1/3 max-w-xs m-4" src="/img/creative-writing-animate.svg" />
 
         <div class="px-4 sm:px-8 py-8">
           <h2 class="text-2xl sm:text-4xl">

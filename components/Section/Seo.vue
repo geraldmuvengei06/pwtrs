@@ -2,7 +2,7 @@
   <div class="">
     <div class="container mx-auto max-w-3xl py-8 sm:py-16 px-4">
       <article
-        class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg">
+        class="prose prose-slate max-w-3xl max-h-[100vh] overflow-y-scroll  mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg">
         <div data-content-id="content:blog:a-wide-selection-of-expert-essay-writers.md">
           <h2 id="how-to-choose-an-expert-writer">
             How to Choose an Expert Writer

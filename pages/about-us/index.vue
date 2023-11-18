@@ -21,7 +21,7 @@ useSeoMeta({
       <div class="hero rounded-xl min-h-min relative">
         <UiBgShade />
         <div class="hero-content flex-col sm:flex-row-reverse">
-          <NuxtImg alt="About Us" id="nuxt-img" src="/img/Conversation-pana.png"
+          <NuxtImg format="webp" loading="lazy" alt="About Us" id="nuxt-img" src="/img/Conversation-pana.png"
             class="md:flex max-w-xs sm:max-w-sm md:max-w-md w-48 sm:w-2/5" />
 
           <div class="sm:z-10">
@@ -52,7 +52,7 @@ useSeoMeta({
   </div>
   <div v-once class="container mx-auto max-w-4xl py-12 px-4">
     <article
-      class="prose prose-slate max-w-3xl mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg">
+      class="prose prose-slate max-w-3xl max-h-[100vh] overflow-y-scroll  mx-auto prose-h1:text-2xl sm:prose-h1:text-3xl prose-h2:text-xl sm:prose-h2:text-2xl prose-h3:text-lg sm:prose-h3:text-xl bg-white shadow-lg ring-1 ring-gray-900/5 p-4 sm:p-6 rounded-lg">
       <section>
         <h2>
           {{ content?.title }}

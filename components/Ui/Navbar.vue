@@ -46,7 +46,7 @@ watch(
 </script>
 <template>
   <header class="drop-shadow  bg-gradient-to-br from-[#F2F8FC]/80 to-[#FEF6F4]/80 backdrop-blur sticky top-0 z-40">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 sm:p-6 lg:px-8" aria-label="Global">
+    <nav class="mx-auto z-20 flex max-w-7xl items-center justify-between p-4 sm:p-6 sm:py-2 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">{{ runtimeConfig.public.websiteName }}</span>
@@ -72,9 +72,9 @@ watch(
 
           <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1"
             enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
-            leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-            <PopoverPanel
-              class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
+          leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
+          <PopoverPanel
+            class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
               <div class="p-4">
                 <div v-for="item in services" :key="item._path"
                   class="group relative flex items-center gap-x-6 rounded-lg py-1 text-sm leading-6 hover:bg-gray-50">
@@ -115,12 +115,12 @@ watch(
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
       <div class="fixed inset-0 z-10" />
       <DialogPanel
-        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 pt-14">
         <div class="flex items-center justify-between">
           <!-- <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">{{ runtimeConfig.public.websiteName }}</span>
-            <UiLogo />
-          </a> -->
+                                        <span class="sr-only">{{ runtimeConfig.public.websiteName }}</span>
+                                        <UiLogo />
+                                      </a> -->
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
             <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -165,6 +165,7 @@ watch(
 
 <style lang="scss">
 .router-link-exact-active {
-  @apply rounded-lg text-secondary font-semibold hover:text-secondary-focus;
+  // @apply rounded-lg text-secondary font-semibold hover: text-secondary-focus;
+  @apply rounded-lg text-secondary font-semibold;
 }
 </style>

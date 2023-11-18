@@ -5,15 +5,14 @@ export default defineNuxtConfig({
     head: {
       title: process.env.NUXT_WEBSITE_NAME,
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-      script: [
-        // ...
-        {
-          hid: "tawk.to",
-          src: "https://embed.tawk.to/" + process.env.NUXT_TAWK_CODE,
+      // script: [
+      //   {
+      //     hid: "tawk.to",
+      //     src: "https://embed.tawk.to/" + process.env.NUXT_TAWK_CODE,
 
-          defer: true,
-        },
-      ],
+      //     defer: true,
+      //   },
+      // ],
     },
     // pageTransition: { name: 'page', mode: 'out-in' },
   },
@@ -25,6 +24,8 @@ export default defineNuxtConfig({
       homeUrl: process.env.NUXT_HOME_URL || "/orders/home/",
       whatsappNumber: process.env.NUXT_WHATSAPP_NUMBER,
       supportEmail: process.env.NUXT_SUPPORT_EMAIL,
+      tawkPropertyId: process.env.NUXT_TAWK_PROPERTY_ID,
+      tawkWidgetId: process.env.NUXT_TAWK_WIDGET_ID,
       apiUrl: "https://api.urgentwriters.com", // can be overridden by NUXT_PUBLIC_API_BASE environment variable
     },
   },
